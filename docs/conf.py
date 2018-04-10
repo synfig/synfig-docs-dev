@@ -185,6 +185,7 @@ epub_exclude_files = ['search.html']
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
+html_theme = "sphinx_rtd_theme"
 from recommonmark.parser import CommonMarkParser
 
 source_parsers = {
