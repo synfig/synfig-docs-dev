@@ -10,14 +10,12 @@ Welcome to Synfig developers documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   common/hotkeys
    common/building
+   common/hotkeys
 
 
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
