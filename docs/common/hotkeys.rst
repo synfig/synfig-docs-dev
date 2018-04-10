@@ -13,7 +13,7 @@ Global hotkeys:
 
 
 ==============  ===============
-Hotkey            Value
+Hotkey            Action
 ==============  ===============
 Ctrl+N           New
 Ctrl+O           Open
