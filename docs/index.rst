@@ -11,6 +11,7 @@ Welcome to Synfig developers documentation!
    :caption: Contents:
 
    common/hotkeys
+   common/building
 
 
 
