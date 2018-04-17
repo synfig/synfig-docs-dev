@@ -20,4 +20,4 @@ $ make html
 
 The docs will be generated, the output files will be placed in the `_build/html/` directory, and can be browsed (locally) with any browser.
 
-The docs can also be found online at <https://synfig-dev-docs.readthedocs.org/>.
+The docs can also be found online at <https://synfig-doc-dev.readthedocs.org/>.
