@@ -3,7 +3,7 @@ Building Synfig
 
 Synfig is written in C++ with GTK+ libraries.
 
-Build system: CMake
+Build system: autoconf/make
 
 Linux build
 ~~~~~~~~~~~~
