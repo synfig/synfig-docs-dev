@@ -12,6 +12,7 @@ Welcome to Synfig developers documentation!
 
    common/building
    common/hotkeys
+   common/random
 
 
 

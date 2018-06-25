@@ -5,39 +5,100 @@ Synfig is written in C++ with GTK+ libraries.
 
 Build system: autoconf/make
 
-Linux build
-~~~~~~~~~~~~
+Things to know before you start
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+TODO: Write here about structure of Synfig (3 components ETL, core, studio).
+
+TODO: List dependencies. 
+
+Building on Linux
+~~~~~~~~~~~~~~~~~
+
+Fetching sources
+----------------
+
+First of all, you need to get sources from GitHub:
 
 .. code:: bash
 
-    $ git clone https://github.com/synfig/synfig.git synfig.git
-    $ cd synfig.git/autobuild/
+    $ git clone https://github.com/synfig/synfig.git ~/synfig.git
+    
+Build approach #1 - recommended
+--------------------------------------
+
+We provide a special build script which installs all required packages for your distro (most popular are supported) and builds Synfig source for you.
+
+TODO: Write which distros are supported by build script.
+
+.. code:: bash
+
+    $ cd ~/synfig.git/autobuild/
     $ ./synfigstudio-linux-build.sh
 
-And that's all.
+After that you can find synfig installed in "~/synfig/". So you can run it:
 
-Windows binaries build
+.. code:: bash
+
+    $ ~/synfig/bin/synfigstudio
+    
+Build approach #2 - using NIX (WIP)
+------------------------------------------
+
+The approach above have several disadvantages:
+
+#. You have to install development packages, which is cluttering your base system
+#. Sometimes new versions of distributives change development package names, which may causeautomatic script to fail.
+#. It is possible your distributive is not supported by our build script.
+
+As alternative we can use a NIX build system, which will assist us in setting correct build environment.
+
+First of all, install NIX using the following command:
+
+.. code:: bash
+
+    $ curl -L http://git.io/nix-install.sh | bash && source ~/.nix-profile/etc/profile.d/nix.sh
+
+Now you can build Synfig:
+
+.. code:: bash
+
+    $ cd ~/synfig.git/autobuild/
+    $ nix-build
+    
+When the build succeeds, it will create a symlink called "result" in the current directory, which will point to Synfig installation. So you can run it with the following command:
+
+.. code:: bash
+
+    $ ./result/bin/synfigstudio
+    
+HINT: If you want to make result of the build available in your PATH, then you can use the following command instead of  "nix-build":
+
+.. code:: bash
+
+    $ nix-env -i -f default.nix
+    
+In this case you can simply run the result as follows:
+
+.. code:: bash
+
+    $ synfigstudio
+
+
+Re-building your changes
+--------------------------------------
+
+WRITEME
+
+Building on Windows
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Build using MinGW cross-compiler:
 
-Build using msys2
------------------
-Msys2 is a nice system with bunch of libraries already precompiled with
-MinGW, but we use package-config 
+WRITEME
 
+Building on OSX
+~~~~~~~~~~~~~~~~~~~~~~
 
-How to build Synfig for production
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Base dependency to run Synfig on Linux systems is **glibc**. It has backward compatibility,
-but not forward. So if you build Synfig on newer OS like Debian 9 it will not start on older
-OS like Debian 7. To do that we use Debian 7 docker image for building Synfig for production.
-For testing/debug purposes or for own usage you can build Synfig on any preferred OS.
-glibc versions (obtained by using ldd --version):
-* Debian 7.11 - 2.13
-* Debian 8.10 - 2.19
-
-How to login to docker image?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-sudo docker run -it debian/wheezy-backports /bin/bash -l
+WRITEME
 
