@@ -51,7 +51,7 @@ The approach above have several disadvantages:
 #. Sometimes new versions of distributives change development package names, which may causeautomatic script to fail.
 #. It is possible your distributive is not supported by our build script.
 
-As alternative we can use a NIX build system, which will assist us in setting correct build environment.
+As alternative we can use a `NIX build system <https://nixos.org/>`_, which will assist us in setting correct build environment.
 
 First of all, install NIX using the following command:
 
@@ -71,18 +71,7 @@ When the build succeeds, it will create a symlink called "result" in the current
 .. code:: bash
 
     $ ./result/bin/synfigstudio
-    
-HINT: If you want to make result of the build available in your PATH, then you can use the following command instead of  "nix-build":
 
-.. code:: bash
-
-    $ nix-env -i -f default.nix
-    
-In this case you can simply run the result as follows:
-
-.. code:: bash
-
-    $ synfigstudio
 
 
 Re-building your changes
