@@ -8,7 +8,19 @@ Build system: autoconf/make
 Things to know before you start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO: Write here about structure of Synfig (3 components ETL, core, studio).
+Synfig is divided into three components: ETL, synfig-core and synfig-studio.
+
+* ETL - the extended template library.
+* synfig-core - contains the render engine and core/command-line tool (cli) 
+* synfig-studio - gui for the application.
+    
+All those three components are included with the main source repository of Synfig - `<https://github.com/synfig/synfig.git>`_.
+
+ETL is required for synfig-core and synfig-core is required for building synfig-studio.
+
+So, first builds ETL, then synfig-core, and then synfig-studio.
+
+Besides that, synfig-core and synfig-studio require following libraries to be available in your system:
 
 TODO: List dependencies. 
 
