@@ -57,7 +57,8 @@ First of all, install NIX using the following command:
 
 .. code:: bash
 
-    $ curl -L http://git.io/nix-install.sh | bash && source ~/.nix-profile/etc/profile.d/nix.sh
+    $ curl https://nixos.org/nix/install | bash
+    $ source ~/.nix-profile/etc/profile.d/nix.sh
 
 Now you can build Synfig:
 
