@@ -94,8 +94,10 @@ Publish announcement
 * Notify subscribers via email newsletter
 * VK
 * Udemy
+
   * Announcement
   * Update required version in description/video/link (if needed)
+  
 * Indiegogo
 * LWN.net
 
