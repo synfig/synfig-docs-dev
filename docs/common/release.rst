@@ -101,4 +101,9 @@ Publish announcement
 * Indiegogo
 * LWN.net
 
+Close related bugs
+~~~~~~~~~~~~~~~~~~~~
 
+Visit https://github.com/synfig/synfig/projects/1 and move all bugs related to release in "Released" column.
+
+Comment on those bugs about new release.
