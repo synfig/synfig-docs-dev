@@ -69,6 +69,7 @@ Add tag:
 (Optionally) merge into master branch:
 
 .. code:: bash
+
     $ git checkout master
     $ git merge testing
     # git push upstream
