@@ -16,6 +16,7 @@ Rendering
 * Port all layers to new render engine
 * Resolution-based rendering
 * Rendering cache
+* Live response for control point modifications
 * Hardware-accelerated rendering (OpenGL, OpenCL, etc.)
 
 Animation tools
