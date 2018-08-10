@@ -117,7 +117,7 @@ where
   * core - builds synfig-core only.
   * studio - builds synfig-studio only.
   
-* [phase] alllows you to choose particular phase to execute for given package:
+* [phase] allows you to choose particular phase to execute for given package:
 
   * clean - does "make clean" operation.
   * configure - running "./configure" script with all neccessary options.
