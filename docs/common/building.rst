@@ -108,22 +108,22 @@ The syntax is:
 
     $ ./build-debug.sh [package] [phase]
     
-where:
+where
 
-[package] can have following values:
+* [package] can have following values:
 
-* all  - builds all three packages (default).
-* etl - builds ETL only.
-* core - builds synfig-core only.
-* studio - builds synfig-studio only.
+  * all  - builds all three packages (default).
+  * etl - builds ETL only.
+  * core - builds synfig-core only.
+  * studio - builds synfig-studio only.
   
-[phase] allows you to choose particular phase to execute for given package:
+* [phase] alllows you to choose particular phase to execute for given package:
 
-* clean - does "make clean" operation.
-* configure - running "./configure" script with all neccessary options.
-* make - running "make" command and "make install".
-* build - executes "configure" and "make" phases (default).
-* full - executes all phases: "clean", "configure" and "make" (exactly in that order).
+  * clean - does "make clean" operation.
+  * configure - running "./configure" script with all neccessary options.
+  * make - running "make" command and "make install".
+  * build - executes "configure" and "make" phases (default).
+  * full - executes all phases: "clean", "configure" and "make" (exactly in that order).
 
 You might ask: why execute those commands/phases from a script , while it is possible to call "./configure" and "make" commands by hand in particular directories? Well, for "make" this would work and is desirable for many cases. But for "./configure" you have to specify many parameters, such as prefix, and locations of some dependent libraries. So it is more convenient to call "./configure" using this helper script.
 
