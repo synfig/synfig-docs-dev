@@ -111,11 +111,14 @@ The syntax is:
 where
 
 * [package] can have following values:
+
   * all  - builds all three packages (default).
   * etl - builds ETL only.
   * core - builds synfig-core only.
   * studio - builds synfig-studio only.
+  
 * [phase] alllows you to choose particular phase to execute for given package:
+
   * clean - does "make clean" operation.
   * configure - running "./configure" script with all neccessary options.
   * make - running "make" command and "make install".
