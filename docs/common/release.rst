@@ -63,16 +63,16 @@ Add tag:
 
 .. code:: bash
 
-    $ git tag v1.3.10
-    $ git push --tags upstream
+    git tag v1.3.10
+    git push --tags upstream
 
 (Optionally) merge into master branch:
 
 .. code:: bash
 
-    $ git checkout master
-    $ git merge testing
-    # git push upstream
+    git checkout master
+    git merge testing
+    git push upstream
 
 
     
