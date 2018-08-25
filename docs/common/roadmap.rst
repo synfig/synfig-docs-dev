@@ -17,7 +17,6 @@ Rendering
 * Resolution-based rendering
 * Rendering cache
 * Live response for control point modifications
-* Hardware-accelerated rendering (OpenGL, OpenCL, etc.)
 
 Animation tools
 ~~~~~~~~~~~~~~~
@@ -26,7 +25,7 @@ Animation tools
 * Waypoint editing tools: multiple selection, move, scale.
 * Onion skin function rework
 * Ghost waypoints
-* Multiple timelines. Timeline mixer.
+* Multiple timelines. Timeline mixer. (?)
 
 Sound
 ~~~~~
