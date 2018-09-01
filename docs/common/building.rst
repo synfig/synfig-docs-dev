@@ -48,7 +48,7 @@ Building Synfig requires many dependent libraries installed for your system (see
 
 So, we are using `NIX build system <https://nixos.org/>`_ to quickly generate development environment with all required dependencies.
 
-**Note for MacOS 10.14 Mojave (Beta) users. Nix has a `known bug<https://github.com/NixOS/nix/issues/2244>`_ on installing on 10.14 beta, so wait until it released.**
+**Note for MacOS 10.14 Mojave (Beta) users. Nix has a `known bug <https://github.com/NixOS/nix/issues/2244>`_ on installing on 10.14 beta, so wait until it released.**
 
 First of all, install NIX using the following command:
 
