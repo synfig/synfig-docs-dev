@@ -1,6 +1,14 @@
 Roadmap
 =======
 
+Rendering
+~~~~~~~~~
+
+* Rendering cache
+* Resolution-based rendering
+* Live response for control point modifications
+* Port all layers to new render engine
+
 Bones system
 ~~~~~~~~~~~~
 
@@ -9,14 +17,6 @@ Bones system
 * Allow to see list of bones
 * Proxy bones
 * IK
-
-Rendering
-~~~~~~~~~
-
-* Port all layers to new render engine
-* Resolution-based rendering
-* Rendering cache
-* Live response for control point modifications
 
 Animation tools
 ~~~~~~~~~~~~~~~
@@ -33,7 +33,8 @@ Sound
 * Waveform display
 * Sound export
 
-User Interface
+Other
 ~~~~~~~~~~~~~~
 
 * Simple rendering dialogue
+* Rewrite Text Layer
