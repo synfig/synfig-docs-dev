@@ -16,6 +16,11 @@ Apply latest translations
 #. Fix lines marked as "TODO" in synfig-studio/src/languages.inc.c (if any)
 #. Update and push translation template to transifex 'bash ./autobuild/transifex-push-template.sh'
 #. Commit changes.
+
+Update NEWS files
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Summarize all changes in NEWS files.
     
 Update version number
 ~~~~~~~~~~~~~~~~~~~~~
