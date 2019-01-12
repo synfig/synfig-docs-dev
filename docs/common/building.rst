@@ -160,32 +160,38 @@ Examples:
 1. Configure and (re)build synfig-core (executes "./configure", "make" and "make install"):
 
 .. code:: bash
+
     ./2-build-debug.sh core
     
 equivalent to:
 
 .. code:: bash
+
     ./2-build-debug.sh core build
 
 2. Do a full clean build of synfig-core (executes "make clean", "./configure", "make" and "make install"):
 
 .. code:: bash
+
     ./2-build-debug.sh core full
 
 3. Quick rebuild of synfig-core (without executing "./configure"):
 
 .. code:: bash
+
     ./2-build-debug.sh core make
     
 Since "make" doesn't require any parameters, the same result can be achieved by executing:
 
 .. code:: bash
+
     cd ~/synfig.git/_debug/synfig-core/
     make install
 
 4. Quick rebuild of of everything - ETL, synfig-core and synfig-studio (without executing "./configure"):
 
 .. code:: bash
+
     ./2-build-debug.sh all make
 
 Please consider some recommendations when to call particular phases.
@@ -222,6 +228,7 @@ First important thing to know is that you need a production build for that (for 
 So, make sure to get production build first:
 
 .. code:: bash
+
     ./2-build-production.sh
 
 After build finishes you can generate a package for your operating system.
@@ -229,14 +236,17 @@ After build finishes you can generate a package for your operating system.
 For OSX:
 
 .. code:: bash
+
     ./3-package-osx-dmg.sh
     
 For Linux:
 
 .. code:: bash
+
     TO BE WRITTEN
     
 For Windows:
 
 .. code:: bash
+
     TO BE WRITTEN
