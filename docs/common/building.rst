@@ -42,7 +42,7 @@ Then navigate to sources directory:
 
     $ cd ~/synfig.git
     
-Now you need to install all required dependencies. This is easy to do by rnning a special script shipped with Synfig's sources:
+Now you need to install all required dependencies. This is easy to do by running a special script shipped with Synfig's sources:
 
 .. code:: bash
 
