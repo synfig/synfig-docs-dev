@@ -16,6 +16,7 @@ Welcome to Synfig developers documentation!
    common/roadmap
    common/hotkeys
    common/random
+   tutorials
 
 
 

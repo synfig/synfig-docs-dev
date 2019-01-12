@@ -1,3 +1,6 @@
+How to add new Dock Window
+==========================
+
 Child windows in Synfig is called docks.
 This is because thay are dockable. To add new dock window to Synfig follow this steps:
 
