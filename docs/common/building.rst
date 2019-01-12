@@ -20,14 +20,12 @@ ETL is required for synfig-core and synfig-core is required for building synfig-
 
 So, first builds ETL, then synfig-core, and then synfig-studio.
 
-Besides that, synfig-core and synfig-studio require following libraries to be available in your system:
-
-TODO: List dependencies. 
-
 Preparing Environment
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Building Synfig requires many dependent libraries installed for your system. Below you will find instructions how to install them on various operating systems.
+Building Synfig requires many dependent libraries installed for your system. For full list of libraries please refer to :ref:`this page <dependencies>`.
+
+Below you will find instructions how to install them on various operating systems.
 
 Linux
 -------
