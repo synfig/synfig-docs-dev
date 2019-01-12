@@ -12,7 +12,7 @@ $ cd docs
 $ pipenv install --three
 ```
 
-This will install the requirements needed for the generating the docs. Afterwards you can run:
+This will install the requirements needed for generating the docs. Afterwards you can run:
 
 ```bash
 $ make html
