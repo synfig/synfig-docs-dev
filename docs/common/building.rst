@@ -1,9 +1,9 @@
 Building Synfig
 ===============
 
-Synfig is written in C++ with GTK+ libraries.
+Synfig is written in C++, based on GTK3 library.
 
-Build system: autoconf/make
+Build system: autotools/make
 
 Things to know before you start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -24,72 +24,97 @@ Besides that, synfig-core and synfig-studio require following libraries to be av
 
 TODO: List dependencies. 
 
-Building on Linux
-~~~~~~~~~~~~~~~~~
+Preparing Environment
+~~~~~~~~~~~~~~~~~~~~~~
 
-Fetching sources
-----------------
+Building Synfig requires many dependent libraries installed for your system. Below you will find instructions how to install them on various operating systems.
 
-First of all, you need to get sources from GitHub:
+Linux
+-------
+
+First of all make sure you have "git" installed. Use it to fetch Synfig's sources:
 
 .. code:: bash
 
     $ git clone https://github.com/synfig/synfig.git ~/synfig.git
+    
+Then navigate to sources directory:
+
+.. code:: bash
+
     $ cd ~/synfig.git
     
-Building using NIX
-------------------------------------------
-
-Building Synfig requires many dependent libraries installed for your system (see first chapter above). The installation of those libraries natively in your system have several disadvantages:
-
-#. Installing the dependencies can be non-trivial - you have to figure out package names for each particular distro.
-#. Different Linux distros have different ersions of required packages, which makes build process less predictable
-#. Sometimes installing many development packages is not desirable, because it is cluttering your system.
-
-So, we are using `NIX build system <https://nixos.org/>`_ to quickly generate development environment with all required dependencies.
-
-**Note for MacOS 10.14 Mojave (Beta) users.** Nix has a `known bug <https://github.com/NixOS/nix/issues/2244>`_ when installing on 10.14 beta, so wait until it is released.
-
-First of all, install NIX using the following command:
+Now you need to install all required dependencies. This is easy to do by rnning a special script shipped with Synfig's sources:
 
 .. code:: bash
 
-    $ curl https://nixos.org/nix/install | bash
-    $ source ~/.nix-profile/etc/profile.d/nix.sh # On Linux system
-    $ nix-shell -p nix-info --run "nix-info -m" # open new terminal and run on MacOS system
+    $ ./1-setup-linux-native.sh
+
+Wait till the script finish installing dependencies and you're ready to build.
     
-Now you can enter development environment, where all dependencies are available:
+OSX
+-------
+
+We will be running all commands in terminal, so start by launching Terminal app.
+
+First you need to install Xcode Command Line Tools with the following command:
 
 .. code:: bash
 
-    $ cd ~/synfig.git/
-    $ ./dev-env.sh
+    $ xcode-select --install
     
-If you are running this command for first time, then you will have to wait while system fetches all required dependencies. Do not worry - those fetched packages won't affect the status of your base operating system.
+Follow instructions on the screen to complete installation.
 
-When the process is done you will see a green prompt:
+Next, get Synfig's sources:
 
 .. code:: bash
 
-    $ [nix-shell:~/synfig.git/]$
+    $ git clone https://github.com/synfig/synfig.git ~/synfig.git
+    
+When download finishes, navigate to sources directory:
 
-That means you are in development environment now. Let's build Synfig!
+.. code:: bash
 
-We have a special script, which carries all build routines for you. In fact, there are two of them - "build-debug.sh" and "build-production.sh".
+    $ cd ~/synfig.git
+    
+Now we can install all required libraries via HomeBrew. There is a special script included with sources:
+
+.. warning::
+    It is NOT recommended to use this method on OSX version < 10.11 with already working Homebrew - with almost 100% probablility your Homebrew installation will be damaged. You've been warned.
+    
+.. code:: bash
+
+    $ ./1-setup-osx-brew.sh
+    
+Depending on version of your system the process of installing dependencies might take some time. When it completes you are ready to build Synfig! 
+
+Windows
+-------
+
+...
+
+TO BE WRITTEN.
+
+...
+    
+First build
+~~~~~~~~~~~~~~~~~~~~~~~
+
+We have a special script, which carries all build routines for you. In fact, there are two of them - "2-build-debug.sh" and "2-build-production.sh".
 
 As you might guess, the first one is for building development version with debug symbols (useful for development itself) and the second one is without debug symbols (useful for production).
 
 Another difference is that first script places result of the build in "_debug/build" subdirectory, and with second script the result will reside in "_production/build".
 
-in all other aspects both scripts work exactly the same and accept the same arguments.
+In all other aspects both scripts work exactly the same and accept the same arguments.
 
-Since we are after developing Synfig, let's continue with first script - "build-debug.sh".
+I will assume that your intention is to develop Synfig, so let's continue with first script - "2-build-debug.sh".
 
 You can build everything by simply executing the script:
 
 .. code:: bash
 
-    $ ./build-debug.sh
+    $ ./2-build-debug.sh
     
 The script will build and install ETL, then synfig-core and finally - synfig-studio.
 
@@ -101,7 +126,7 @@ When building is done, you can launch Synfig by executing
     
     
 Re-building your changes
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Of course it is not very convenient to run a full rebuild process on every change. So, the script provides a set of arguments that allow you to execute particular stages of the build:
 
@@ -109,7 +134,7 @@ The syntax is:
 
 .. code:: bash
 
-    $ ./build-debug.sh [package] [phase]
+    $ ./2-build-debug.sh [package] [phase]
     
 where
 
@@ -135,35 +160,35 @@ Examples:
 1. Configure and (re)build synfig-core (executes "./configure", "make" and "make install"):
 
 .. code:: bash
-    ./build-debug.sh core
+    ./2-build-debug.sh core
     
 equivalent to:
 
 .. code:: bash
-    ./build-debug.sh core build
+    ./2-build-debug.sh core build
 
 2. Do a full clean build of synfig-core (executes "make clean", "./configure", "make" and "make install"):
 
 .. code:: bash
-    ./build-debug.sh core full
+    ./2-build-debug.sh core full
 
 3. Quick rebuild of synfig-core (without executing "./configure"):
 
 .. code:: bash
-    ./build-debug.sh core make
+    ./2-build-debug.sh core make
     
 Since "make" doesn't require any parameters, the same result can be achieved by executing:
 
 .. code:: bash
-    cd ~/synfig.git/synfig-core/
+    cd ~/synfig.git/_debug/synfig-core/
     make install
 
 4. Quick rebuild of of everything - ETL, synfig-core and synfig-studio (without executing "./configure"):
 
 .. code:: bash
-    ./build-debug.sh all make
+    ./2-build-debug.sh all make
 
-Finally, some recommendations when to call particular phases.
+Please consider some recommendations when to call particular phases.
 
 Considering the structure of Synfig (see first chapter of this article), we have following dependency chain:
 
@@ -183,19 +208,35 @@ The answer is: if you edited .h and .cpp files only, then it is safe to skip. In
 
 Let's suppose you made changes in synfig-studio and want to rebuild it without re
 
-And finallly a quick note about "build.conf.sample" file in the root of source repository.
+And finally a quick note about "build.conf.sample" file in the root of source repository.
 
 With this file you can tweak the number of threads used by the build scripts. Just copy "~/synfig.git/build.conf.sample" to "~/synfig.git/build.conf" and adjust its contents according to your needs.
 
-Building on Windows
-~~~~~~~~~~~~~~~~~~~~~~
+Creating Installer/Package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Build using MinGW cross-compiler:
+As an optional step you might wish to build a package/installer for distribution.
 
-WRITEME
+First important thing to know is that you need a production build for that (for obvious reason it is very unlikely you want to distribute a build with debug symbols).
 
-Building on OSX
-~~~~~~~~~~~~~~~~~~~~~~
+So, make sure to get production build first:
 
-WRITEME
+.. code:: bash
+    ./2-build-production.sh
 
+After build finishes you can generate a package for your operating system.
+    
+For OSX:
+
+.. code:: bash
+    ./3-package-osx-dmg.sh
+    
+For Linux:
+
+.. code:: bash
+    TO BE WRITTEN
+    
+For Windows:
+
+.. code:: bash
+    TO BE WRITTEN
