@@ -1,16 +1,7 @@
-Open Projects
-=============
-
-This document is a compilation of all the proposed enhancements that does not fit in the roadmap. The projects in this page are open-ended and we welcome all contribution. If you are planning to contribute to any of these project, please do let us know by starting a thread on `<https://forums.synfig.org>`_.
-
 Google Summer of Code
-~~~~~~~~~~~~~~~~~~~~~
+=====================
 
 `GSoC <https://summerofcode.withgoogle.com>`_ is a global program focused on bringing more student developers into open source software development. Students work with an open source organization on a 3 month programming project during their break from school. 
-
-GSoC'19
---------
-This year we plan to apply to Google Summer of Code. Currently we are looking for project ideas and mentors. If you are a student, you are welcome to explore existing project ideas towards the GSoC application phase. There are ways to reach out to mentors, and many projects have lists of newcomer friendly issues you can start from. Students are also welcome to propose their own project ideas.
 
 Propose Project
 ---------------
@@ -30,12 +21,13 @@ If you have a project idea, edit the project section by filling the required det
 :Your profile: github | linkedin | etc 
 :Your role: I am a making this proposal as a <student | mentor | community member | contributor | etc>
 
-Projects Ideas
---------------
-
 Contacts
 --------
-                                
+ 
+GSoC'19
+~~~~~~~
+This year we plan to apply to Google Summer of Code. Currently we are looking for project ideas and mentors. If you are a student, you are welcome to explore existing project ideas towards the GSoC application phase. There are ways to reach out to mentors, and many projects have lists of newcomer friendly issues you can start from. Students are also welcome to propose their own project ideas.
 
 
-
+Projects Ideas
+--------------
