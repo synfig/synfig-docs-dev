@@ -7,6 +7,14 @@ Propose Project
 ---------------
 If you have a project idea, edit the project section by filling the required details and sending a pull request(this page is editable `here <https://github.com/synfig/synfig-docs-dev/tree/master/docs/common/openprojects.rst>`_), even if you could not mentor (we will find a mentor).
 
+
+Contacts
+--------
+ 
+GSoC'19
+~~~~~~~
+This year we plan to apply to Google Summer of Code. Currently we are looking for project ideas and mentors. If you are a student, you are welcome to explore existing project ideas towards the GSoC application phase. There are ways to reach out to mentors, and many projects have lists of newcomer friendly issues you can start from. Students are also welcome to propose their own project ideas.
+
 **Required information for project proposal**
 
 :Title: A descriptive title
@@ -20,14 +28,6 @@ If you have a project idea, edit the project section by filling the required det
 :Your name: :)
 :Your profile: github | linkedin | etc 
 :Your role: I am a making this proposal as a <student | mentor | community member | contributor | etc>
-
-Contacts
---------
- 
-GSoC'19
-~~~~~~~
-This year we plan to apply to Google Summer of Code. Currently we are looking for project ideas and mentors. If you are a student, you are welcome to explore existing project ideas towards the GSoC application phase. There are ways to reach out to mentors, and many projects have lists of newcomer friendly issues you can start from. Students are also welcome to propose their own project ideas.
-
 
 Projects Ideas
 --------------
