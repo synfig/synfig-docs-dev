@@ -5,10 +5,11 @@ Synfig GSoC application (draft) 2019
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Org profile:**
-* Tagline (up to 80 symbols): Free and open source animation software
-* Technology tags: c++, gtkmm
-* Topic Tags: vector-graphics, animation
-* Ideas list: 
+
+#. Tagline (up to 80 symbols): Free and open source animation software
+#. Technology tags: c++, gtkmm
+#. Topic Tags: vector-graphics, animation
+#. Ideas list: 
 
 **Short Desc:**
 
