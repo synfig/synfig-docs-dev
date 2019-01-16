@@ -1,0 +1,11 @@
+.. _gsoc:
+
+Google Summer of Code 2019
+==========================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   2019/*
+
