@@ -4,7 +4,7 @@ Google Summer of Code
 `GSoC <https://summerofcode.withgoogle.com>`_ is a global program focused on bringing more student developers into open source software development. Students work with an open source organization on a 3 month programming project during their break from school. 
 
 GSoC'19
-~~~~~~~
+-------
 This year we plan to apply to Google Summer of Code. Currently we are looking for project ideas and mentors. If you are a student, you are welcome to explore existing project ideas towards the GSoC application phase. There are ways to reach out to mentors, and many projects have lists of newcomer friendly issues you can start from. Students are also welcome to propose their own project ideas.
 
 Propose Project
