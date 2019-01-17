@@ -2,23 +2,7 @@ Application
 ===========
 
 Synfig GSoC application (draft) 2019
-
-**Org profile:**
-
-#. Tagline (up to 80 symbols): Free and open source animation software
-#. Technology tags: c++, gtkmm
-#. Topic Tags: vector-graphics, animation
-#. Ideas list: 
-
-**Short Desc:**
-
-**Long Desc:**
-
-**Proposal Process:**
-
-**Proposal Tags:**
-
-**Contacts:**
+------------------------------------
 
 **Why does your org want to participate in Google Summer of Code?**
 
@@ -34,10 +18,54 @@ Synfig GSoC application (draft) 2019
 
 **Has your org been accepted as a mentoring org in Google Summer of Code before?**
 
-**If you are a new organization to GSoC, is there a Google employee or previously participating organization who will vouch for you? If so, please enter their name, contact email, and relationship to your organization. (optional)**
+**What year was your project started?**
 
-**Are you part of a foundation/umbrella organization?**
+2006
 
-**Anything else we should know (optional)?**
+**Where does your source code live?**
 
-Reference: https://jenkins.io/projects/gsoc/2019/application/
+https://github.com/synfig/synfig/
+
+
+Organization Profile
+--------------------
+
+**Website URL**
+
+https://www.synfig.org/
+
+**Tagline (up to 80 symbols)**
+
+Open-source 2D animation software
+
+**Primary OpenSource License**
+
+GPLv3
+
+**Technology tags (Enter keywords for the primary specific technologies your organization uses. Examples: Python, Javascript, MySQL, Hadoop, OpenGL, Arduino)**
+
+C++, GTKmm
+
+**Topic Tags (Enter keywords for general topics that describe your organization. Examples: Vision, Robotics, Cloud, Graphics, Web, Real time )**
+
+Vector Graphics, Animation
+
+**Ideas List**
+
+**Short Description**
+
+**Long Description**
+
+**Proposal Process / Application Instructions**
+
+**Proposal Tags**
+
+**Contacts Methods:**
+
+General Email: contact -AT- synfig -DOT- org
+
+**Links**
+
+Twitter: https://twitter.com/synfig
+
+Blog: https://www.synfig.org/news/
