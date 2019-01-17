@@ -7,16 +7,16 @@ Welcome to Synfig developers documentation!
 ===========================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-   common/building
-   common/tutorials/index
-   common/dependencies
-   common/release
-   common/roadmap
-   common/hotkeys
-   common/random
+   building
+   tutorials/index
+   dependencies
+   release
+   roadmap
+   hotkeys
+   random
 
 
 Indices and tables
