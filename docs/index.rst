@@ -11,14 +11,12 @@ Welcome to Synfig developers documentation!
    :caption: Contents:
 
    common/building
-   tutorials
+   common/tutorials/index
    common/dependencies
    common/release
    common/roadmap
    common/hotkeys
    common/random
-   
-
 
 
 Indices and tables
