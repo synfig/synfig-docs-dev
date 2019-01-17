@@ -2,7 +2,6 @@ Application
 ===========
 
 Synfig GSoC application (draft) 2019
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Org profile:**
 
