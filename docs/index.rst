@@ -15,6 +15,7 @@ Welcome to Synfig developers documentation!
    common/dependencies
    common/release
    common/roadmap
+   gsoc
    common/hotkeys
    common/random
 
