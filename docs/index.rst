@@ -11,7 +11,7 @@ Welcome to Synfig developers documentation!
    :caption: Contents:
 
    common/building
-   common/tutorials/index
+   tutorials
    common/dependencies
    common/release
    common/roadmap
