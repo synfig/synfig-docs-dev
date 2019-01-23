@@ -13,6 +13,7 @@ Welcome to Synfig developers documentation!
    common/building
    tutorials
    common/dependencies
+   common/packaging
    common/release
    common/roadmap
    gsoc
