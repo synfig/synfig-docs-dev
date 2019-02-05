@@ -16,19 +16,19 @@ If you have a project idea, edit the "Project Ideas" section below by filling th
 
     A descriptive title
     ~~~~~~~~~~~~~~~~~~~
-    **Description**
+    **- Description**
 
     A brief description about the project
 
-    **Expected Results**
+    **- Expected Results**
 
     What benefit this deliver?
 
-    **Difficulty** Easy | Medium | High
+    **- Difficulty** Easy | Medium | High
 
-    **Skills required*** Knowledge Prerequisite
+    **- Skills required*** Knowledge Prerequisite
 
-    **Mentor(s)** Put your name if you are willing to mentor + other mentors.
+    **- Mentor(s)** Put your name if you are willing to mentor + other mentors.
 
 *Please mention the following as comment on your proposal pr*
 
@@ -42,138 +42,138 @@ Projects Ideas
 Export for Web
 ~~~~~~~~~~~~~~
 
-**Description**
+**- Description**
 
 Allow to export animation for web through Lottie export format (http://airbnb.io/lottie/). See this page for details - https://github.com/synfig/synfig/issues/704
 
-**Expected Results**
+**- Expected Results**
 
 Synfig becomes a platform for creating animated web content.
 
-**Difficulty** Medium
+**- Difficulty** Medium
 
-**Skills required** C++ or Python,
+**- Skills required** C++ or Python,
 
-**Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
+**- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
 
 
 Editable animation curves in Graphs Panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-**Description**
+**- Description**
 
 A possibility to edit animation curves in Graphs Panel, in the same way as we can do that with bezier curves on workarea. See this page for details - https://github.com/synfig/synfig/issues/267
 
-**Expected Results**
+**- Expected Results**
 
 Editing animation curves is a must-have feature for professional animators. Implementing this will get Synfig closer to professional animation tool.
 
-**Difficulty** Easy
+**- Difficulty** Easy
 
-**Skills required** C++, GTKmm
+**- Skills required** C++, GTKmm
 
-**Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
+**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
 
 
 Skeleton Tool
 ~~~~~~~~~~~~~
 
-**Description**
+**- Description**
 
 Currently the skeleton is created by adding a Skeleton Layer (via "Layer"->"New Layer"->"Other"->"Skeleton") and adding bones one-by-one through context menu. This is tedious and non-intuitive. It would be better to construct Skeleton in the same way as we can construct splines (using Spline Tool). So the proposal is to add Skeleton Tool, which allows user to "draw" bones and set their parent-child relationships.
 
-**Expected Results**
+**- Expected Results**
 
 Simpler and faster Skeleton construction. Creating bones will be intuitively visible for new users (exposed as tool in Toolbox).
 
-**Difficulty** Medium
+**- Difficulty** Medium
 
-**Skills required** C++, GTKmm
+**- Skills required** C++, GTKmm
 
-**Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
+**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
 
 Vectorization of bitmaps
 ~~~~~~~~~~~~~~~~~~~~~~~~
-**Description**
+**- Description**
 
 Allow to convert bitmap images to vector data with a single command, through integration with Potrace (http://potrace.sourceforge.net/). Alternative - instead of Potrace, use an algorithm of vectorization from OpenToonz (https://opentoonz.readthedocs.io/ja/latest/drawing_animation_levels.html#converting-raster-drawings-to-vectors), which works better.
 
-**Expected Results**
+**- Expected Results**
 
 User can quickly convert any bitmap image to vector and get resolution-independent image, available for edit.
 
-**Difficulty** Easy (Potrace) - Medium (OpenToonz)
+**- Difficulty** Easy (Potrace) - Medium (OpenToonz)
 
-**Skills required** C++
+**- Skills required** C++
 
-**Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
+**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
 
 Implement generic waypoint editing operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Description**
+**- Description**
 
 Allow user to manipulate multiple waypoints in TimeTrack Panel. See this page for details - https://github.com/synfig/synfig/issues/266
 
-**Expected Results**
+**- Expected Results**
 
 This will greatly simplify process of tweaking animation for user.
 
-**Difficulty** Medium
+**- Difficulty** Medium
 
-**Skills required** C++
+**- Skills required** C++
 
-**Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
+**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
 
 Simplify building process by utilizing Conan C++ package manager
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Description**
+**- Description**
 
 Integrate Conan C/C++ package manager (https://conan.io/) to provide all required dependencies for building Synfig on any platform. See this page for details - https://github.com/synfig/synfig/issues/666
 
-**Expected Results**
+**- Expected Results**
 
 Developers can easily set up build environment on any platform and any toolchain.
 
-**Difficulty** Easy
+**- Difficulty** Easy
 
-**Skills required** CMake, Autotools, MSYS2
+**- Skills required** CMake, Autotools, MSYS2
 
-**Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
+**- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
 
 OpenToonz importer
 ~~~~~~~~~~~~~~~~~~
 
-**Description**
+**- Description**
 
 Synfig at its current status is not good for frame-by-frame animations. But it is good for morphing vectors, cut-out and motion design. With the ability to import OpenToonz files (which is good for vector frame-by-frame animation), Synfig users can get best of two worlds and use those applications together.
 
-**Expected Results**
+**- Expected Results**
 
 Synfig users will be able to use frame-by-frame animations created in OpenToonz.
 
-**Difficulty** High
+**- Difficulty** High
 
-**Skills required** C++ (and maybe Python)
+**- Skills required** C++ (and maybe Python)
 
-**Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
+**- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
 
 Text Layer rewrite
 ~~~~~~~~~~~~~~~~~~~~
 
-**Description**
+**- Description**
 
 Current implementation of Text Layer uses old rendering engine, which makes it really slow. The task is to rewrite the Text Tool for new rendering engine, with consideration of solving its current issues - https://github.com/synfig/synfig/labels/Text
 
-**Expected Results**
+**- Expected Results**
 
 A usable Text Tool in Synfig.
 
-**Difficulty** High
+**- Difficulty** High
 
-**Skills required** C++, Freetype
+**- Skills required** C++, Freetype
 
-**Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
+**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
 
 
 
