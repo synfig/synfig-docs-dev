@@ -86,7 +86,7 @@ Synfig is a 2D open-source animation software which allows to create motion grap
 
 **Long Description**
 
-.. codeblock:: markdown
+::
 
     About
     =====
