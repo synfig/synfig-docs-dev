@@ -14,7 +14,7 @@ We would like to allow our student contributors to dedicate their full time to w
 
 **How will you keep mentors engaged with their students?**
 
-The student opens GitHub's issue, which is coresponding to his project and there provides weekly public reports about his progress. Every mentor should follow reports and provide on-time feedback and advices to student via public discussion in relevant GitHub's issue or privately via email.
+The student opens GitHub's issue, which is coresponding to his project and there provides weekly public reports about his progress. Every mentor should follow reports and provide on-time feedback and advices to student via public discussion in relevant GitHub's issue or privately via email. Also, every mentor is required to contact student at least twice a week.
 
 Administrator of the project also watches reports and ensures that feedback provided by mentors on time.
 
@@ -28,7 +28,8 @@ Every student is required to write a short report about his progress every week,
 
 **How will you get your students involved in your community during GSoC?**
 
-...
+In general, we require students to be involved into our community BEFORE GSoC starts and their participation activity influences if their GSoC idea get accepted as a project or not.
+All participating students are advised to subscribe (watch) our main repository at GitHub (https://github.com/synfig/synfig) to receive notifications about discussions.
 
 **How will you keep students involved with your community after GSoC?**
 
@@ -39,6 +40,10 @@ Given that we put initial student motivation in the first place, we understand t
 **Has your org been accepted as a mentoring org in Google Summer of Code before?**
 
 No.
+
+**If your org has applied for GSoC before but not been accepted, select the years:**
+
+2008, 2010, 2012
 
 **What year was your project started?**
 
@@ -73,14 +78,58 @@ C++, GTKmm
 Vector Graphics, Animation
 
 **Ideas List**
+https://synfig-docs-dev.readthedocs.io/en/latest/gsoc/2019/ideas.html#projects-ideas
 
 **Short Description**
 
+Synfig is a 2D open-source animation software which allows to create motion graphics and cut-out animations for product explanation videos, tutorial videos, etc.
+
 **Long Description**
+
+.. codeblock:: markdown
+
+    About
+    =====
+    Synfig is a 2D open-source animation software. It is capable to produce vector artwork and also can work with bitmap images. 
+
+    The main concept of Synfig is "tweening" - you can define object positions or shapes of vector objects at certain points of time and program will interpolate in-between frames automatically. You can also use bones to control your animation on higher level.
+
+    With Synfig you can easily create motion graphics and cut-out animations for product explanation videos, tutorial videos, and more.
+
+    Main features
+    ===========
+
+    **- Vector tweening**
+    Transform any vector shape into another! Synfig gives you powerful tools to control every vertex of your vector artwork. Just set the key positions and inbetween frames will be calculated automatically.
+
+    **- Layers and Filters**
+    Synfig provides 50+ layers to create artwork and animation of any complexity. Choose from various layer types: geometric, gradients, filters, distortions, transformations, fractals and others. 
+
+    **- Bones**
+    A bone system allows to create cutout animation using bitmap images or control your vector artwork. With an additional Skeleton Distortion layer it is possible to apply complex deformations to bitmap artwork.
+
+    **- Linking elements**
+    You can link parameters of various layers – directly or through mathematical expressions. This allows you to create advanced character puppets and other dynamic structures.
+
+    Examples of works created with Synfig
+    ==============================
+
+    * [Morevna Episode 3](https://www.youtube.com/watch?v=ecVv2IB7f5k)
+    * [Polar Detective](https://www.youtube.com/watch?v=lSL-NdoOLQc)
+    * [Synfig Promo Video](https://www.youtube.com/watch?v=N8SF_-gJ0_w)
+    * [Demo Reel by VanChatto](https://www.youtube.com/watch?v=fWAxFc9FPwA)
+    * [The Deadline](https://www.youtube.com/watch?v=3dVamedBYq8)
+    * [Pluto takes life](https://www.youtube.com/watch?v=cgSI3IcyXhs)
+
+
 
 **Proposal Process / Application Instructions**
 
+
+
 **Proposal Tags**
+
+feature, improvement, bugfix, infrastructure
 
 **Contacts Methods:**
 

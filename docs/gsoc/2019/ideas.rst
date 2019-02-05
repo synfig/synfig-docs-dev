@@ -1,4 +1,4 @@
-Google Summer of Code
+Ideas List
 =====================
 
 `GSoC <https://summerofcode.withgoogle.com>`_ is a global program focused on bringing more student developers into open source software development. Students work with an open source organization on a 3 month programming project during their break from school. 
@@ -9,15 +9,16 @@ This year we plan to apply to Google Summer of Code. Currently we are looking fo
 
 Propose Project
 ---------------
-If you have a project idea, edit the project section by filling the required details and sending a pull request(this page is editable `here <https://github.com/synfig/synfig-docs-dev/tree/master/docs/common/openprojects.rst>`_), even if you could not mentor (we will find a mentor).
+If you have a project idea, edit the "Project Ideas" section below by filling the required details and sending a pull request (this page is editable `here <https://github.com/synfig/synfig-docs-dev/blob/master/docs/gsoc/2019/ideas.rst`_), even if you could not mentor (we will find a mentor).
 
 **Required information for project proposal**
 
 :Title: A descriptive title
-:Description: A small description about the project
-:Mentor(s): Put your name if you are willing to mentor + other mentors.
+:Description: A brief description about the project
+:Expected results: What benefit this deliver?
 :Difficulty: Easy | Medium | High
 :Skills required:
+:Mentor(s): Put your name if you are willing to mentor + other mentors.
 
 *Please mention the following as comment on your proposal pr*
 
@@ -31,4 +32,5 @@ Projects Ideas
 
 Contacts
 --------
- 
+
+https://www.synfig.org/contact/
