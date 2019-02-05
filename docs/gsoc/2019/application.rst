@@ -125,7 +125,46 @@ Synfig is a 2D open-source animation software which allows to create motion grap
 
 **Proposal Process / Application Instructions**
 
+::
 
+    Before applying, please make sure to read [getting started page](https://synfig-docs-dev.readthedocs.io/en/latest/gsoc/2019/getting-started.html). 
+
+    Application Template
+    ====================
+
+    **Name**
+
+    Please provide your full name
+
+    **Email / Social / Web**
+
+    Where can we contact you? If you have a web page you'd like us to know about, please include it. Make sure to mention your Facebook, Twitter or other identities.
+
+    **Synopsis**
+
+    A short description of your planned GSoC project.
+
+    **Benefits**
+
+    Describe how your project will benefit Synfig. Will it benefit artists using Synfig? Will it be an aid for future Synfig development?
+
+    **Deliverables**
+
+    Provide a user-level summary of the final output or results of your project. How does it integrate in Synfig, and how does it cooperate with the rest of Synfig's features? Note that end-user documentation should be one of the deliverables as well.
+
+    **Project Details**
+
+    A more detailed description.
+
+    **Project Schedule**
+
+    How long will the project take? When can you begin work? 
+    Include an estimated timeline of the project with mini-milestones.
+    Do you have any possible school or work conflicts with your schedule?
+
+    ** Short Bio**
+
+    Please let us know who are you, what are you studying (and where), and what activities do you enjoy? What is your experience using Synfig or animation or other computer graphics programs? What code development projects you've participated in? What makes you the best person to work on this project? If you have any history submitting bug fixes or patches to our issue tracker at GitHub, please indicate what you have done.
 
 **Proposal Tags**
 

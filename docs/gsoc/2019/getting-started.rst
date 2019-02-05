@@ -10,7 +10,7 @@ Before applying, please check with our [ideas page](https://synfig-docs-dev.read
 Also, please make sure to read the following tips:
 
 Application FAQs
-================
+~~~~~~~~~~~~~~~~
 
 **Q: What will most help my odds of acceptance?**
 
@@ -30,7 +30,7 @@ A: See [this documentation](https://synfig-docs-dev.readthedocs.io/en/latest/com
 A: We recommend to become familiar with existing Synfig functionality before you start any coding. You can start with [beginner's tutorials](https://wiki.synfig.org/Category:Tutorials). Also, you can request a free access to [our video training course](https://www.udemy.com/synfig-studio-cutout-animation-en/), which allow you to grab all basicsin the shortest time. Just mail us via [contact page](https://www.synfig.org/contact/) letting us know that you are aspiring GSoC student - and we will send you a link for free access.
 
 Application Template
-====================
+~~~~~~~~~~~~~~~~~~~~
 
 **Name**
 
