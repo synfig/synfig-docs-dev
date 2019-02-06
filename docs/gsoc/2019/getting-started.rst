@@ -62,6 +62,6 @@ How long will the project take? When can you begin work?
 Include an estimated timeline of the project with mini-milestones.
 Do you have any possible school or work conflicts with your schedule?
 
-** Short Bio**
+**Short Bio**
 
 Please let us know who are you, what are you studying (and where), and what activities do you enjoy? What is your experience using Synfig or animation or other computer graphics programs? What code development projects you've participated in? What makes you the best person to work on this project? If you have any history submitting bug fixes or patches to our issue tracker at GitHub, please indicate what you have done.

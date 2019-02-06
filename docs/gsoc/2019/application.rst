@@ -14,7 +14,7 @@ We would like to allow our student contributors to dedicate their full time to w
 
 **How will you keep mentors engaged with their students?**
 
-The student opens GitHub's issue, which is coresponding to his project and there provides weekly public reports about his progress. Every mentor should follow reports and provide on-time feedback and advices to student via public discussion in relevant GitHub's issue or privately via email. Also, every mentor is required to contact student at least twice a week.
+The student opens GitHub's issue, which is coresponding to his project and there provides weekly public reports about his progress. Every mentor should follow reports and provide on-time feedback and consultation to student via public discussion in relevant GitHub's issue or privately via email. Also, every mentor is required to contact student at least twice a week.
 
 Administrator of the project also watches reports and ensures that feedback provided by mentors on time.
 
@@ -45,6 +45,10 @@ No.
 
 2008, 2010, 2012
 
+**Do you have any GSoC participant who can vouch for your project?**
+
+Information hidden.
+
 **What year was your project started?**
 
 2006
@@ -71,11 +75,11 @@ GPLv3
 
 **Technology tags (Enter keywords for the primary specific technologies your organization uses. Examples: Python, Javascript, MySQL, Hadoop, OpenGL, Arduino)**
 
-C++, GTKmm
+c++, gtk, GTKmm
 
 **Topic Tags (Enter keywords for general topics that describe your organization. Examples: Vision, Robotics, Cloud, Graphics, Web, Real time )**
 
-Vector Graphics, Animation
+vector graphics, animation
 
 **Ideas List**
 https://synfig-docs-dev.readthedocs.io/en/latest/gsoc/2019/ideas.html#projects-ideas
@@ -171,6 +175,8 @@ Synfig is a 2D open-source animation software which allows to create motion grap
 feature, improvement, bugfix, infrastructure
 
 **Contacts Methods:**
+
+Mailing List: https://forums.synfig.org/c/development
 
 General Email: contact -AT- synfig -DOT- org
 
