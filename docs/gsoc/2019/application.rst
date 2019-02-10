@@ -1,7 +1,7 @@
 Application
 ===========
 
-Synfig GSoC application (draft) 2019
+Synfig GSoC application 2019
 ------------------------------------
 
 **Why does your org want to participate in Google Summer of Code?**
