@@ -21,10 +21,10 @@ Bones system
 Animation tools
 ~~~~~~~~~~~~~~~
 
-* Allow to edit animation curves
-* Waypoint editing tools: multiple selection, move, scale.
-* Onion skin function rework
-* Ghost waypoints
+* Editable animation curves in Graphs Panel (`issue #267 <https://github.com/synfig/synfig/issues/267>`_).
+* Waypoint editing tools: multiple selection, move, scale (`issue #266 <https://github.com/synfig/synfig/issues/266>`_).
+* Onion skin function rework (`issue #600 <https://github.com/synfig/synfig/issues/600>`_).
+* Ghost waypoints.
 * Multiple timelines. Timeline mixer. (?)
 
 Sound
