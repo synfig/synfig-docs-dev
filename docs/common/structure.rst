@@ -15,21 +15,21 @@ Synfig is divided into three components: ETL, synfig-core and synfig-studio.
 
 The structure of **synfig-core** is:
 
-- ``synfig-core/src/synfig/`` - Code of **"libsynfig"** library. This is actually the main part of synfig-core. It contains code of render engine and routines for reading/writing Synfig's files. The **libsynfig** library is used by all other Synfig's components.
-- ``synfig-core/src/modules/`` - Functionality of **libsynfig** can be extended with modules and this directory is a place for them. A module can do following things:
-   - Add support for importing specific file format(s). Examples:
-      - ``synfig-core/src/modules/mod_png/mptr_png.cpp``
-      - ``synfig-core/src/modules/mod_bmp/mptr_bmp.cpp``
-   - Add support for exporting (rendering) to specific file format(s). Examples:
-      - ``synfig-core/src/modules/mod_png/trgt_png.cpp``
-      - ``synfig-core/src/modules/mod_gif/trgt_gif.cpp``
-   - Implement a layer type(s). Examples:
-      -  ``synfig-core/src/modules/mod_geometry/circle.cpp`` - Circle Layer
-      -  ``synfig-core/src/modules/lyr_freetype/lyr_freetype.cpp`` - Text Layer
-      -  ``synfig-core/src/modules/mod_noise/distort.cpp`` - Noise Distort Layer	 
-   - Implement a **valuenode** (see below on valuenodes). Example:
-      - ``synfig-core/src/modules/mod_noise/valuenode_random.cpp``
-- ``synfig-core/src/tool/`` - Code of synfig command-line tool (binary is simply called ``synfig``). It uses **libsynfig** to read Synfig files files and render them in any supported format.
+* ``synfig-core/src/synfig/`` - Code of **"libsynfig"** library. This is actually the main part of synfig-core. It contains code of render engine and routines for reading/writing Synfig's files. The **libsynfig** library is used by all other Synfig's components.
+* ``synfig-core/src/modules/`` - Functionality of **libsynfig** can be extended with modules and this directory is a place for them. A module can do following things:
+   * Add support for importing specific file format(s). Examples:
+      * ``synfig-core/src/modules/mod_png/mptr_png.cpp``
+      * ``synfig-core/src/modules/mod_bmp/mptr_bmp.cpp``
+   * Add support for exporting (rendering) to specific file format(s). Examples:
+      * ``synfig-core/src/modules/mod_png/trgt_png.cpp``
+      * ``synfig-core/src/modules/mod_gif/trgt_gif.cpp``
+   * Implement a layer type(s). Examples:
+      *  ``synfig-core/src/modules/mod_geometry/circle.cpp`` - Circle Layer
+      *  ``synfig-core/src/modules/lyr_freetype/lyr_freetype.cpp`` - Text Layer
+      *  ``synfig-core/src/modules/mod_noise/distort.cpp`` - Noise Distort Layer	 
+   * Implement a **valuenode** (see below on valuenodes). Example:
+      * ``synfig-core/src/modules/mod_noise/valuenode_random.cpp``
+* ``synfig-core/src/tool/`` - Code of synfig command-line tool (binary is simply called ``synfig``). It uses **libsynfig** to read Synfig files files and render them in any supported format.
 
 Main components of **synfig-studio**:
 
