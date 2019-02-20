@@ -131,34 +131,59 @@ In simplest case layer parameter can be defined by a value of particular type - 
 
    ``synfig-core/src/synfig/base_types.cpp``
    
-In complex case parameter can be defined by **ValueNode**. ValueNode is a formula that produces a value from some calculations. Each ValueNode has parameters that define input data for formula. Parameters of ValueNode can also be represented by ValueBases or ValueNodes, so it is possible to construct nested formulas.
+In complex case parameter can be defined by **ValueNode**. ValueNode is a formula that produces a value from some calculations. Each ValueNode has parameters that define input data for formula. Parameters of ValueNode can also be represented by ValueBases (static value) or ValueNodes (calculated value), so it is possible to construct nested formulas.
 
 .. note::
 
    ``synfig-core/src/synfig/valuenodes/``
    ``synfig-core/src/modules/mod_noise/valuenode_random.cpp``
 
-It is possible to link ValueNodes and ValueBases for different layers.
+It is possible to link ValueNodes and ValueBases among different parameters (and among different layers).
+
+I.e. for two circle layers A and B we can link their Radius parameters (both static values, ValueBase). In this case, changing radius of one circle will change radius of another (see https://wiki.synfig.org/Doc:Getting_Started#Linking).
+
+In more complex case we can have Radius parameter of circle A defined by Scale ValueNode. The Scale ValueNode have two parameters - "Link" and "Scalar". If "scalar" parameter is set to static value 2.0 and "Link" parameter is linked to "Radius" value of circle B, then circle A will always have a radius twice bigger than circle B. 
 
 TODO: Make an illustration of layers sharing same ValueNodes/ValueBases
 
+Among all different ValueNodes there is a special ValueNode, which deserves a special attention - it is called "Animated".
 
+.. note::
+
+   ``synfig-core/src/synfig/valuenodes/valuenode_animated.cpp``
+   ``synfig-core/src/synfig/valuenodes/valuenode_animated.h``
+   ``synfig-core/src/synfig/valuenodes/valuenode_animatedinterface.cpp``
+   ``synfig-core/src/synfig/valuenodes/valuenode_animatedinterface.h``
+
+This ValueNode stores multiple values of parameter for different moments of time and calculates interpolated values between them.
+
+When Synfig needs to render a frame it starts by evaluating parameters of layers. If a parameter is ValueNode (calculated value), then it evaluates its parameters. This process works recursively, going all the way down to the leaf nodes, calculating their value, then calculating the value of their parent, and so on until reaching the root of the node tree.
+
+Since ValueNodes can be animated (meaning that they can change value at diffeerent points of time), so the entire tree needs to be evaluated on each frame.
+
+Once a layer has the values for it's parameters, it *renders* the intended shape or effect onto a raster. A raster is an array of pixels, each pixel with its color/opacity. It doesn't carry any information about the vector shapes that it's representing, only their pixel data.
+
+Then comes blending. The raster result of the previous layers is combined with the current one according to the set blending method. Some layers (transforms, distortions, etc) just modify the raster result of the previous layers and pass that on to the next layer, instead of blending.
+
+Note that a layer sees all the layers underneath as a single combined raster. That layer cannot distinguish the pixel data that comes from the next layer that's underneath, from pixel data from any other layer that's underneath.
+
+.. image:: ../images/synfig-rendering-001.png
+   :width: 600
+
+On diagram: "V" stands for ValueNodes, "L" for layers, "BL" for blank layer (completely transparent layer default background), "BM" for blend method. 
 
 To be continued...
 
 ..
-	TODO: Include info from https://wiki.synfig.org/Dev:How_Synfig_Works
-
-	TODO: Write about linking
-
-	TODO: Write about animated ValueNodes.
-
 	TODO: Write about rendering engines.
-  synfigapp
-  ---------
-
+	
+	Finally, here is a description of how render engine works.
+	
+	synfigapp
+	---------
+	
 	**main**
-
+	
 	../synfigapp/main - stores information for the entire application (fg/bg colors, width, settings, input devices)
 	 
 	../synfigapp/instance - information unique for each instance (root canvas, canvas interface list, selection manager, save/save_as)
@@ -175,9 +200,9 @@ To be continued...
 	../synfigapp/selectionmanager (look-into) - selection manager interface, null selection manager
 	../synfigapp/editmode - edit mode (normal, animated)
 	../synfigapp/uimanager - interface class for a UI interface (Dialogs such as yes_no, yes_no_cancel, etc) The actual UI interface used is defined elsewhere
-
+	
 	**action system**
-
+	
 	../synfigapp/action - defines types of actions: action, undoable, canvasspecific, super, group
 	../synfigapp/action_param - defines parameters for action
 	../synfigapp/action_system - action system and passive grouper
