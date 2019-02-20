@@ -136,6 +136,7 @@ In complex case parameter can be defined by **ValueNode**. ValueNode is a formul
 .. note::
 
    ``synfig-core/src/synfig/valuenodes/``
+   
    ``synfig-core/src/modules/mod_noise/valuenode_random.cpp``
 
 It is possible to link ValueNodes and ValueBases among different parameters (and among different layers).
@@ -151,8 +152,11 @@ Among all different ValueNodes there is a special ValueNode, which deserves a sp
 .. note::
 
    ``synfig-core/src/synfig/valuenodes/valuenode_animated.cpp``
+   
    ``synfig-core/src/synfig/valuenodes/valuenode_animated.h``
+   
    ``synfig-core/src/synfig/valuenodes/valuenode_animatedinterface.cpp``
+   
    ``synfig-core/src/synfig/valuenodes/valuenode_animatedinterface.h``
 
 This ValueNode stores multiple values of parameter for different moments of time and calculates interpolated values between them.
