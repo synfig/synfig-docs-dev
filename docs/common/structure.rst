@@ -47,7 +47,7 @@ So, we have following structure:
              synfig-cli -------> libsynfig
 
 
-How Synfig works
+synfig-core
 ----------------
 
 Let's take a few moments to understand the main concepts.
