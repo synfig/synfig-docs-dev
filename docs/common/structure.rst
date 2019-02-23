@@ -48,7 +48,7 @@ So, we have following structure:
 
 
 synfig-core
-----------------
+------------
 
 Layers
 ~~~~~~
@@ -192,11 +192,105 @@ On diagram: "V" stands for ValueNodes, "L" for layers, "BL" for blank layer (com
 Render engine
 ~~~~~~~~~~~~~
 
-TODO: Write about rendering engines.
+Now, let's talk about render engines.
+
+In fact there are two of them now.
+
+The new one (called "Cobra") is the our latest development andit is the future of Synfig.
+
+And there is an old one (without a name). As of version 1.2.0 it is deactivated. But some layers are still use its code, in case if they are not ported to Cobra yet (Synfig fallbacks to old render engine). This is generally works much slower comparing to case when layer's code is ported to Cobra.
+
+If you examine code of any layer, you will see a function called ``accelerated_render()`` - this is a code of old render engine.
+
+**Old rendering engine** examines stack of layers in two passes. 
+
+First, it is going from top to bottom and applies required transformations (when possible). Also, it defines required context for rendering each layer. On second pass it goes from bottom to top. It is doing actual rendering for each layer and mixing it according to Blend Method with previous layers (context).
+
+I.e., if we have Stretch Layer on top of Shape Layer, then on first pass Synfig goes down and applies stretch to all vertices of Shape Layer, thus eliminating Stretch from operations. Then on rendering stage it renders Shape Layer only (as stretch is already applied on first pass).
+
+
+On the other hand, if we have Blur Layer between Stretch Layer and Shape Layer, then it is not possible to apply Stretch (because Blur is a raster-based effect). So it doesn't eliminates Stretch on first pass. On second pass it renders all 3 layers - Shape, then blurs it and finally stretches result.
+
+Now, let's talk about **Cobra engine**, which is more advanced.
+
+.. note::
+
+   The code of Cobra render engine is located in ``/synfig-core/src/synfig/rendering``
+
+Its main concepts are: *Task, Queue, Optimizer, Sub-Engine* and *Renderer*.
+
+**Task** is the main primitive of Cobra render engine that does something. This is like Layer in Synfig's concept, but even more simple/low-level. I.e. there is a task for blending, task for drawing filled region, task for affine transformation, etc. 
+
+For example, Outline and Region Layers are executed by the same task - the one that drawing filled region (Task Contour).
+
+.. note::
+
+  ``synfig-core/src/synfig/rendering/common/task/``
+  
+  ``synfig-core/src/synfig/rendering/software/task/``
+  
+  ``synfig-core/src/synfig/rendering/opengl/task/``
+
+So, why we need both Tasks and Layers? How do both concepts relate to each other? Layers are good for user (they help to construct and organize animation document) and Tasks are good for render engine (they are not good for editing, but allow to render animation document as fast as possible). Tasks describe user's animation document in a low-level form, in a language that is suitable for render engine.
+
+In a very simple view Cobra render engine also works in two passes. In first pass it takes a tree of Layers, and constructs a **Queue** of Tasks. In second pass it executes tasks in Queue (does rendering).
+
+.. note::
+
+  ``synfig-core/src/synfig/rendering/renderqueue.cpp``
+
+Queue is a linear list, but Tasks can have dependencies. I.e. task A can depend on task B and C. That means when render engine processes Queue, it skips task A unless taks B and C are ready. The task A is executed in next pass, after B and C are done. This allows to organize parallel (multi-threaded) rendering.
+
+When Cobra does its first pass (transforms Layers to Queue of Tasks) it applies **Optimizers**.
+
+Optimizers are analyzing list of tasks and re-organizing it to speedup rendering process.
+
+.. note::
+
+  ``synfig-core/src/synfig/rendering/common/optimizer/``
+
+
+For example, there is an optimizer that looks for a sequences of Region/Outline Layers which could be merged into one task and thus rendered in single pass (without intermediate blending functions).
+
+Now let's get to **Sub-Engines**.
+
+It is clear there is a possibility to implement one particular task in different ways. For example, we can draw a vector region using straight-forward CPU calculations (software method), or activate OpenGL and use its functions to draw the same shape using videocard (hardware-accelerated).
+
+In the same fashion, we can do Gaussian blur operation with straight-forward CPU calculations, or utilize hardware-accelerated methods.
+
+So, all tasks are grouped by implementation method, forming a Sub-Engines.
+
+Currently we have 2 sub-engines - "software" (the main one, all tasks done with calculations on CPU) and "opengl" (all tasks are hardware-accelerated using OpenGL, it is currently broken).
+
+* Software Sub-Engine - ```synfig-core/src/synfig/rendering/software/```
+* Tasks of Software Sub-Engine - ```synfig-core/src/synfig/rendering/software/task/```
+* OpenGL Sub-Engine - ```synfig-core/src/synfig/rendering/opengl/```
+* Tasks of OpenGL Sub-Engine - ```synfig-core/src/synfig/rendering/opengl/task/``
+
+Generally, it is possible one Sub-Engine can use tasks from other Sub-Engine. I.e., when OpenGL Sub-Engine is active and there is some task missing, then it can be replaced by task from Software Sub-Engine.
+
+Each Sub-Engine can have several configurations with different set of Optimizers. We call those configurations **Renderers** - and this is what user actually see when choosing renderer via "Edit" -> "Preferences..." -> "Render".
+
+.. image:: ../images/render-preferences-001.png
+   :width: 600
+
+For example, "Draft" and "LowRes" rendering modes are just Renderers of Software Sub-Engine.
+
+.. note::
+
+  - Default Software Renderer - ``synfig-core/src/synfig/rendering/software/renderersw.cpp``
+  - Safe-mode Software Renderer (not uses Optimizers) - ``synfig-core/src/synfig/rendering/software/renderersafe.cpp``
+  - Draft Software Renderer - ``synfig-core/src/synfig/rendering/software/rendererdraftsw.cpp``
+  - LowRes Software Renderer - ``synfig-core/src/synfig/rendering/software/rendererlowressw.cpp``
+
+
+Now, let's get back to Layers.
+
+We already know how Layers define their rendering for old render engine. But how this done for Cobra render engine?
+
+If layer is ported to Cobra angine, then  you will see ``build_rendering_task_vfunc()`` or ``build_composite_task_vfunc()`` or ``build_composite_fork_task_vfunc()`` functions. So, in Cobra engine layers just use tasks as building blocks to construct structures hich produce required output.
 
 ..
-	Finally, here is a description of how render engine works.
-	
 	synfigapp
 	---------
 	
