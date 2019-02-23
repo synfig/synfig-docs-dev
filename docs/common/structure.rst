@@ -50,7 +50,8 @@ So, we have following structure:
 synfig-core
 ----------------
 
-Let's take a few moments to understand the main concepts.
+Layers
+~~~~~~
 
 The basic building block in Synfig is **Layer**.
 
@@ -85,6 +86,9 @@ Layers are placed in particular order.
 
 Layers are rendered from bottom to top.
 
+Context and Blend Methods
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 All graphic information under particular layer is called its **Context**.
 
 In example above ``Layer 2`` together with ``Layer 1`` are context of ``Layer 3``.
@@ -98,6 +102,9 @@ If ``Layer 3`` is a graphic layer, then it displays some graphic information, wh
    TODO: Add link to list of available blend methods
 
 If ``Layer 3`` is a filter layer, then it transforms graphic information created by ``Layer 1`` and ``Layer 2``.
+
+Canvas
+~~~~~~
 
 A structure which stores a list of layers is called **Canvas**.
 
@@ -122,6 +129,9 @@ Paste Canvas can be **inline** (i.e. include all its content in itself) or **lin
    Loading Synfig file:  ``synfig-core/src/synfig/loadcanvas.cpp``
    
    Saving Synfig file: ``synfig-core/src/synfig/savecanvas.cpp``
+
+ValueNodes
+~~~~~~~~~~
 
 Every layer has a set of **Parameters**, which define how layer is rendered (and *what* it is rendering).
 
@@ -161,6 +171,9 @@ Among all different ValueNodes there is a special ValueNode, which deserves a sp
 
 This ValueNode stores multiple values of parameter for different moments of time and calculates interpolated values between them.
 
+Rendering process
+~~~~~~~~~~~~~~~~~
+
 When Synfig needs to render a frame it starts by evaluating parameters of layers. If a parameter is ValueNode (calculated value), then it evaluates its parameters. This process works recursively, going all the way down to the leaf nodes, calculating their value, then calculating the value of their parent, and so on until reaching the root of the node tree.
 
 Since ValueNodes can be animated (meaning that they can change value at diffeerent points of time), so the entire tree needs to be evaluated on each frame.
@@ -176,11 +189,12 @@ Note that a layer sees all the layers underneath as a single combined raster. Th
 
 On diagram: "V" stands for ValueNodes, "L" for layers, "BL" for blank layer (completely transparent layer default background), "BM" for blend method. 
 
-To be continued...
+Render engine
+~~~~~~~~~~~~~
+
+TODO: Write about rendering engines.
 
 ..
-	TODO: Write about rendering engines.
-	
 	Finally, here is a description of how render engine works.
 	
 	synfigapp
