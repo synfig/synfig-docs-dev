@@ -11,14 +11,15 @@ Welcome to Synfig developers documentation!
    :caption: Contents:
 
    common/building
-   tutorials
    common/dependencies
+   common/structure
+   tutorials
+   common/packaging
    common/release
    common/roadmap
+   gsoc
    common/hotkeys
    common/random
-   
-
 
 
 Indices and tables

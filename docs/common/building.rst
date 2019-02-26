@@ -1,3 +1,5 @@
+.. _building:
+
 Building Synfig
 ===============
 
@@ -126,7 +128,7 @@ When building is done, you can launch Synfig by executing
 Re-building your changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Of course it is not very convenient to run a full rebuild process on every change. So, the script provides a set of arguments that allow you to execute particular stages of the build:
+Of course it is not very efficient to run a full rebuild process on every change. So, the script provides a set of arguments that allow you to execute particular stages of the build:
 
 The syntax is:
 
@@ -192,17 +194,17 @@ Since "make" doesn't require any parameters, the same result can be achieved by 
 
     ./2-build-debug.sh all make
 
-Please consider some recommendations when to call particular phases.
+Here are some recommendations when to call particular phases:
 
 Considering the structure of Synfig (see first chapter of this article), we have following dependency chain:
 
-synfig-studio -> synfig-core -> ETL
+**synfig-studio** -> **synfig-core** -> **ETL**
 
 So, you should follow this logic:
 
-* when change is made to ETL, then rebuild everything - ETL, synfig-core and synfig-studio;
-* when change is made to synfig-core, then you can rebuild synfig-core and synfig-studio only;
-* when change is made to synfig-studio, then you need to rebuild synfig-studio only;
+* when change is made to **ETL**, then rebuild everything - **ETL**, **synfig-core** and **synfig-studio**;
+* when change is made to **synfig-core**, then you need to rebuild **synfig-core** and **synfig-studio** only;
+* when change is made to **synfig-studio**, then you have to to rebuild **synfig-studio** only;
 
 You might notice that if you rebuild simply by running "make install" that takes considerably less time than when you do a ful-cycle rebuild with "./configure" and then "make install".
 
@@ -210,7 +212,11 @@ So, when it is safe to skip "./configure"?
 
 The answer is: if you edited .h and .cpp files only, then it is safe to skip. In all other cases it is safer to re-start ./configure on rebuilding.
 
-Let's suppose you made changes in synfig-studio and want to rebuild it without re
+Let's suppose you made changes in **synfig-studio** (only .h and .cpp files) and want to rebuild it. The following command is enough:
+
+.. code:: bash
+
+    ./2-build-debug.sh studio make
 
 And finally a quick note about "build.conf.sample" file in the root of source repository.
 
