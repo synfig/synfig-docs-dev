@@ -29,7 +29,7 @@ The structure of **synfig-core** is:
       *  ``synfig-core/src/modules/mod_noise/distort.cpp`` - Noise Distort Layer	 
    * Implement a **valuenode** (see below on valuenodes). Example:
       * ``synfig-core/src/modules/mod_noise/valuenode_random.cpp``
-* ``synfig-core/src/tool/`` - Code of synfig command-line tool (binary is simply called ``synfig``). It uses **libsynfig** to read Synfig files files and render them in any supported format.
+* ``synfig-core/src/tool/`` - Code of synfig command-line tool (binary is simply called ``synfig``). It uses **libsynfig** to read Synfig files and render them in any supported format.
 
 Main components of **synfig-studio**:
 
@@ -59,7 +59,7 @@ The basic building block in Synfig is **Layer**.
 
    ``synfig-core/src/synfig/layer.cpp``
 
-Layer either displays some graphical information on the screen (circle, line, text, etc.), or does some transformation of graphic information *under* it - i.e. acts as **filter** (blur, translation, noise distortion, etc.).
+Layer either displays some graphical information on the screen (circle, line, text, etc.) or does some transformation of graphic information *under* it - i.e. acts as **filter** (blur, translation, noise distortion, etc.).
 
 .. note::
 
@@ -89,7 +89,7 @@ Layers are rendered from bottom to top.
 Context and Blend Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All graphic information under particular layer is called its **Context**.
+All graphics information under particular layer is called its **Context**.
 
 In example above ``Layer 2`` together with ``Layer 1`` are context of ``Layer 3``.
 
@@ -176,7 +176,7 @@ Rendering process
 
 When Synfig needs to render a frame it starts by evaluating parameters of layers. If a parameter is ValueNode (calculated value), then it evaluates its parameters. This process works recursively, going all the way down to the leaf nodes, calculating their value, then calculating the value of their parent, and so on until reaching the root of the node tree.
 
-Since ValueNodes can be animated (meaning that they can change value at diffeerent points of time), so the entire tree needs to be evaluated on each frame.
+Since ValueNodes can be animated (meaning that they can change value at different points of time), so the entire tree needs to be evaluated on each frame.
 
 Once a layer has the values for it's parameters, it *renders* the intended shape or effect onto a raster. A raster is an array of pixels, each pixel with its color/opacity. It doesn't carry any information about the vector shapes that it's representing, only their pixel data.
 
@@ -196,9 +196,9 @@ Now, let's talk about render engines.
 
 In fact there are two of them now.
 
-The new one (called "Cobra") is the our latest development andit is the future of Synfig.
+The new one (called "Cobra") is the our latest development and it is the future of Synfig.
 
-And there is an old one (without a name). As of version 1.2.0 it is deactivated. But some layers are still use its code, in case if they are not ported to Cobra yet (Synfig fallbacks to old render engine). This is generally works much slower comparing to case when layer's code is ported to Cobra.
+And there is an old one (without a name). As of version 1.2.0 it is deactivated. But some layers are still use its code, in case if they are not ported to Cobra yet (Synfig fallbacks to old render engine). This generally works much slower comparing to case when layer's code is ported to Cobra.
 
 If you examine code of any layer, you will see a function called ``accelerated_render()`` - this is a code of old render engine.
 
@@ -239,7 +239,7 @@ In a very simple view Cobra render engine also works in two passes. In first pas
 
   ``synfig-core/src/synfig/rendering/renderqueue.cpp``
 
-Queue is a linear list, but Tasks can have dependencies. I.e. task A can depend on task B and C. That means when render engine processes Queue, it skips task A unless taks B and C are ready. The task A is executed in next pass, after B and C are done. This allows to organize parallel (multi-threaded) rendering.
+Queue is a linear list, but Tasks can have dependencies. I.e. task A can depend on task B and C. That means when render engine processes Queue, it skips task A unless tasks B and C are ready. The task A is executed in next pass, after B and C are done. This allows to organize parallel (multi-threaded) rendering.
 
 When Cobra does its first pass (transforms Layers to Queue of Tasks) it applies **Optimizers**.
 
@@ -260,7 +260,7 @@ In the same fashion, we can do Gaussian blur operation with straight-forward CPU
 
 So, all tasks are grouped by implementation method, forming a Sub-Engines.
 
-Currently we have 2 sub-engines - "software" (the main one, all tasks done with calculations on CPU) and "opengl" (all tasks are hardware-accelerated using OpenGL, it is currently broken).
+Currently we have 2 sub-engines - "software" (the main one, all tasks done with calculations on CPU) and "OpenGL" (all tasks are hardware-accelerated using OpenGL, it is currently broken).
 
 * Software Sub-Engine - ```synfig-core/src/synfig/rendering/software/```
 * Tasks of Software Sub-Engine - ```synfig-core/src/synfig/rendering/software/task/```
@@ -288,7 +288,7 @@ Now, let's get back to Layers.
 
 We already know how Layers define their rendering for old render engine. But how this done for Cobra render engine?
 
-If layer is ported to Cobra angine, then  you will see ``build_rendering_task_vfunc()`` or ``build_composite_task_vfunc()`` or ``build_composite_fork_task_vfunc()`` functions. So, in Cobra engine layers just use tasks as building blocks to construct structures hich produce required output.
+If layer is ported to Cobra engine, then  you will see ``build_rendering_task_vfunc()`` or ``build_composite_task_vfunc()`` or ``build_composite_fork_task_vfunc()`` functions. So, in Cobra engine layers just use tasks as building blocks to construct structures which produce required output.
 
 ..
 	synfigapp
