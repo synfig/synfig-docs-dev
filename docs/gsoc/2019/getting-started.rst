@@ -29,7 +29,7 @@ A: See `this documentation <https://synfig-docs-dev.readthedocs.io/en/latest/com
 
 A: We recommend to become familiar with existing Synfig functionality before you start any coding. You can start with `beginner's tutorials <https://wiki.synfig.org/Category:Tutorials>`_. Also, you can request a free access to `our video training course <https://www.udemy.com/synfig-studio-cutout-animation-en/>`_, which allow you to grab all basicsin the shortest time. Just mail us via `contact page <https://www.synfig.org/contact/>`_ letting us know that you are aspiring GSoC student - and we will send you a link for free access.
 
-After watching the course we recommend to get familiar with Synfig code by reading `this page <https://synfig-docs-dev.readthedocs.io/en/latest/common/structure.html>`_.
+After watching the course we recommend to get familiar with Synfig's code by reading `this page <https://synfig-docs-dev.readthedocs.io/en/latest/common/structure.html>`_.
 
 Application Template
 ~~~~~~~~~~~~~~~~~~~~
