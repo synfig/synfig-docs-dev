@@ -23,11 +23,13 @@ A: There are a number of things you can do to help your odds
 
 **Q: Is there some place that tells me the process of compiling Synfig?**
 
-A: See [this documentation](https://synfig-docs-dev.readthedocs.io/en/latest/common/building.html).
+A: See `this documentation <https://synfig-docs-dev.readthedocs.io/en/latest/common/building.html>`_.
 
 **Q: Where can I learn basics of Synfig's functionality?**
 
-A: We recommend to become familiar with existing Synfig functionality before you start any coding. You can start with [beginner's tutorials](https://wiki.synfig.org/Category:Tutorials). Also, you can request a free access to [our video training course](https://www.udemy.com/synfig-studio-cutout-animation-en/), which allow you to grab all basicsin the shortest time. Just mail us via [contact page](https://www.synfig.org/contact/) letting us know that you are aspiring GSoC student - and we will send you a link for free access.
+A: We recommend to become familiar with existing Synfig functionality before you start any coding. You can start with `beginner's tutorials <https://wiki.synfig.org/Category:Tutorials>`_. Also, you can request a free access to `our video training course <https://www.udemy.com/synfig-studio-cutout-animation-en/>`_, which allow you to grab all basicsin the shortest time. Just mail us via `contact page <https://www.synfig.org/contact/>`_ letting us know that you are aspiring GSoC student - and we will send you a link for free access.
+
+After watching the course we recommend to get familiar with Synfig code by reading `this page <https://synfig-docs-dev.readthedocs.io/en/latest/common/structure.html>`_.
 
 Application Template
 ~~~~~~~~~~~~~~~~~~~~
