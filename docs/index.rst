@@ -20,7 +20,8 @@ Welcome to Synfig developers documentation!
    gsoc
    common/hotkeys
    common/random
-
+   community/code of conduct
+   community/contribution guidelines
 
 Indices and tables
 ==================
