@@ -35,6 +35,11 @@ Whether you’re a developer, a designer, or just a Synfig devotee, there are lo
 1. Submitting a pull request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. warning::
+    - Before you start working on any issue kindly ensure that someone else is not already working on it by looking at comments. 
+    - If no one is working on that issue drop a comment to let everyone know you will be working on it.
+    - We know your time is precious :)
+
 * The smaller the proposed change, the better. If you’d like to propose two unrelated changes, submit two pull requests.
 * The more information, the better. Make judicious use of the pull request body. Describe what changes were made, why you made them, and what impact they will have for users.
 * If this is your first pull request, it may help to understand GitHub Flow.
