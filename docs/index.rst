@@ -5,6 +5,10 @@
 
 Welcome to Synfig developers documentation!
 ===========================================================
+.. note::
+    **IMPORTANT**    
+    Please have a look at our contributing guidelines `here <https://synfig-docs-dev.readthedocs.io/en/latest/community/contribution%20guidelines.html>`_
+
 
 .. toctree::
    :maxdepth: 2
