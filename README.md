@@ -12,12 +12,15 @@ $ cd docs
 $ pipenv install --three
 ```
 
-This will install the requirements needed for generating the docs. Afterwards you can run:
+This will install the python virtual environment needed for generating the docs. 
+Afterwards you can run:
 
 ```bash
 $ make html
 ```
+**NOTE:** you can run ```$ pipenv shell ``` from /synfig-docs-dev/docs to run pipenv again.
 
+ 
 The docs will be generated, the output files will be placed in the `_build/html/` directory, and can be browsed (locally) with any browser.
 
 The docs can also be found online at <https://synfig-docs-dev.readthedocs.org/>.
