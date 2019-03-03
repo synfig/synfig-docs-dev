@@ -87,6 +87,9 @@ Moreover, keep in mind the following guidelines:
 3. Pull-Request guidelines
 --------------------------
 
+.. note::
+   While creating the PR please mention the issue number. For example, to close an issue numbered 123, you could use the phrase "Closes #123" or "Closes: #123" in your pull request description or commit message. Once the branch is merged into the default branch, the issue will close.
+   
 After pushing your changes to your fork, prepare a new Pull Request
 (from now on we will shorten it often to just *PR*):
 
