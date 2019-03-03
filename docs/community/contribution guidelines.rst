@@ -26,11 +26,14 @@ Whether you’re a developer, a designer, or just a Synfig devotee, there are lo
 * Browse through the Synfig discussion forum, and lend a hand answering questions. There’s a good chance you’ve already experienced what another user is experiencing.
 * Find an open issue (especially those labeled help wanted/good first issue),mention yourself in the comment with the interest to work on the issue and submit a proposed fix. If it’s your first pull request, we promise we won’t bite, and are glad to answer any questions.
 * Help evaluate open pull requests, by testing the changes locally and reviewing what’s proposed.
+* Open an issue if you found something that needs a fix (**Please don't forget to mentioned if you want to work on the issue you opened or have started working for a fix!**)
 
 .. note::
 
    - Synfig issue tracker -> https://github.com/synfig/synfig/issues
-   - Want easy projects? `Check out our list of "good first issues" <https://github.com/synfig/synfig/labels/good%20first%20issue>`_ .  
+   - `Some beginner issue to ensure you can use synfig. <https://github.com/synfig/synfig-tests-regressions/issues/3>`_. 
+   - Want easy projects? `Check out our list of "good first issues" <https://github.com/synfig/synfig/labels/good%20first%20issue>`_ .
+   
 
 1. Submitting a pull request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
