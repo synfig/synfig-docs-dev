@@ -24,7 +24,7 @@ Whether you’re a developer, a designer, or just a Synfig devotee, there are lo
 * Comment on some of the project’s open issues. Have you experienced the same problem? Know a work around? Do you have a suggestion for how the feature could be better?
 * Read through the documentation, and ask the community(on forum or GitHub), any time you see something confusing, or have a suggestion for something that could be improved.
 * Browse through the Synfig discussion forum, and lend a hand answering questions. There’s a good chance you’ve already experienced what another user is experiencing.
-* Find an open issue (especially those labeled help wanted/good first issue),mention yourself in the comment with the interest to work on the issue and submit a proposed fix. If it’s your first pull request, we promise we won’t bite, and are glad to answer any questions.
+* Find an open issue (especially those labeled help wanted/good first issue), mention yourself in the comment with the interest to work on the issue and submit a proposed fix. If it’s your first pull request, we promise we won’t bite, and are glad to answer any questions.
 * Help evaluate open pull requests, by testing the changes locally and reviewing what’s proposed.
 * Open an issue if you found something that needs a fix (**Please don't forget to mentioned if you want to work on the issue you opened or have started working for a fix!**)
 
