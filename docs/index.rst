@@ -16,16 +16,17 @@ Welcome to Synfig developers documentation!
 
    common/building
    common/dependencies
+   community/contribution guidelines
    common/structure
    tutorials
    common/packaging
    common/release
    common/roadmap
    gsoc
+   projects
    common/hotkeys
    common/random
    community/code of conduct
-   community/contribution guidelines
 
 Indices and tables
 ==================
