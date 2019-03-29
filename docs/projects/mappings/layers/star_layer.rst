@@ -46,13 +46,14 @@ Important points regarding conversion
 
 - Ordering of Z_depth is .sif format is opposite from lottie format. The first layer in the .sif format will be the farthest or deepest from the observer whereas the first layer in lottie format will be the   closest to the observer.
 
-- :math:`Amount\  in\  lottie = Amount(.sif) * 100`
+- ``Amount(lottie) = Amount(.sif) * 100``
 
-- For origin unit conversion, refer to miscellaneous section.
+- For origin unit conversion, refer to :ref:`miscellaneous <miscellaneous>` section.
 
 - Inner Radius and Outer Radius in .sif format are stored in units. To convert them to pixels(used in lottie), 
 
-.. math::
-  ir(lottie) = 1\ unit(pixels) * Inner Radius(.sif)
+  ``ir(lottie) = 1 unit(pixels) * Inner Radius(.sif)``
 
-- For angle conversion, refer to miscellaneous section to know the orientation difference in x-y plane in both the formats.
+- For angle conversion, refer to :ref:`miscellaneous <miscellaneous>` section to know the orientation difference in x-y plane in both the formats.
+  
+  ``angle_lottie = (90 - angle_sif) % 360``
