@@ -9,4 +9,4 @@ This page contains the mappings from `.sif <https://wiki.synfig.org/Sif_Format>`
     :maxdepth: 2
     :glob:
 
-    mappings/*
+    lottie/*
