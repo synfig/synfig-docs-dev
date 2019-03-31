@@ -4,9 +4,6 @@ Contributing guidelines
 Hi there! Interested in contributing to Synfig? We’d love your help. Synfig is an open source project, built one contribution at a time by users like you. 
 Please read these guidelines carefully, it will help you and us to save precious time later.
 
-Step 0
-~~~~~~~~~~~~~~~~~~
-
 As you prepare to join our community, you should find out what this project is about - if you didn’t do this already. We highly recommend to become familiar with existing Synfig functionality before you start any coding. You can start with `beginner's tutorials <https://wiki.synfig.org/Category:Tutorials>`_. Also, you can request a free access to `our video training course <https://www.udemy.com/synfig-studio-cutout-animation-en/>`_, which allow you to grab all basics in the shortest time. 
 
 .. note::
@@ -34,21 +31,16 @@ Whether you’re a developer, a designer, or just a Synfig devotee, there are lo
    - `Some beginner issue to ensure you can use synfig. <https://github.com/synfig/synfig-tests-regressions/issues/3>`_. 
    - Want easy projects? `Check out our list of "good first issues" <https://github.com/synfig/synfig/labels/good%20first%20issue>`_ .
    
-
-1. Submitting a pull request
+Contributing code changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Get code and prepare your working tree
+-----------------------------------------
 
 .. warning::
     - Before you start working on any issue kindly ensure that someone else is not already working on it by looking at comments. 
     - If no one is working on that issue drop a comment to let everyone know you will be working on it.
     - We know your time is precious :)
-
-* The smaller the proposed change, the better. If you’d like to propose two unrelated changes, submit two pull requests.
-* The more information, the better. Make judicious use of the pull request body. Describe what changes were made, why you made them, and what impact they will have for users.
-* If this is your first pull request, it may help to understand GitHub Flow.
-* If you’re submitting a code contribution, be sure to read the code contributions section below.
-
-**Submitting a pull request via git command**
 
 Fork the project by clicking “Fork” in the top right corner of synfig/synfig.
 Clone the repository locally 
@@ -61,46 +53,54 @@ Create a new, descriptively named branch to contain your change
 
   git checkout -b my-awesome-feature
 
-Hack away, add tests. Not necessarily in that order.
-Make sure everything still passes by running script/cibuild
+2. Making code changes
+-----------------------------------------
 
-Push the branch up 
-::
+Learn how to build Synfig here - https://synfig-docs-dev.readthedocs.io/en/latest/common/building.html
 
-  git push origin my-awesome-feature
+Make sure to read about code structure - https://synfig-docs-dev.readthedocs.io/en/latest/common/structure.html
 
-Create a pull request by visiting https://github.com/<your-username>/synfig and following the instructions at the top of the screen.
+Don't forget to configure IDE. We recommend to use NetBeans. Here are video instructions on how to configure it - https://www.youtube.com/watch?v=SNkdiSxBV_s
 
-2. Commit message style guidelines
-----------------------------------
-**Please follow our commit message style conventions**.
+Now, have fun, hack away.
 
-Moreover, keep in mind the following guidelines:
-
-- commits should be descriptive in nature, the message should
-  explain the nature of the change
 - make sure to follow the code style used in the module
   you are contributing to
 - before committing and pushing the changes, test the code both manually
   and automatically with the automated test suite if applicable
-- after pushing your branch code, make a pull-request of that
-  corresponding change of yours which should contain a descriptive
-  message and mention the issue number as suggested in the example above
 
-3. Pull-Request guidelines
+3. Commit message style guidelines
+----------------------------------
+
+When done, commit your changes.
+
+- commits should be descriptive in nature
+- the message should explain the nature of the change
+
+
+4. Submitting a pull request
 --------------------------
 
-.. note::
-   While creating the PR please mention the issue number. For example, to close an issue numbered 123, you could use the phrase "Closes #123" or "Closes: #123" in your pull request description or commit message. Once the branch is merged into the default branch, the issue will close.
-   
-After pushing your changes to your fork, prepare a new Pull Request
-(from now on we will shorten it often to just *PR*):
+* The smaller the proposed change, the better. If you’d like to propose two unrelated changes, submit two pull requests.
+* The more information, the better. Make judicious use of the pull request body. Describe what changes were made, why you made them, and what impact they will have for users.
+* If this is your first pull request, it may help to understand GitHub Flow.
+
+Push the branch (you have created it) to your GitHub fork: 
+::
+
+  git push origin my-awesome-feature
+
+Create a pull request (from now on we will shorten it often to just *PR*) by visiting https://github.com/<your-username>/synfig and following the instructions at the top of the screen:
 
 - from your forked repository of the project select your branch and
   click "New Pull Request"
 - check the changes tab and review the changes again to ensure everything
   is correct
 - write a concise description of the PR, if an issue exists for
+
+.. note::
+   While creating the PR please mention the issue number. For example, to close an issue numbered 123, you could use the phrase "Closes #123" or "Closes: #123" in your pull request description or commit message. Once the branch is merged into the default branch, the issue will close.
+
 - after submitting your PR, check back again whether your PR has passed
   our required tests
 - if the tests fail for some reason, try to fix them and if you get
@@ -111,14 +111,14 @@ After pushing your changes to your fork, prepare a new Pull Request
   to follow up with this type of operations
 - once everything is fine with us we'll merge your PR
 
-4. Avoiding unnecessary changes
+5. Avoiding unnecessary changes
 -------------------------------
 
 - while making changes to the required files, then saving it and
   comitting it, different contributors often find that there occur same
   changes that they have not made and those changes gets committed with
   the desired change that the person wants to make
-- these unnecessary changes should be evaluated first and then the
+- these unnecessary changes should be evaluated first before the
   commit should be made
 - these changes generally occur due to different settings and
   customizations of your editor that you are working with. These changes
