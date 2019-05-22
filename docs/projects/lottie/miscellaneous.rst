@@ -45,3 +45,11 @@ Interpolation conversion
 - In Tangents for the formats differ in direction. They are exactly opposite of each other.
 
 - Length of tangents differ by a multiple ``TANGENT_FACTOR``, which is a constant.
+
+Unit conversion
+---------------
+
+- Opacity, referred to as amount:
+  ``Amount(lottie) = Amount(.sif) * 100``
+
+- ``angle_lottie = (90 - angle_sif) % 360``
