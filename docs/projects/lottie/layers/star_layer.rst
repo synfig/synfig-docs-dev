@@ -9,15 +9,15 @@ Table of Mappings
 +==================+==============================================================================================================================+
 |      Z_depth     |                                        Depends on ordering of layers in lottie format                                        |
 +------------------+------------------------------------------------------------------------------------------------------------------------------+
-|      Amount      |                         layers/fill.json -> “o” -> properties/[value.json OR valueKeyframed.json]                            |
+|      Amount      |                         shapes/fill.json -> “o” -> properties/[value.json OR valueKeyframed.json]                            |
 +------------------+------------------------------------------------------------------------------------------------------------------------------+
 |   Blend_method   |                                      layers/shape.json -> “bm” -> helpers/blendMode.json                                     |
 +------------------+------------------------------------------------------------------------------------------------------------------------------+
-|       Color      |                                                layers/fill.json -> “ty” = “fl”                                               |
+|       Color      |                                                shapes/fill.json -> “ty” = “fl”                                               |
 +------------------+------------------------------------------------------------------------------------------------------------------------------+
 |      Origin      | layers/shape.json -> “it” -> shapes/star.json -> “p” -> properties/[multiDimensional.json OR multiDimensionalKeyframed.json] |
 +------------------+------------------------------------------------------------------------------------------------------------------------------+
-|      Invert      |                              layers/shape.json -> “maskProperties” ->helpers/mask.json -> “inv”                              |
+|      Invert      |                                                         Not supported                                                        | 
 +------------------+------------------------------------------------------------------------------------------------------------------------------+
 |   Antialiasing   |                                        This property is always present(true) in lottie                                       |
 +------------------+------------------------------------------------------------------------------------------------------------------------------+
@@ -40,6 +40,7 @@ Table of Mappings
 
 .. note::
     "it" is used for shapes within groups. When only a single shape is there, "shapes" will be used
+    "ty" = "fl" describes that the type of shape used is 'fill'.
 
 Important points regarding conversion
 -------------------------------------
