@@ -15,7 +15,7 @@ Table of Mappings
 +--------------+---------------------------------------------------------------------------------------------------------------------------------+
 |     Color    |                                                 shapes/fill.json -> “ty” = “fl”                                                 |
 +--------------+---------------------------------------------------------------------------------------------------------------------------------+
-|    Radius    |               layers/ellipse.json -> "s" -> properties/[multiDimensional.json OR multiDimenstionalKeyframed.json]               |
+|    Radius    |               shapes/ellipse.json -> "s" -> properties/[multiDimensional.json OR multiDimenstionalKeyframed.json]               |
 +--------------+---------------------------------------------------------------------------------------------------------------------------------+
 |    Center    | layers/shape.json -> “it” -> shapes/ellipse.json -> “p” -> properties/[multiDimensional.json OR multiDimensionalKeyframed.json] |
 +--------------+---------------------------------------------------------------------------------------------------------------------------------+
