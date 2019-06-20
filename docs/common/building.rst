@@ -91,11 +91,38 @@ Depending on version of your system the process of installing dependencies might
 Windows
 -------
 
-...
+.. note::
+    For compiling Synfig on WIndows we use MinGW installation in MSYS2 environment. 
+    
+    Alternative for that approach could be to build using MSVC and Microsoft vcpkg (https://github.com/microsoft/vcpkg), but we haven't digged into that yet. Any help on this matter is appreciated here - https://github.com/synfig/synfig/issues/860.
 
-TO BE WRITTEN.
+Download and install MSYS2, following instructions here - http://www.msys2.org/.
 
-...
+After that, start "MSYS2 MinGW 64-bit" from Windows menu and install git:
+
+.. code:: bash
+
+    $ pacman -S git
+
+Next, get Synfig's sources:
+
+.. code:: bash
+
+    $ git clone https://github.com/synfig/synfig.git ~/synfig.git
+    
+When download finishes, navigate to sources directory:
+
+.. code:: bash
+
+    $ cd ~/synfig.git
+
+Now you need to install all required dependencies. Run a special script shipped with Synfig's sources:
+
+.. code:: bash
+
+    $ ./1-setup-windows-msys2.sh
+
+Wait till the script finish installing dependencies and you're ready to build Synfig.
     
 First build
 ~~~~~~~~~~~~~~~~~~~~~~~
