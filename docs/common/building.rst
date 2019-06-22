@@ -92,7 +92,7 @@ Windows
 -------
 
 .. note::
-    For compiling Synfig on WIndows we use MinGW installation in MSYS2 environment. 
+    For compiling Synfig on Windows we use MinGW installation in MSYS2 environment.
     
     Alternative for that approach could be to build using MSVC and Microsoft vcpkg (https://github.com/microsoft/vcpkg), but we haven't digged into that yet. Any help on this matter is appreciated here - https://github.com/synfig/synfig/issues/860.
 
