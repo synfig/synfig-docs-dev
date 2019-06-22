@@ -3,40 +3,52 @@
 Supported Features
 ==================
 
+.. |tick| image:: ../../images/tick.jpeg
+    :width: 30pt
+    :height: 22pt
+
+.. |cross| image:: ../../images/cross.png
+    :width: 15pt
+    :height: 15pt
+
+.. |minus| image:: ../../images/not_needed_symbol.png
+    :width: 25pt
+    :height: 10pt
+
 Star Layer
 ----------
 +-----------------+---------------------+---------------------------------------------+
 |  Property Name  |        Value        | Type(Animation)                             |
 +=================+=====================+=============================================+
-|     Z depth     |      Supported      | Animation not supported                     |
+|     Z depth     |        |tick|       | |cross|                                     |
 +-----------------+---------------------+---------------------------------------------+
-|      Amount     |      Supported      | Supported                                   |
+|      Amount     |        |tick|       | |tick|                                      |
 +-----------------+---------------------+---------------------------------------------+
-|   Blend_method  | Partially supported | Not needed                                  |
+|   Blend_method  | Partially supported | |minus|                                     |
 +-----------------+---------------------+---------------------------------------------+
-|      Color      |      Supported      | TCB and Clamped interpolation not supported |
+|      Color      |        |tick|       | TCB and Clamped interpolation not supported |
 +-----------------+---------------------+---------------------------------------------+
-|      Origin     |      Supported      | Supported                                   |
+|      Origin     |        |tick|       | |tick|                                      |
 +-----------------+---------------------+---------------------------------------------+
-|      Invert     |    Not Supported    | Not Supported                               |
+|      Invert     |        |cross|      | |cross|                                     |
 +-----------------+---------------------+---------------------------------------------+
-|   Antialiasing  |      Supported      | Supported                                   |
+|   Antialiasing  |        |tick|       | |tick|                                      |
 +-----------------+---------------------+---------------------------------------------+
-|     Feather     |    Not supported    | Not Supported                               |
+|     Feather     |        |cross|      | |cross|                                     |
 +-----------------+---------------------+---------------------------------------------+
-| Type of Feather |    Not supported    | Not Supported                               |
+| Type of Feather |        |cross|      | |cross|                                     |
 +-----------------+---------------------+---------------------------------------------+
-|  Winding Style  |    Not Supported    | Not Supported                               |
+|  Winding Style  |        |cross|      | |cross|                                     |
 +-----------------+---------------------+---------------------------------------------+
-|   Outer Radius  |      Supported      | Supported                                   |
+|   Outer Radius  |        |tick|       | |tick|                                      |
 +-----------------+---------------------+---------------------------------------------+
-|   Inner Radius  |      Supported      | Supported                                   |
+|   Inner Radius  |        |tick|       | |tick|                                      |
 +-----------------+---------------------+---------------------------------------------+
-|      Angle      |      Supported      | Supported                                   |
+|      Angle      |        |tick|       | |tick|                                      |
 +-----------------+---------------------+---------------------------------------------+
-|      Points     |      Supported      | [Waiting for bug fix]                       |
+|      Points     |        |tick|       | |cross|                                     |
 +-----------------+---------------------+---------------------------------------------+
-| Regular Polygon |      Supported      | [Devising the algorithm]                    |
+| Regular Polygon |        |tick|       | |cross|                                     |
 +-----------------+---------------------+---------------------------------------------+
 
 Circle Layer
@@ -44,21 +56,21 @@ Circle Layer
 +---------------+---------------------+---------------------------------------------+
 | Property Name |        Value        |               Type(Animation)               |
 +===============+=====================+=============================================+
-|    Z depth    |      Supported      |           Animation not supported           |
+|    Z depth    |        |tick|       |                  |cross|                    |
 +---------------+---------------------+---------------------------------------------+
-|     Amount    |      Supported      |                  Supported                  |
+|     Amount    |        |tick|       |                  |tick|                     |
 +---------------+---------------------+---------------------------------------------+
-|  Blend_method | Partially supported |                  Not needed                 |
+|  Blend_method | Partially supported |                  |minus|                    |
 +---------------+---------------------+---------------------------------------------+
-|     Color     |      Supported      | TCB and Clamped interpolation not supported |
+|     Color     |        |tick|       | TCB and Clamped interpolation not supported |
 +---------------+---------------------+---------------------------------------------+
-|     Radius    |      Supported      |                  Supported                  |
+|     Radius    |        |tick|       |                  |tick|                     |
 +---------------+---------------------+---------------------------------------------+
-|     Origin    |      Supported      |                  Supported                  |
+|     Origin    |        |tick|       |                  |tick|                     |
 +---------------+---------------------+---------------------------------------------+
-|     Invert    |    Not Supported    |                Not Supported                |
+|     Invert    |        |cross|      |                  |cross|                    |
 +---------------+---------------------+---------------------------------------------+
-|    Feather    |    Not supported    |                Not Supported                |
+|    Feather    |        |cross|      |                  |cross|                    |
 +---------------+---------------------+---------------------------------------------+
 
 Rectangle Layer
@@ -66,29 +78,29 @@ Rectangle Layer
 +---------------------+---------------------+---------------------------------------------+
 |       Property      |        Value        |               Type(Animation)               |
 +=====================+=====================+=============================================+
-|       Z depth       |      Supported      |           Animation not supported           |
+|       Z depth       |        |tick|       |                  |cross|                    |
 +---------------------+---------------------+---------------------------------------------+
-|        Amount       |      Supported      |                  Supported                  |
+|        Amount       |        |tick|       |                  |tick|                     |
 +---------------------+---------------------+---------------------------------------------+
-|     Blend_method    | Partially supported |                  Not needed                 |
+|     Blend_method    | Partially supported |                  |minus|                    |
 +---------------------+---------------------+---------------------------------------------+
-|        Color        |      Supported      | TCB and Clamped interpolation not supported |
+|        Color        |        |tick|       | TCB and Clamped interpolation not supported |
 +---------------------+---------------------+---------------------------------------------+
-|       Point 1       |      Supported      |                  Supported                  |
+|       Point 1       |        |tick|       |                  |tick|                     |
 +---------------------+---------------------+---------------------------------------------+
-|       Point 2       |      Supported      |                  Supported                  |
+|       Point 2       |        |tick|       |                  |tick|                     |
 +---------------------+---------------------+---------------------------------------------+
-|        Expand       |      Supported      |                  Supported                  |
+|        Expand       |        |tick|       |                  |tick|                     |
 +---------------------+---------------------+---------------------------------------------+
-|        Invert       |    Not Supported    |                Not Supported                |
+|        Invert       |        |cross|      |                  |cross|                    |
 +---------------------+---------------------+---------------------------------------------+
-|      Feather X      |    Not supported    |                Not Supported                |
+|      Feather X      |        |cross|      |                  |cross|                    |
 +---------------------+---------------------+---------------------------------------------+
-|      Feather Y      |    Not supported    |                Not Supported                |
+|      Feather Y      |        |cross|      |                  |cross|                    |
 +---------------------+---------------------+---------------------------------------------+
-|        Bevel        |      Supported      |                  Supported                  |
+|        Bevel        |        |tick|       |                  |tick|                     |
 +---------------------+---------------------+---------------------------------------------+
-| Keep Bevel Circular | Partially Supported |                Not Supported                |
+| Keep Bevel Circular | Partially Supported |                  |cross|                    |
 +---------------------+---------------------+---------------------------------------------+
 
 Simple Circle Layer
@@ -96,17 +108,17 @@ Simple Circle Layer
 +---------------+---------------------+---------------------------------------------+
 | Property Name |        Value        |               Type(Animation)               |
 +===============+=====================+=============================================+
-|    Z depth    |      Supported      |           Animation not supported           |
+|    Z depth    |        |tick|       |                  |cross|                    |
 +---------------+---------------------+---------------------------------------------+
-|     Amount    |      Supported      |                  Supported                  |
+|     Amount    |        |tick|       |                  |tick|                     |
 +---------------+---------------------+---------------------------------------------+
-|  Blend_method | Partially supported |                  Not needed                 |
+|  Blend_method | Partially supported |                  |minus|                    |
 +---------------+---------------------+---------------------------------------------+
-|     Color     |      Supported      | TCB and Clamped interpolation not supported |
+|     Color     |        |tick|       | TCB and Clamped interpolation not supported |
 +---------------+---------------------+---------------------------------------------+
-|     Radius    |      Supported      |                  Supported                  |
+|     Radius    |        |tick|       |                  |tick|                     |
 +---------------+---------------------+---------------------------------------------+
-|     Center    |      Supported      |                  Supported                  |
+|     Center    |        |tick|       |                  |tick|                     |
 +---------------+---------------------+---------------------------------------------+
 
 Solid Color Layer
@@ -114,13 +126,13 @@ Solid Color Layer
 +--------------+---------------------+---------------------------------------------+
 |   Property   |        Value        |               Type(Animation)               |
 +==============+=====================+=============================================+
-|    Z depth   |      Supported      |           Animation not supported           |
+|    Z depth   |        |tick|       |                  |cross|                    |
 +--------------+---------------------+---------------------------------------------+
-|    Amount    |      Supported      |                  Supported                  |
+|    Amount    |        |tick|       |                  |tick|                     |
 +--------------+---------------------+---------------------------------------------+
-| Blend_method | Partially supported |                  Not needed                 |
+| Blend_method | Partially supported |                  |minus|                    |
 +--------------+---------------------+---------------------------------------------+
-|     Color    |      Supported      | TCB and Clamped interpolation not supported |
+|     Color    |        |tick|       | TCB and Clamped interpolation not supported |
 +--------------+---------------------+---------------------------------------------+
 
 Import Image Layer
@@ -129,23 +141,23 @@ Import Image Layer
 +------------------+--------------------------+--------------------------+
 |     Property     |           Value          |      Type(Animation)     |
 +==================+==========================+==========================+
-|      Z depth     |         Supported        |  Animation not supported |
+|      Z depth     |           |tick|         |         |cross|          |
 +------------------+--------------------------+--------------------------+
-|      Amount      |         Supported        |         Supported        |
+|      Amount      |           |tick|         |         |tick|           |
 +------------------+--------------------------+--------------------------+
-|   Blend_method   |    Partially supported   |        Not needed        |
+|   Blend_method   |    Partially supported   |         |minus|          |
 +------------------+--------------------------+--------------------------+
-|     Top Left     |         Supported        |         Supported        |
+|     Top Left     |           |tick|         |         |tick|           |
 +------------------+--------------------------+--------------------------+
-|   Bottom Right   |         Supported        |         Supported        |
+|   Bottom Right   |           |tick|         |         |tick|           |
 +------------------+--------------------------+--------------------------+
-|   Interpolation  |       Not Supported      |       Not Supported      |
+|   Interpolation  |           |cross|        |         |cross|          |
 +------------------+--------------------------+--------------------------+
-| Gamma Adjustment |       Not Supported      |       Not Supported      |
+| Gamma Adjustment |           |cross|        |         |cross|          |
 +------------------+--------------------------+--------------------------+
 |     Filename     | .lst files not supported | .lst files not supported |
 +------------------+--------------------------+--------------------------+
-|    Time Offset   |       Not Supported      |       Not Supported      |
+|    Time Offset   |           |cross|        |         |cross|          |
 +------------------+--------------------------+--------------------------+
 
 Region Layer
@@ -154,27 +166,27 @@ Region Layer
 +-----------------+---------------------+---------------------------------------------+
 |     Property    |        Value        |               Type(Animation)               |
 +=================+=====================+=============================================+
-|     Z depth     |      Supported      |           Animation not supported           |
+|     Z depth     |        |tick|       |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-|      Amount     |      Supported      |                  Supported                  |
+|      Amount     |        |tick|       |                  |tick|                     |
 +-----------------+---------------------+---------------------------------------------+
-|   Blend_method  | Partially supported |                  Not needed                 |
+|   Blend_method  | Partially supported |                  |minus|                    |
 +-----------------+---------------------+---------------------------------------------+
-|      Color      |      Supported      | TCB and Clamped interpolation not supported |
+|      Color      |        |tick|       | TCB and Clamped interpolation not supported |
 +-----------------+---------------------+---------------------------------------------+
-|      Origin     |      Supported      |                  Supported                  |
+|      Origin     |        |tick|       |                  |tick|                     |
 +-----------------+---------------------+---------------------------------------------+
-|      Invert     |    Not Supported    |                Not Supported                |
+|      Invert     |        |cross|      |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-|   Antialiasing  |      Supported      |                  Supported                  |
+|   Antialiasing  |        |tick|       |                  |tick|                     |
 +-----------------+---------------------+---------------------------------------------+
-|     Feather     |    Not Supported    |                Not Supported                |
+|     Feather     |        |cross|      |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-| Type of Feather |    Not supported    |                Not Supported                |
+| Type of Feather |        |cross|      |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-|  Winding Style  |    Not supported    |                Not Supported                |
+|  Winding Style  |        |cross|      |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-|     Vertices    |      Supported      |             Partially Supported             |
+|     Vertices    |        |tick|       |             Partially Supported             |
 +-----------------+---------------------+---------------------------------------------+
 
 - Animation of `Addition/Deletion` of vertices is not yet supported
@@ -185,27 +197,27 @@ Polygon Layer
 +-----------------+---------------------+---------------------------------------------+
 |     Property    |        Value        |               Type(Animation)               |
 +=================+=====================+=============================================+
-|     Z depth     |      Supported      |           Animation not supported           |
+|     Z depth     |        |tick|       |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-|      Amount     |      Supported      |                  Supported                  |
+|      Amount     |        |tick|       |                  |tick|                     |
 +-----------------+---------------------+---------------------------------------------+
-|   Blend_method  | Partially supported |                  Not needed                 |
+|   Blend_method  | Partially supported |                  |minus|                    |
 +-----------------+---------------------+---------------------------------------------+
-|      Color      |      Supported      | TCB and Clamped interpolation not supported |
+|      Color      |        |tick|       | TCB and Clamped interpolation not supported |
 +-----------------+---------------------+---------------------------------------------+
-|      Origin     |      Supported      |                  Supported                  |
+|      Origin     |        |tick|       |                  |tick|                     |
 +-----------------+---------------------+---------------------------------------------+
-|      Invert     |    Not Supported    |                Not Supported                |
+|      Invert     |        |cross|      |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-|   Antialiasing  |      Supported      |                  Supported                  |
+|   Antialiasing  |        |tick|       |                  |tick|                     |
 +-----------------+---------------------+---------------------------------------------+
-|     Feather     |    Not Supported    |                Not Supported                |
+|     Feather     |        |cross|      |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-| Type of Feather |    Not supported    |                Not Supported                |
+| Type of Feather |        |cross|      |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-|  Winding Style  |    Not supported    |                Not Supported                |
+|  Winding Style  |        |cross|      |                  |cross|                    |
 +-----------------+---------------------+---------------------------------------------+
-|  Vertices List  |      Supported      |             Partially Supported             |
+|  Vertices List  |        |tick|       |             Partially Supported             |
 +-----------------+---------------------+---------------------------------------------+
 
 - Animation of `Addition/Deletion` of vertices in `Vertices List` is not yet supported
