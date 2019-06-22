@@ -52,4 +52,6 @@ Unit conversion
 - Opacity, referred to as amount:
   ``Amount(lottie) = Amount(.sif) * 100``
 
-- ``angle_lottie = (90 - angle_sif) % 360``
+- ``angle_lottie = (90 - angle_sif) % 360 + shift*360``
+
+  where ``shift = -[theta / 360]``
