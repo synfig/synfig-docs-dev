@@ -82,6 +82,8 @@ Now we can install all required libraries via HomeBrew. There is a special scrip
 .. warning::
     It is NOT recommended to use this method on OSX version < 10.11 with already working Homebrew - with almost 100% probablility your Homebrew installation will be damaged. You've been warned.
     
+    For more details about this issue see here - https://github.com/synfig/synfig/blob/678cc3a7b1208fcca18c8b54a29a20576c499927/1-setup-osx-brew.sh#L34-L37
+    
 .. code:: bash
 
     $ ./1-setup-osx-brew.sh
