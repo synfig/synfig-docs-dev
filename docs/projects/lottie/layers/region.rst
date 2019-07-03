@@ -27,10 +27,6 @@ Region Layer
 |     Vertices    |             layers/solid.json -> helpers/mask.json -> "pt"             |
 +-----------------+------------------------------------------------------------------------+
 
-.. note::
-    "it" is used for shapes within groups. When only a single shape is there, "shapes" will be used
-    "ty" = "fl" describes that the type of shape used is 'fill'.
-
 Important points
 ----------------
 
