@@ -1,5 +1,5 @@
-Region Layer
-==========
+Outline Layer
+=============
 
 +-----------------+------------------------------------------------------------------------+
 |     Property    |                         Path to Property in lottie                     |
@@ -24,7 +24,7 @@ Region Layer
 +-----------------+------------------------------------------------------------------------+
 |  Winding Style  |                              Not supported                             |
 +-----------------+------------------------------------------------------------------------+
-|     Vertices    |             layers/solid.json -> helpers/mask.json -> "pt"             |
+|  Vertices List  |             layers/solid.json -> helpers/mask.json -> "pt"             |
 +-----------------+------------------------------------------------------------------------+
 
 .. note::
@@ -34,4 +34,4 @@ Region Layer
 Important points
 ----------------
 
-- Instead of directly using the shapes layer from Lottie, a solid region layer is used and is masked(using masks) furthur to draw a polygon. This is done to support the invert parameter from Synfig.
+- Instead of directly using the shapes layer from Lottie, a solid color layer is used and is masked(using masks) furthur to draw a polygon. This is done to support the invert parameter from Synfig.
