@@ -44,4 +44,4 @@ Outline Layer
 Important points
 ----------------
 
-- Instead of directly using the shapes layer from Lottie, a solid color layer is used and is masked(using masks) furthur to draw a polygon. This is done to support the invert parameter from Synfig.
+- Instead of directly using the shapes layer from Lottie, a solid color layer is used and is masked(using masks) to draw an outline. This is done to support the invert parameter from Synfig.
