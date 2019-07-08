@@ -6,47 +6,32 @@ Rectangle Layer
 +=====================+===========================================================================+
 |       Z depth       |               Depends on ordering of layers in lottie format              |
 +---------------------+---------------------------------------------------------------------------+
-|        Amount       | shapes/fill.json -> “o” -> properties/[value.json OR valueKeyframed.json] |
+|        Amount       |   layers/solid.json -> "ef" -> effects/fill.json -> effects/opacity.json  |
 +---------------------+---------------------------------------------------------------------------+
-|     Blend_method    |            layers/shape.json -> “bm” -> helpers/blendMode.json            |
+|     Blend_method    |            layers/solid.json -> “bm” -> helpers/blendMode.json            |
 +---------------------+---------------------------------------------------------------------------+
-|        Color        |                      shapes/fill.json -> “ty” = “fl”                      |
+|        Color        |    layers/solid.json -> "ef" -> effects/fill.json -> effects/color.json   |
 +---------------------+---------------------------------------------------------------------------+
-|       Point 1       |             Used in calculation of Origin parameter in lottie             |
+|       Point 1       |      Calculation of  layers/solid.json -> helpers/mask.json -> "pt"       |
 +---------------------+---------------------------------------------------------------------------+
-|       Point 2       |             Used in calculation of Origin parameter in lottie             |
+|       Point 2       |      Calculation of  layers/solid.json -> helpers/mask.json -> "pt"       |
 +---------------------+---------------------------------------------------------------------------+
-|        Expand       |             Used in calculation of Origin parameter in lottie             |
+|        Expand       |      Calculation of  layers/solid.json -> helpers/mask.json -> "pt"       |
 +---------------------+---------------------------------------------------------------------------+
-|        Invert       |                               Not Supported                               |
+|        Invert       |             layers/solid.json -> helpers/mask.json -> "inv"               |
 +---------------------+---------------------------------------------------------------------------+
 |      Feather X      |                               Not supported                               |
 +---------------------+---------------------------------------------------------------------------+
 |      Feather Y      |                               Not supported                               |
 +---------------------+---------------------------------------------------------------------------+
-|        Bevel        |            layers/shape.json -> "it" -> shapes/rect.json -> "r"           |
+|        Bevel        |      Calculation of  layers/solid.json -> helpers/mask.json -> "pt"       |
 +---------------------+---------------------------------------------------------------------------+
-| Keep Bevel Circular |                            Partially Supported                            |
+| Keep Bevel Circular |      Calculation of  layers/solid.json -> helpers/mask.json -> "pt"       |
 +---------------------+---------------------------------------------------------------------------+
 
-.. note::
-    "it" is used for shapes within groups. When only a single shape is there, "shapes" will be used. 
-    "ty" = "fl" describes that the type of shape used is 'fill'.
+Important points
+----------------
 
-Important points regarding conversion
--------------------------------------
+- Instead of directly using the shapes layer from Lottie, a solid region layer is used and is masked(using masks) to draw a rectangle. This is done to support the invert parameter from Synfig.
 
-- Instead of parameters ``point1`` and ``point2``, parameters ``Origin`` and ``Size`` from lottie layers are used. They are calculated as follows:
-
-  * ``Origin = (point1 + point2) / 2``
-
-  * ``Size = abs(point1 - point2)``
-
-- Size is a list of length equal to 2. It consists of [Size_x, Size_y].
-
-- Point1 is one extrema of the rectangle and Point2 is the diagnolly opposite extrema of the rectangle. These four parameters are depicted in the below image.
-
-.. image:: ../../../images/rectangle.png
-   :width: 600
-
-- Only Circular bevel is supported
+- The mask is drawn according to: https://github.com/synfig/synfig/blob/678cc3a7b1208fcca18c8b54a29a20576c499927/synfig-core/src/modules/mod_geometry/rectangle.cpp
