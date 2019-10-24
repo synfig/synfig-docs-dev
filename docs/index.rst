@@ -14,6 +14,7 @@ Welcome to Synfig developers documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   common/Setting up IDE
    common/building
    common/dependencies
    community/contribution guidelines
