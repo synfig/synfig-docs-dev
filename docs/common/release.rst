@@ -29,6 +29,7 @@ If you are doing (major) stable release, then make sure to edit following files:
 
 * `synfig-core/src/synfig/version.h`
 * `synfig-core/src/synfig/releases.h`
+* `synfig-studio/src/gui/app.cpp`
 
 Make sure the release number is correct. If it is not, then execute 'version-bump.sh' script from the root dir of synfig repository:
 
