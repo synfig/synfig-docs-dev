@@ -25,26 +25,32 @@ Summarize all changes in NEWS files.
 Update version number
 ~~~~~~~~~~~~~~~~~~~~~
 
-From the root dir of synfig repository:
+If you are doing (major) stable release, then make sure to edit following files:
+
+* `synfig-core/src/synfig/version.h`
+* `synfig-core/src/synfig/releases.h`
+
+Make sure the release number is correct. If it is not, then execute 'version-bump.sh' script from the root dir of synfig repository:
 
 .. code:: bash
 
-    $ ./release-bump.sh <VERSION_NUMBER>
+    $ ./version-bump.sh <VERSION_NUMBER>
     
 i.e.:
 
 .. code:: bash
 
-    $ ./release-bump.sh 1.3.10
+    $ ./version-bump.sh 1.4.0
     
-Changes are committed automatically.
+This will update all files and commit changes.
 
-Push to upstream
-~~~~~~~~~~~~~~~~
+Next, execute 'version-release.sh' script:
 
 .. code:: bash
 
-    $ git push upstream testing
+    $ ./version-release.sh
+    
+It will add neccesary tags and
 
 
 Build packages
@@ -64,14 +70,7 @@ Example - https://www.synfig.org/2018/06/25/synfig-studio-1-3-9-released/
 Finish repository changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Add tag:
-
-.. code:: bash
-
-    git tag v1.3.10
-    git push --tags upstream
-
-(Optionally) merge into master branch:
+Merge branch 'testing' into 'master':
 
 .. code:: bash
 
@@ -79,7 +78,11 @@ Add tag:
     git merge testing
     git push upstream
 
+...And bump version number, so it will be next development release:
 
+.. code:: bash
+
+    $ ./version-bump.sh 1.5.0
     
 Publish packages
 ~~~~~~~~~~~~~~~~~
