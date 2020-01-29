@@ -6,7 +6,13 @@ Preparation
 
 All release procedures are done from "testing" branch. So, switch to "testing" branch first and then set it to the last commit you want to release from.
 
-Before you start procedure, you have to make sure that current content of "testing" branch compiles fine on all supported platforms - Windows, Linux and OSX. If everything is alright, tthen proceed with the steps below.
+Before you start procedure, you have to make sure that current content of "testing" branch builds succesfully on all supported platforms - Windows, Linux and OSX.
+
+Also, make sure that source tarball generation script executes without errors:
+
+.. code:: bash
+
+    $ ./autobuild/synfigstudio-release.sh
 
 Apply latest translations
 ~~~~~~~~~~~~~~~~~~~~~~~~~
