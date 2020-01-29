@@ -44,17 +44,17 @@ Export for Web
 
 **- Description**
 
-Allow to export animation for web through Lottie export format (http://airbnb.io/lottie/). See this page for details - https://github.com/synfig/synfig/issues/704
+Extending support of "Lottie Export" plugin which helps to export animation for web through Lottie export format (http://airbnb.io/lottie/). See this page for details - https://forums.synfig.org/t/google-summer-of-code-2020/10545/4?u=anishg
 
 **- Expected Results**
 
-Synfig becomes a platform for creating animated web content.
+This will allow users to export animations which use many advanced features of Synfig, for instance, advanced outline layer, convert methods etc.
 
 **- Difficulty** Medium
 
-**- Skills required** C++ or Python,
+**- Skills required** C++, Python
 
-**- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
+**- Mentor(s)** Anish Gulati (https://github.com/AnishGG)
 
 
 Editable animation curves in Graphs Panel
@@ -88,22 +88,6 @@ Simpler and faster Skeleton construction. Creating bones will be intuitively vis
 **- Difficulty** Medium
 
 **- Skills required** C++, GTKmm
-
-**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
-
-Vectorization of bitmaps
-~~~~~~~~~~~~~~~~~~~~~~~~
-**- Description**
-
-Allow to convert bitmap images to vector data with a single command, through integration with Potrace (http://potrace.sourceforge.net/). Alternative - instead of Potrace, use an algorithm of vectorization from OpenToonz (https://opentoonz.readthedocs.io/ja/latest/drawing_animation_levels.html#converting-raster-drawings-to-vectors), which works better.
-
-**- Expected Results**
-
-User can quickly convert any bitmap image to vector and get resolution-independent image, available for edit.
-
-**- Difficulty** Easy (Potrace) - Medium (OpenToonz)
-
-**- Skills required** C++
 
 **- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
 
