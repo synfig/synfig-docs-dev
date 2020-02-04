@@ -6,17 +6,15 @@ Synfig GSoC application 2020
 
 **Why does your org want to participate in Google Summer of Code?**
 
-Synfig became a mentoring org in GSoC for the first time in 2019. We had 2/2 successful projects last year. GSoC gives a student an opportunity to work on Synfig full time. Furthurmore, the projects would have taken too long to be implemented without GSoC, because the existing community is relatively small to try some out of the way projects.
-
-Also, GSoC gives Synfig an opportunity to grow its community. While we realize that many students will move on to other things after GSoC ends, but like last time, some students decide to stick around and continue contributing to the project.
+GSoC gives us an opportunity to grow our community of contributors. With GSoC students can work on Synfig full time for 3 months and that's a great advancement to our project. But that's not all - the fact of participation in GSoC attracts attention to our project: before GSoC coding period starts, we get many contributions from aspiring students, who wish to proof their skills to be selected for participation. That's also a great boost for our project.
 
 **How many potential mentors have agreed to participate?**
 
-FILL THIS
+1-5
 
 **How will you keep mentors engaged with their students?**
 
-The student opens GitHub's issue, which is coresponding to his project and there provides weekly public reports about his progress. Every mentor should follow reports and provide on-time feedback and consultation to student via public discussion in relevant GitHub's issue or privately via email. Also, every mentor is required to contact student at least twice a week.
+The student opens GitHub's issue, which is corresponding to his project and there provides weekly public reports about his progress. Every mentor should follow reports and provide on-time feedback and consultation to student via public discussion in relevant GitHub's issue or privately via email/IM. Also, every mentor is required to contact student at least twice a week to check for the progress.
 
 Administrator of the project also watches reports and ensures that feedback provided by mentors on time.
 
@@ -33,11 +31,11 @@ These weekly blog posts will allow the student's mentors and org admins to notic
 **How will you get your students involved in your community during GSoC?**
 
 In general, we require students to be involved into our community BEFORE GSoC starts and their participation activity influences if their GSoC idea gets accepted as a project or not.
-All participating students are advised to subscribe (watch) our main repository at GitHub (https://github.com/synfig/synfig) to receive notifications about discussions.
+All participating students are advised to subscribe (watch) our main repository at GitHub (https://github.com/synfig/synfig) and Forums (https://forums.synfig.org/c/development) to receive notifications about discussions.
 
 **How will you keep students involved with your community after GSoC?**
 
-Considering that there are no mechanics to 100% guarantee student involvement after the program, we aim to create a community with a special attitude, where a student can have a home-like feeling, where he know his work is valued and appreciated by community other members and creative people from all around the world. This is the main motivation to contribute for all current project members.
+Considering that there are no mechanics to 100% guarantee student involvement after the program, we aim to maintain a community with a special attitude, where a student can have a home-like feeling, where he know his work is valued and appreciated by community other members and creative people from all around the world. This is the main motivation to contribute for all current project members.
 
 Given that we put initial student motivation in the first place, we understand that there are situations where a massive and long-term contribution effort it not possible without monetary reward. So, thanks to a regular income of donations we can afford to pay a small grants for implementing some features, for students who have proven their abilities and skill to carry and complete projects. The money for such grants are collected via continuous crowdfunding and other means (see https://www.synfig.org/donate/ for details).
 
@@ -51,7 +49,7 @@ Yes.
 
 **For each year your organization has participated, provide the counts of successful and total students. (e.g. 2016: 3/4) [500 characters]**
 
-2019: 2/2.
+2019: 2/2
 
 **If your org has applied for GSoC before but not been accepted, select the years:**
 
@@ -59,7 +57,7 @@ Yes.
 
 **Do you have any GSoC participant who can vouch for your project?**
 
-Information hidden.
+-
 
 **What year was your project started?**
 
@@ -91,7 +89,7 @@ c++, gtk, GTKmm, python
 
 **Topic Tags (Enter keywords for general topics that describe your organization. Examples: Vision, Robotics, Cloud, Graphics, Web, Real time )**
 
-vector graphics, animation
+vector graphics, animation, 2d/3d graphics
 
 **Ideas List**
 https://synfig-docs-dev.readthedocs.io/en/latest/gsoc/2020/ideas.html#projects-ideas
