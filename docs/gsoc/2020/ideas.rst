@@ -92,6 +92,26 @@ Developers can easily set up build environment on any platform and any toolchain
 
 **- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
 
+
+CMake build system
+~~~~~~~~~~~~~~~~~~~~
+
+**- Description**
+
+Current implementation of CMake build scripts is not full. Synfig builded by CMake still can be run by using some hacks.
+The task is to complete CMake build system scripts and fix some parts of Synfig code (mainly image and library search algorithms)
+
+**- Expected Results**
+
+Synfig can be built using CMake. Installers can be built using CMake (CPack).
+
+**- Difficulty** Medium
+
+**- Skills required** CMake, C++
+
+**- Mentor(s)** Artem Konoplin (https://github.com/ice0)
+
+
 Text Layer rewrite
 ~~~~~~~~~~~~~~~~~~~~
 
