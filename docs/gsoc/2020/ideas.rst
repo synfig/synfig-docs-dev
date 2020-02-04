@@ -39,39 +39,22 @@ If you have a project idea, edit the "Project Ideas" section below by filling th
 Projects Ideas
 --------------
 
-Export for Web
-~~~~~~~~~~~~~~
+Improvements for Lottie exporter plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **- Description**
 
-Extending support of "Lottie Export" plugin which helps to export animation for web through Lottie export format (http://airbnb.io/lottie/). See this page for details - https://forums.synfig.org/t/google-summer-of-code-2020/10545/4?u=anishg
+This project will improve plugin which helps to export animation for web through Lottie export format (http://airbnb.io/lottie/). See this page for details - https://forums.synfig.org/t/google-summer-of-code-2020/10545/4?u=anishg
 
 **- Expected Results**
 
-This will allow users to export animations which use many advanced features of Synfig, for instance, advanced outline layer, convert methods etc.
+This will allow users to export animations which use advanced features of Synfig, such as advanced outline layer, convert methods etc.
 
 **- Difficulty** Medium
 
 **- Skills required** C++, Python
 
 **- Mentor(s)** Anish Gulati (https://github.com/AnishGG)
-
-
-Editable animation curves in Graphs Panel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-**- Description**
-
-A possibility to edit animation curves in Graphs Panel, in the same way as we can do that with bezier curves on workarea. See this page for details - https://github.com/synfig/synfig/issues/267
-
-**- Expected Results**
-
-Editing animation curves is a must-have feature for professional animators. Implementing this will get Synfig closer to professional animation tool.
-
-**- Difficulty** Easy
-
-**- Skills required** C++, GTKmm
-
-**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
 
 
 Skeleton Tool
@@ -89,24 +72,8 @@ Simpler and faster Skeleton construction. Creating bones will be intuitively vis
 
 **- Skills required** C++, GTKmm
 
-**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
+**- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
 
-Implement generic waypoint editing operations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**- Description**
-
-Allow user to manipulate multiple waypoints in TimeTrack Panel. See this page for details - https://github.com/synfig/synfig/issues/266
-
-**- Expected Results**
-
-This will greatly simplify process of tweaking animation for user.
-
-**- Difficulty** Medium
-
-**- Skills required** C++
-
-**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
 
 Simplify building process by utilizing Conan C++ package manager
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -125,23 +92,6 @@ Developers can easily set up build environment on any platform and any toolchain
 
 **- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
 
-OpenToonz importer
-~~~~~~~~~~~~~~~~~~
-
-**- Description**
-
-Synfig at its current status is not good for frame-by-frame animations. But it is good for morphing vectors, cut-out and motion design. With the ability to import OpenToonz files (which is good for vector frame-by-frame animation), Synfig users can get best of two worlds and use those applications together.
-
-**- Expected Results**
-
-Synfig users will be able to use frame-by-frame animations created in OpenToonz.
-
-**- Difficulty** High
-
-**- Skills required** C++ (and maybe Python)
-
-**- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
-
 Text Layer rewrite
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -157,7 +107,7 @@ A usable Text Tool in Synfig.
 
 **- Skills required** C++, Freetype
 
-**- Mentor(s)** Ivan Mahonin (https://github.com/blackwarthog)
+**- Mentor(s)** Artem Konoplin (https://github.com/ice0)
 
 
 
