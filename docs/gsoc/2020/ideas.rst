@@ -130,6 +130,25 @@ A usable Text Tool in Synfig.
 **- Mentor(s)** Artem Konoplin (https://github.com/ice0)
 
 
+Replacement of deprecated Gtk classes
+~~~~~~~~~~~~~~~~~~~
+**- Description**
+
+- get rid of deprecated Gtk::StockId (since before 2013)
+- convert deprecated Gtk::Action to Gio::Action (since 2016)
+- convert/get rid of deprecated Gtk::UIManager to Gtk::Builder (since 2013)
+- (possibly) convert deprecated Gtk::Main 2 to Gtk::Application (since 2012)
+
+**- Expected Results**
+
+Let Synfig Studio code avoid unmantained code, as they can led to stability and security issues.
+Besides, it will ease porting of Synfig Studio to upcoming Gtk 4, that deletes all currently deprecated classes and methods.
+
+**- Difficulty** Easy
+
+**- Skills required*** C++, Gtkmm
+
+**- Mentor(s)** Rodolfo Ribeiro Gomes (https://github.com/rodolforg)
 
 Contacts
 --------
