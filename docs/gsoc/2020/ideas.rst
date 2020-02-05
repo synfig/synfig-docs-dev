@@ -130,6 +130,23 @@ A usable Text Tool in Synfig.
 **- Mentor(s)** Artem Konoplin (https://github.com/ice0)
 
 
+Scripting
+~~~~~~~~~~~~~~~~~~~
+**- Description**
+
+Expose/Port synfigapp API and its basic data structures to Python scripting language.
+
+**- Expected Results**
+
+Provide a way to user automate actions and to developers create plugins easier, like Blender does.
+
+**- Difficulty** Medium
+
+**- Skills required*** C, C++, Python
+
+**- Mentor(s)** Rodolfo Ribeiro Gomes (https://github.com/rodolforg)
+
+
 Replacement of deprecated Gtk classes
 ~~~~~~~~~~~~~~~~~~~
 **- Description**
@@ -149,6 +166,7 @@ Besides, it will ease porting of Synfig Studio to upcoming Gtk 4, that deletes a
 **- Skills required*** C++, Gtkmm
 
 **- Mentor(s)** Rodolfo Ribeiro Gomes (https://github.com/rodolforg)
+
 
 Contacts
 --------
