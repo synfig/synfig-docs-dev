@@ -27,7 +27,7 @@ Welcome to Synfig developers documentation!
    projects
    common/hotkeys
    common/random
-   community/code of conduct
+   community/code-of-conduct
 
 Indices and tables
 ==================
