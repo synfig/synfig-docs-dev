@@ -168,6 +168,27 @@ Besides, it will ease porting of Synfig Studio to upcoming Gtk 4, that deletes a
 **- Mentor(s)** Rodolfo Ribeiro Gomes (https://github.com/rodolforg)
 
 
+Performance enhancements
+~~~~~~~~~~~~~~~~~~~~~~~~
+**- Description**
+
+Improve the speed of Synfig export to files and rendering speed.
+
+If you want to learn about how to find bottlenecks in an application, especially in a complicated one like Synfig, and fix them - select this project :)
+
+This project is *only for Linux* (Linux has the necessary tools)
+
+**- Expected Results**
+
+Improved Synfig rendering speed, allowing users to work faster and create more complex animations.
+
+**- Difficulty** Medium
+
+**- Skills required** C++ (perf optional)
+
+**- Mentor(s)** Artem Konoplin (https://github.com/ice0), Konstantin Dmitriev (https://github.com/morevnaproject)
+
+
 Contacts
 --------
 
