@@ -57,6 +57,24 @@ This will allow users to export animations which use advanced features of Synfig
 **- Mentor(s)** Anish Gulati (https://github.com/AnishGG)
 
 
+Enhancements for Vectorization of bitmaps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**- Description**
+
+This project involves enhancements for vectorization feature. Currently the vectorization feature uses Opentoonz centerline method (see https://github.com/synfig/synfig/issues/735) for vectorization, this project involve implementation/porting outline vectorization method from Opentoonz to synfig.
+
+**- Expected Results**
+
+Provide outline and centerline methods to users, for converting any bitmap image to vector and get resolution-independent image, available for edit.
+
+**- Difficulty** Medium
+
+**- Skills required** C++
+
+**- Mentor(s)** Ankit Kumar Dwivedi (https://github.com/ankit-kumar-dwivedi)
+
+
 Skeleton Tool
 ~~~~~~~~~~~~~
 
