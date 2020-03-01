@@ -19,6 +19,7 @@ Welcome to Synfig developers documentation!
    common/dependencies
    community/contribution guidelines
    common/structure
+   common/vectorization
    tutorials
    common/packaging
    common/release
