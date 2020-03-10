@@ -207,6 +207,34 @@ Improved Synfig rendering speed, allowing users to work faster and create more c
 **- Mentor(s)** Artem Konoplin (https://github.com/ice0), Konstantin Dmitriev (https://github.com/morevnaproject)
 
 
+Cloud rendering platform
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+**- Description**
+
+Sometimes time is running out and you need to do your rendering as fast as possible.
+
+Synfig have console tool which can be run inside a container, and it allows you to choose which part of animation you want to render.
+We want to create a service which can distribute rendering job across a number of containers and merge final output to video file.
+
+This service must allow to:
+- Upload your rendering data to the cloud;
+- Run distributed rendering;
+- Re-run failed jobs (if container will stay unavailable);
+- Get completed images and pipe it thru FFMPEG to get the final avi/mp4 file;
+- Download images and/or final avi/mp4 file;
+- Have an API connector;
+
+**- Expected Results**
+Simple web-page for upload/download data and run/stop/view process status.
+
+**- Difficulty** Medium
+
+**- Skills required** Python, Docker, Kubernetes (JS/HTML optional)
+
+**- Mentor(s)** Sagar Utekar (https://github.com/Sagar2366), Artem Konoplin (https://github.com/ice0)
+
+
 Contacts
 --------
 
