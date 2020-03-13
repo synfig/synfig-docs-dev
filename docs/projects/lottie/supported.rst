@@ -366,3 +366,7 @@ Blend Methods
 -------------
 - The blend methods supported are: Composite, Difference, Multiply, Hard light, Luminance, Saturation, Hue, Color, Darken, Brighten, Overlay, Screen.
 - These methods have somewhat different implementations in Lottie and Synfig, hence the blend methods tend to show different behaviour when a layer is blended over a transparent background.
+
+Convert Methods
+---------------
+- The convert methods supported by Lottie Exporter plugin are : Add, Average, Composite, Exponential, Linear, Radial Composite, Scale, Subtract, Switch, Weighted Average, Bone link, Bone, Bone Root and Sine.
