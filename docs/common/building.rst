@@ -125,13 +125,6 @@ Now you need to install all required dependencies. Run a special script shipped 
     $ ./1-setup-windows-msys2.sh
 
 Wait till the script finish installing dependencies and you're ready to build Synfig.
-
-.. note::
-    When Synfig is compiled on Windows using MSYS2 there is a bug related with rendering files via CLI.
-    For this reason, generation of GUI icons and images is disabled for Windows build. So, after building
-    Synfig Studio you will not see any icons.
-    
-    For more details about this issue see this bugreport  - https://github.com/synfig/synfig/issues/861
     
 First build
 ~~~~~~~~~~~~~~~~~~~~~~~
