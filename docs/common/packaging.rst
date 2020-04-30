@@ -37,7 +37,7 @@ TL;DR;
 
     $ ./build-synfigstudio.sh
     
-This will fetch Docker image, and build pacakges for Windows and Linux, 64bit and 32bit. This process involves building all required libraries, so it will take a very long time.
+This will fetch Docker image, and build packages for Windows and Linux, 64bit and 32bit. This process involves building all required libraries, so it will take a very long time.
 
 After build finishes grab packages from "publish" directory.
 
