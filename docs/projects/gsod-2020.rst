@@ -6,3 +6,5 @@ Google Season of Docs
 .. toctree::
     :maxdepth: 2
     :glob
+    
+    gsod/*
