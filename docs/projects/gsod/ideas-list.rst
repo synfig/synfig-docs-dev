@@ -27,4 +27,5 @@ With the release of major stable version 1.4.0 we have a single top-priority pro
 - Project Website: https://www.synfig.org/
 - Old documentation: https://wiki.synfig.org/Category:Manual
 - New documentation (structure): https://synfig.readthedocs.io/en/latest/index.html
+- Discussion thread for new documentation: https://forums.synfig.org/t/new-documentation/10931
 - Links to similar documentation projects: https://docs.blender.org/manual/en/latest/, https://docs.krita.org/en/
