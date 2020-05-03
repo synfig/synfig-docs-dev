@@ -1,0 +1,8 @@
+.. _gsod-2020:
+
+Google Season of Docs
+=====================================================
+
+.. toctree::
+    :maxdepth: 2
+    :glob
