@@ -6,7 +6,7 @@ Projects
 This is a page for in-development projects
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
 
    projects/*
