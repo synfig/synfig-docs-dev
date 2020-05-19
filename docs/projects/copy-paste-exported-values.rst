@@ -1,7 +1,7 @@
 .. _copy-paste-exported-values:
 
-Control handling exported values during copy-pasting
-=====================================================
+Control handling exported values during copy-pasting [PENDING]
+===============================================================
 
 In Synfig user can export any parameter of any layer - this way parameter is linked to exported value.
 When user copy-pasting such layer from one file into another, the exported values are not copied (they are referenced/linked).
