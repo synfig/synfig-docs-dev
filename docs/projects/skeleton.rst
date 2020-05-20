@@ -30,13 +30,13 @@ Milestones
     - Will start working on the project for a head-start.
 
 - From June 1st to June 29th: (Eat- Sleep – Code -Repeat)
-    - Will start working with full force to get the basic click to "Active Bone and drag-click to draw bone working.
+    - Will start working with full force to get the basic "click to Active Bone" and "drag-click to draw bone" working.
 
 - From June 29th to July 3rd: 
     - Phase 1 evaluation submission
 
 - From July 3rd to July 27th:
-    - Implement the remaining feature.
+    - Implement the remaining features.
     - Adding the option “Make child to Current Active Bone” and make it work.
 
 - From July 27th to July 31st: 
