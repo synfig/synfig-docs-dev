@@ -9,7 +9,7 @@ Implementation Plan
 The Main functions of the tool are:
 
 - Create and Transform Bones:
-    - Double-click would add a default bone with all the handles. 
+    - Single-click on an empty space in the workarea would add a default bone with all the handles. 
     - Mouse-Down and Drag will add bone between the points dragged.
     - The handles will have their usual functions for transforming the bones.
 - Set Parent-Child Relations:
