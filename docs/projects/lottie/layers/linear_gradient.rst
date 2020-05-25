@@ -8,15 +8,20 @@ Linear Gradient Layer
 +---------------------+---------------------------------------------------------------------------+
 |        Amount       |   layers/shape.json -> "ef" -> effects/gFill.json -> effects/opacity.json |
 +---------------------+---------------------------------------------------------------------------+
-|     Blend_method    |Not supported                                                              |
+|     Blend_method    |Partially supported                                                        |
 +---------------------+---------------------------------------------------------------------------+
 |        Gradient     |    layers/shape.json -> "ef" -> effects/gfill.json                        |
 +---------------------+---------------------------------------------------------------------------+
-|       Point 1       |layers/shape.json ->  "ef" -> effects/gFill.json ->  "s"                   |
+|       p1            |layers/shape.json ->  "ef" -> effects/gFill.json ->  "s"                   |
 +---------------------+---------------------------------------------------------------------------+
-|       Point 2       |layers/shape.json ->  "ef" -> effects/gFill.json ->  "e"                   |
+|       p2            |layers/shape.json ->  "ef" -> effects/gFill.json ->  "e"                   |
 +---------------------+---------------------------------------------------------------------------+
 |      Loop           |                               Not supported                               |
 +---------------------+---------------------------------------------------------------------------+
 |      Zigzag         |                               Not supported                               |
 +---------------------+---------------------------------------------------------------------------+
+
+Important points
+----------------
+
+- p1 and p2 parameters are used to calculate the gradient start point -> "s" and the gradient end point -> "e" respectively.
