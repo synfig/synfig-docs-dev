@@ -25,31 +25,17 @@ The Main functions of the tool are:
 
 Milestones
 ~~~~~~~~~~
-- From May 4th to June 1st: (Community Bonding Period)
-    - Will start taking opinions regarding the tool and expectations of the community.
-    - Will start working on the project for a head-start.
 
 - From June 1st to June 29th: (Eat- Sleep – Code -Repeat)
-    - Will start working with full force to get the basic "click to Active Bone" and "drag-click to draw bone" working.
+    - Get the basic "click to set Active Bone" and "drag-click to draw bone" working.
 
-- From June 29th to July 3rd: 
-    - Phase 1 evaluation submission
-
-- From July 3rd to July 27th:
+- From June 29th to July 27th:
     - Implement the remaining features.
     - Adding the option “Make child to Current Active Bone” and make it work.
 
-- From July 27th to July 31st: 
-    - Phase 2 evaluation Submission
-
-- From July 31st to August 24th:
-    - Extensive testing and implementing missing features. (if any)
+- From July 27th to August 24th:
+    - Extensive testing and implementing missing features (if any).
     - Polishing the UI.
 
 - From August 24th to August 31st: 
-    - Final Project Submission
-
-- After GSoC: 
-    - I’ll keep on contributing to Synfig Studio as I enjoy contributing to anything that involves Art and computers. <3
-
-
+    - Wrapping up the project
