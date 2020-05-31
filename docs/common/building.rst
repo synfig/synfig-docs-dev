@@ -177,7 +177,7 @@ where
 * [phase] allows you to choose particular phase to execute for given package:
 
   * clean - does "make clean" operation.
-  * configure - running "./configure" script with all neccessary options.
+  * configure - running "./configure" script with all necessary options.
   * make - running "make" command and "make install".
   * build - executes "configure" and "make" phases (default).
   * full - executes all phases: "clean", "configure" and "make" (exactly in that order).
