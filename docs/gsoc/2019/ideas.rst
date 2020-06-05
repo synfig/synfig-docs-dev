@@ -1,6 +1,7 @@
 .. _ideas:
 
-Ideas List
+Ideas List 
+Just a check
 =====================
 
 
