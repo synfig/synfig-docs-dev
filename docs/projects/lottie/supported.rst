@@ -445,6 +445,23 @@ Radial Gradient Layer
 |        Zigzag       |        |cross|      |                  |cross|                    |
 +---------------------+---------------------+---------------------------------------------+
 
+Blur Layer
+----------
+
++--------------+---------+-----------------+
+|   Property   |  Value  | Type(Animation) |
++==============+=========+=================+
+|    Z_depth   |  |tick| |     |cross|     |
++--------------+---------+-----------------+
+|    Amount    | |cross| |     |cross|     |
++--------------+---------+-----------------+
+| Blend Method | |cross| |     |cross|     |
++--------------+---------+-----------------+
+|     Size     |  |tick| |      |tick|     |
++--------------+---------+-----------------+
+|     Type     |  |tick| |      |tick|     |
++--------------+---------+-----------------+
+
 Blend Methods
 -------------
 - The blend methods supported are: Composite, Difference, Multiply, Hard light, Luminance, Saturation, Hue, Color, Darken, Brighten, Overlay, Screen.
@@ -452,4 +469,4 @@ Blend Methods
 
 Convert Methods
 ---------------
-- The convert methods supported by Lottie Exporter plugin are : Add, aTan2, Average, Bone, Bone Link, Bone Root, Composite, Cos, Exponential, Integer, Linear, Radial Composite, Scale, Sine, Subtract, Switch, Vector Angle, Weighted Average
+- The convert methods supported by Lottie Exporter plugin are : Add, aTan2, Average, Bone, Bone Link, Bone Root, Composite, Cos, Exponential, Integer, Linear, Power, Radial Composite, Scale, Sine, Subtract, Switch, Vector Angle, VectorX, VectorY, Weighted Average
