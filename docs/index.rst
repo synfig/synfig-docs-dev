@@ -21,6 +21,7 @@ Welcome to Synfig developers documentation!
    common/structure
    tutorials
    common/packaging
+   common/cmake
    common/release
    common/roadmap
    gsoc
