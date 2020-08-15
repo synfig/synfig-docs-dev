@@ -1,4 +1,4 @@
-.. _building:
+.. _structure:
 
 Code structure
 ===============

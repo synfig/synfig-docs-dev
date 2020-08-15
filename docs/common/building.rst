@@ -3,7 +3,7 @@
 Building Synfig
 ===============
 
-Synfig is written in C++, based on GTK3 library.
+Synfig is written in C++, based on GTK3 library. This documentation uses autotools/make for building. Synfig can also be built using CMake. Check that out on :ref:`this page <cmake>`.
 
 Build system: autotools/make
 
