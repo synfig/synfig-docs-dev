@@ -469,4 +469,4 @@ Blend Methods
 
 Convert Methods
 ---------------
-- The convert methods supported by Lottie Exporter plugin are : Add, aTan2, Average, Bone, Bone Link, Bone Root, Composite, Cos, Exponential, Integer, Linear, Power, Radial Composite, Scale, Sine, Subtract, Switch, Vector Angle, VectorX, VectorY, Weighted Average
+- The convert methods supported by Lottie Exporter plugin are : Add, aTan2, Average, Bone, Bone Link, Bone Root, Composite, Cos, Dot Product, Exponential, Integer, Linear, Logarithm, Power, Radial Composite, Scale, Sine, Subtract, Switch, Vector Angle, VectorX, VectorY, Weighted Average
