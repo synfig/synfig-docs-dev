@@ -90,6 +90,24 @@ Now we can install all required libraries via HomeBrew. There is a special scrip
     
 Depending on version of your system the process of installing dependencies might take some time. When it completes you are ready to build Synfig! 
 
+.. note::  
+    If you are having problems with slow download speed of brew packages, check to see if your ISP is blocking some IP addresses. For example, in Russia Roskomnadzor blocks some IP addresses (https://isitblockedinrussia.com/?host=54.192.98.189) used by the Homebrew CDN (they use Cloudfront servers). This leads to long connection timeouts. To fix this, you can restrict the `curl` connect-timeout parameter. This is how I fixed it:
+
+.. code:: bash
+
+    $ echo "--connect-timeout 1" >> ~/.curlrc
+    $ export HOMEBREW_CURLRC=1
+
+
+P.S. Quick hack if you certificates outdated, and brew can't download packages:
+
+.. code:: bash
+
+    $ echo "--insecure" >> ~/.curlrc
+    $ export HOMEBREW_CURLRC=1
+
+
+
 Windows
 -------
 
