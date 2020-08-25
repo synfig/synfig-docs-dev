@@ -249,12 +249,16 @@ A *.deb* package for Synfig can be made by using the following code.
 
 .. code:: bash
 
-    $ make package
+    $ cpack -G DEB
 
 OSX
 ---
 
-TO BE WRITTEN
+A *.dmg* package for Synfig can be made by using the following code.
+
+.. code:: bash
+
+    $ cpack -G DragNDrop
 
 Windows
 -------
@@ -263,5 +267,5 @@ A *.exe* installer for synfig can be made by using the following code.
 
 .. code:: bash
 
-    $ make package
+    $ cpack -G NSIS
 
