@@ -47,3 +47,7 @@ Important points
 - Instead of directly using the shapes layer from Lottie, a solid color layer is used and is masked(using masks) to draw an outline. This is done to support the invert parameter from Synfig.
 
 - The mask is drawn according to: https://github.com/synfig/synfig/blob/678cc3a7b1208fcca18c8b54a29a20576c499927/synfig-core/src/modules/mod_geometry/outline.cpp
+
+- It is possible to export outlines without variable widths. To do so you need to use Outline width as the width for all vertices, upon doing so you can export the outlines without variable widths by choosing the same option from the Export menu.
+
+- In exporting without variable widths, the rounded edges cannot be animated.
