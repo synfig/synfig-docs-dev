@@ -15,6 +15,7 @@ Welcome to Synfig developers documentation!
    :caption: Contents:
 
    common/Setting up netbeans IDE
+   common/Setting up QtCreator IDE
    common/building
    common/dependencies
    community/contribution guidelines
