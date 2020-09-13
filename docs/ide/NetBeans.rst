@@ -1,16 +1,15 @@
+.. _NetBeans:
+
 Setting up Netbeans IDE for Synfig Development
 ==============================================
 
-If you are a developer yourself, you might want to setup a development environment, so that you can debug and develop Synfig Studio yourself.
-This tutorial will guide you on setting up Apache Netbeans IDE for Synfig.
-It is recommended that you clone the Synfig project before following this guide :)
 
 Prerequisites
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Please ensure that you have the following prerequisites installed on your machine:
 
-    * Git
-    * Oracle’s Java 8 or Open JDK v8
+    #. Clone synfig repo
+    #. Execute :code:`1-setup-<your-os>.sh` script to install build tools and dependencies
+    #. Install Oracle’s Java 8 or Open JDK v8
 
 .. note::
 

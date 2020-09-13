@@ -14,8 +14,7 @@ Welcome to Synfig developers documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   common/Setting up netbeans IDE
-   common/Setting up QtCreator IDE
+   ide/Setting up your preferred IDE
    common/building
    common/dependencies
    community/contribution guidelines

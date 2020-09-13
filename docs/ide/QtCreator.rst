@@ -1,12 +1,12 @@
+.. _QtCreator:
+
 Setting up QtCreator IDE for Synfig development
 ===============================================
 
-QtCreator is a powerful C++ IDE with Cmake support out of the box. Though the name Qt may mislead that it’s an IDE for Qt development, however, it’s not necessarily tied to only Qt technology. Any C++ project that uses CMake build tool can benefit the powerful features provided by the IDE.
-
 Prerequisites
 ~~~~~~~~~~~~~
-    • Clone synfig repo first on your computer
-    • Execute setup.sh script to install the build tools and dependencies
+    #. Clone synfig repo
+    #. Execute :code:`1-setup-<your-os>.sh` script to install build tools and dependencies
     
 Installation
 ~~~~~~~~~~~~~
@@ -16,7 +16,7 @@ For Windows and Mac users, you can download and install open source version of q
 
 Setup new Synfig project
 ~~~~~~~~~~~~~~~~~~~~~~~~
-    • Select Open project
+    * Select Open project
     
         .. image:: ../images/qtcreator_setup_open.png
         
@@ -24,7 +24,7 @@ Setup new Synfig project
     
         .. image:: ../images/qtcreator_setup_select.png
         
-    • Manage your kit
+    * Manage your kit
 
         For most users, you can select and use the default kit usually named Desktop.
         
@@ -32,7 +32,7 @@ Setup new Synfig project
       
         .. image:: ../images/qtcreator_setup_kit.png
       
-    • Manage your build path
+    * Manage your build path
 
         QtCreator tends to generate build directory above our source directory. If that’s OK with you than you can skip this part and proceed with Configure Project.
 
@@ -42,13 +42,13 @@ Setup new Synfig project
       
 Setup make configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
-    • Set processor count
+    * Set processor count
 
         Depending on your generated build files, the build system might utilize parallelism during build process or it might run only on one CPU. If you want to control the number of CPUs to be utilized by CMake during build process you can set it from Projects > Build > CMake arguments. For instance, if you've a quad-core processor, you can use -j 4
         
         .. image:: ../images/qtcreator_make_processor.png
         
-    • Change run configuration
+    * Change run configuration
 
         QtCreator, by default, sets synfig_bin to be run as our output but usually we are testing the GUI frontend so change it to synfigstudio from  Projects > Run > Run configuration
         
@@ -56,7 +56,7 @@ Setup make configuration
 
 File browser
 ~~~~~~~~~~~~
-    • File system
+    * File system
 
         To browse your project files, change File System sub-menu from Computer to synfig-studio. That way you’ll be able to see all the source files, resources, translation files, etc as it is in your file system.
         
