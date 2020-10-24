@@ -20,7 +20,8 @@ Checklist
 * its files should be placed in synfig-studio/gui/widgets folder
 * if it contains translatable text, it should be included in synfig-studio/po/POTFILES.in
 * signal slots/callbacks should be named on_[signal_name] or on_[child_widget_name]_[signal_name]
-* the user-interaction callbacks, like on_key_pressed and on_draw, if used, should catch all exceptions, if there is any of synfig:: or synfigapp:: API call in the method implementation, even indirectly. It should be done by macros SYNFIG_EXCEPTION_GUARD_*
+* the user-interaction callbacks, like on_key_pressed and on_draw, if used, should catch all exceptions, if there is any of synfig:: or synfigapp:: API call in the method implementation, even indirectly. It should be done by `macros SYNFIG_EXCEPTION_GUARD_* <https://github.com/synfig/synfig/blob/master/synfig-studio/src/gui/exception_guard.h>`_
 * it should `support Gtk::Builder and be available for Glade <https://github.com/synfig/synfig/pull/900/commits/025eec22c849c45d3c9e1fa295459033702ed069>`_
  * it should have properties defined via Glib::Property (for better support for Glade editor)
 * if it's a widget that uses time as horizontal axis, like for Widget_SoundWave, Widget_Timetrack and Widget_Curves, it could use `Widget_TimeGraphBase <https://github.com/synfig/synfig/blob/master/synfig-studio/src/gui/widgets/widget_timegraphbase.h>`_ as a parent class, for useful methods.
+* please document it :P
