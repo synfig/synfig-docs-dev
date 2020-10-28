@@ -62,4 +62,12 @@ File browser
         
         .. image:: ../images/qtcreator_file_browser.png
 
+Source code indentation
+~~~~~~~~~~~~~~~~~~~~~~~
+    * Use tab character
+
+        Synfig source files mainly C++ and CMake use tab character for indentation. QtCreator might use spaces by default depending on platforms or versions. Change C++ code style settings to Tabs Only. You could also duplicate built-in settings and make changes to preserve default settings.
+
+        .. image:: ../images/qtcreator_source_indentation.png
+
 You're all done :) Happy hacking!
