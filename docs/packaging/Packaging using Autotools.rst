@@ -1,7 +1,7 @@
-.. _packaging:
+.. _Packaging using Autotools:
 
-Packaging Synfig for distribution
-=================================
+Packaging using Autotools
+==========================
 
 OSX
 ~~~
@@ -87,6 +87,5 @@ Directory structure
 * "docker-builder-data/build/script/packet" - script files, which tell how to build each particular package.
 * "docker/debian-7-32bit" - 32-bit Docker environment configuration and scripts.
 * "docker/debian-7-64bit" - 64-bit Docker environment configuration and scripts.
-
 
 
