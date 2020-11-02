@@ -14,14 +14,12 @@ Welcome to Synfig developers documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   ide/Setting up your preferred IDE
-   common/building
-   common/dependencies
    community/contribution guidelines
+   ide/Setting up your preferred IDE
    common/structure
+   building/Building Synfig
+   packaging/packaging
    tutorials
-   common/packaging
-   common/cmake
    common/release
    common/roadmap
    gsoc

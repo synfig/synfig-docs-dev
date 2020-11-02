@@ -1,11 +1,7 @@
-.. _building:
+.. _Building using Autotools:
 
-Building Synfig
-===============
-
-Synfig is written in C++, based on GTK3 library. This documentation uses autotools/make for building. Synfig can also be built using CMake. Check that out on :ref:`this page <cmake>`.
-
-Build system: autotools/make
+Building Synfig using Autotools
+===============================
 
 Things to know before you start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,129 +17,7 @@ All those three components are included with the main source repository of Synfi
 ETL is required for synfig-core and synfig-core is required for building synfig-studio.
 
 So, first builds ETL, then synfig-core, and then synfig-studio.
-
-Preparing Environment
-~~~~~~~~~~~~~~~~~~~~~~
-
-Building Synfig requires many dependent libraries installed for your system. For full list of libraries please refer to :ref:`this page <dependencies>`.
-
-Below you will find instructions how to install them on various operating systems.
-
-Linux
--------
-
-First of all make sure you have "git" installed. Use it to fetch Synfig's sources:
-
-.. code:: bash
-
-    $ git clone https://github.com/synfig/synfig.git ~/synfig.git
-    
-Then navigate to sources directory:
-
-.. code:: bash
-
-    $ cd ~/synfig.git
-    
-Now you need to install all required dependencies. This is easy to do by running a special script shipped with Synfig's sources:
-
-.. code:: bash
-
-    $ ./1-setup-linux-native.sh
-
-Wait till the script finish installing dependencies and you're ready to build.
-    
-OSX
--------
-
-We will be running all commands in terminal, so start by launching Terminal app.
-
-First you need to install Xcode Command Line Tools with the following command:
-
-.. code:: bash
-
-    $ xcode-select --install
-    
-Follow instructions on the screen to complete installation.
-
-Next, get Synfig's sources:
-
-.. code:: bash
-
-    $ git clone https://github.com/synfig/synfig.git ~/synfig.git
-    
-When download finishes, navigate to sources directory:
-
-.. code:: bash
-
-    $ cd ~/synfig.git
-    
-Now we can install all required libraries via HomeBrew. There is a special script included with sources:
-
-.. warning::
-    It is NOT recommended to use this method on OSX version < 10.11 with already working Homebrew - with almost 100% probablility your Homebrew installation will be damaged. You've been warned.
-    
-    For more details about this issue see here - https://github.com/synfig/synfig/blob/678cc3a7b1208fcca18c8b54a29a20576c499927/1-setup-osx-brew.sh#L34-L37
-    
-.. code:: bash
-
-    $ ./1-setup-osx-brew.sh
-    
-Depending on version of your system the process of installing dependencies might take some time. When it completes you are ready to build Synfig! 
-
-.. note::  
-    If you are having problems with slow download speed of brew packages, check to see if your ISP is blocking some IP addresses. For example, in Russia Roskomnadzor blocks some IP addresses (https://isitblockedinrussia.com/?host=54.192.98.189) used by the Homebrew CDN (they use Cloudfront servers). This leads to long connection timeouts. To fix this, you can restrict the `curl` connect-timeout parameter. This is how I fixed it:
-
-.. code:: bash
-
-    $ echo "--connect-timeout 1" >> ~/.curlrc
-    $ export HOMEBREW_CURLRC=1
-
-
-P.S. Quick hack if you certificates outdated, and brew can't download packages:
-
-.. code:: bash
-
-    $ echo "--insecure" >> ~/.curlrc
-    $ export HOMEBREW_CURLRC=1
-
-
-
-Windows
--------
-
-.. note::
-    For compiling Synfig on Windows we use MinGW installation in MSYS2 environment.
-    
-    Alternative for that approach could be to build using MSVC and Microsoft vcpkg (https://github.com/microsoft/vcpkg), but we haven't digged into that yet. Any help on this matter is appreciated here - https://github.com/synfig/synfig/issues/860.
-
-Download and install MSYS2, following instructions here - http://www.msys2.org/.
-
-After that, start "MSYS2 MinGW 64-bit" from Windows menu and install git:
-
-.. code:: bash
-
-    $ pacman -S git
-
-Next, get Synfig's sources:
-
-.. code:: bash
-
-    $ git clone https://github.com/synfig/synfig.git ~/synfig.git
-    
-When download finishes, navigate to sources directory:
-
-.. code:: bash
-
-    $ cd ~/synfig.git
-
-Now you need to install all required dependencies. Run a special script shipped with Synfig's sources:
-
-.. code:: bash
-
-    $ ./1-setup-windows-msys2.sh
-
-Wait till the script finish installing dependencies and you're ready to build Synfig.
-    
+   
 First build
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -269,35 +143,3 @@ And finally a quick note about "build.conf.sample" file in the root of source re
 
 With this file you can tweak the number of threads used by the build scripts. Just copy "~/synfig.git/build.conf.sample" to "~/synfig.git/build.conf" and adjust its contents according to your needs.
 
-Creating Installer/Package
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-As an optional step you might wish to build a package/installer for distribution.
-
-First important thing to know is that you need a production build for that (for obvious reason it is very unlikely you want to distribute a build with debug symbols).
-
-So, make sure to get production build first:
-
-.. code:: bash
-
-    ./2-build-production.sh
-
-After build finishes you can generate a package for your operating system.
-    
-For OSX:
-
-.. code:: bash
-
-    ./3-package-osx-dmg.sh
-    
-For Linux:
-
-.. code:: bash
-
-    TO BE WRITTEN
-    
-For Windows:
-
-.. code:: bash
-
-    TO BE WRITTEN

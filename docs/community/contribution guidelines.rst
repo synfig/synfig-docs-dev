@@ -79,7 +79,7 @@ When done, commit your changes.
 
 
 4. Submitting a pull request
---------------------------
+----------------------------
 
 * The smaller the proposed change, the better. If you’d like to propose two unrelated changes, submit two pull requests.
 * The more information, the better. Make judicious use of the pull request body. Describe what changes were made, why you made them, and what impact they will have for users.
