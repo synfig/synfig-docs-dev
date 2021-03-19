@@ -26,7 +26,7 @@ If you have a project idea, edit the "Project Ideas" section below by filling th
 
     **- Difficulty** Easy | Medium | High
 
-    **- Skills required*** Knowledge Prerequisite
+    **- Skills required** Knowledge Prerequisite
 
     **- Mentor(s)** Put your name if you are willing to mentor + other mentors.
 
