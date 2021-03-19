@@ -28,15 +28,6 @@ A *.deb* package for Synfig can be made by using the following code.
 
     $ cpack -G DEB
 
-OSX
----
-
-A *.dmg* package for Synfig can be made by using the following code.
-
-.. code:: bash
-
-    $ cpack -G DragNDrop
-
 Windows
 -------
 
