@@ -56,7 +56,7 @@ From 3 packages (ETL, synfig-core, synfig-studio) 2 remains (synfig-core, synfig
 
 **- Skills required** C++
 
-**- Mentor(s)** Artem Konoplin (https://github.com/ice0), Ankit Kumar Dwivedi (https://github.com/ankit-kumar-dwivedi)
+**- Mentor(s)** Artem Konoplin (https://github.com/ice0), Ankit Kumar Dwivedi (https://github.com/ankit-kumar-dwivedi), Ayush Chamoli (https://github.com/ayesdie)
 
 
 Replacement of deprecated Gtk classes
