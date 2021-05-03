@@ -1,11 +1,14 @@
 .. _copy-paste-exported-values:
 
-Control handling exported values during copy-pasting [PENDING]
-===============================================================
+Control handling exported values during copy-pasting [IN PROGRESS]
+===================================================================
+
+.. note::
+    Currently in progress here - https://github.com/synfig/synfig/pull/2086
 
 In Synfig user can export any parameter of any layer - this way parameter is linked to exported value.
 When user copy-pasting such layer from one file into another, the exported values are not copied (they are referenced/linked).
-This creates problems
+This creates problems.
 
 I suggest to show a dialog, which is listing all exported values (ones which pasted layer has).
 In this dialog user can select which exported values should be copied and which should be linked from old file (default behavior is to copy values).
@@ -18,7 +21,7 @@ Here is a prototype:
 
     .. image:: copy-paste-exported-values/synfig-dialog.png
 
-    .. image:: copy-paste-exported-values/synfig-dialog.kra
+:download:`synfig-dialog.kra <copy-paste-exported-values/synfig-dialog.kra>`
     
 Explanation:
 
