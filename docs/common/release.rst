@@ -64,7 +64,7 @@ Build packages
 ~~~~~~~~~~~~~~
 
 #. Build source tarballs - './autobuild/synfigstudio-release.sh'
-#. Build OSX package and upload to deploy server.
+#. Build MacOS package and upload to deploy server.
 #. Wait when build bot will finish building packages for Linux and Windows.
 
 Write press release
@@ -101,6 +101,37 @@ Login to deploy server and upload packages to
 * SourceForge
 
 Update Paddle products.
+
+Update flatpak and snap packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**flatpak**
+
+.. code:: bash
+
+    git clone --recursive https://github.com/flathub/org.synfig.SynfigStudio.git
+    # edit org.synfig.SynfigStudio.yaml and update packages
+    flatpak-builder --user --install build-dir org.synfig.SynfigStudio.yaml
+    # test build locally
+    flatpak run org.synfig.SynfigStudio
+    # make pull request with your changes
+    
+**snap**
+
+.. code:: bash
+
+    git clone https://github.com/synfig/synfig.git
+    cd autobuild/snap-stable/
+    # edit snapcraft.yaml and update packages
+    # remote build using launchpad.net servers
+    snapcraft remote-build
+    # install snap and test it
+    snap install --dangerous ./synfigstudio_1.4.0_amd64.snap
+    # upload to snapcraft store
+    snapcraft upload --release=candidate synfigstudio_1.4.0_amd64.snap
+    # after test move it from candidate to release channel
+    # make pull request with your changes
+    
 
 Publish announcement
 ~~~~~~~~~~~~~~~~~~~~
