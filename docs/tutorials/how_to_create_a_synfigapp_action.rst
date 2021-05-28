@@ -22,15 +22,15 @@ The issue I mentioned above I want to solve is about move the origin point of a 
 As it is a modification of a synfig layer parameter value, it should be done via a ``synfigapp::Action``, and I will show here how to create it and
 how Synfig Studio will be able to provide it and call it.
 
-When user right-clicks on a layer visual handle (like tangent, origin, vertex, etc.), the Workarea class detects the mouse button pressing event,
+When user right-clicks on a layer visual handle (like tangent, origin, vertex, etc.), the ``Workarea`` class detects the mouse button pressing event,
 realizes that it was over a handle (Synfig Studio internally calls it 'duck') and dispatches the event to the duck object.
 The event detection is done in ``bool studio::WorkArea::on_drawing_area_event(GdkEvent *event)`` and the dispatch is via ``void studio::Duck::signal_user_click(int button_num)``.
 
-Each handle (duck) type may react to this signal calling differently, but it is pretty common to they call ``studio::CanvasView::popup_param_menu()`` passing
-as argument what layer parameter they affect. In its turn, it calls ``studio::CanvasView::make_param_menu()`` that, in short, scans all synfigapp actions and
-ask each one if they are a action candidate to deal with that layer parameter/value node.
+Each handle (duck) type may react to this signal calling differently, but it is pretty common to they call ``studio::CanvasView::popup_param_menu()`` and pass,
+as method argument, what layer parameter they affect.
+In its turn, it calls ``studio::CanvasView::make_param_menu()`` that, in short, scans all synfigapp actions and ask each one if it is a candidate to deal with that layer parameter/value node.
 
-At his point, Studio pops up a context menu with all related actions (and some other special stuff).
+At this point, Studio pops up a context menu with all related actions (and some other special stuff).
 When user selects a menu item, ``void Instance::process_action(synfig::String action_name, synfigapp::Action::ParamList param_list)`` is called,
 where it may ask user for some confirmation or for extra info and then check if the action tells it is ready. Finally, the action is performed.
 
@@ -38,6 +38,7 @@ synfigapp Actions
 -----------------
 
 There are 4 types of Action:
+
 * Base
 * Undoable (< Base)
 * CanvasSpecific
