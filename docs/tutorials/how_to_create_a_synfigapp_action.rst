@@ -2,25 +2,25 @@ How to add new synfigapp Action
 ===============================
 
 This is a tutorial based on what I did to solve issue `#2005 <https://github.com/synfig/synfig/issues/2005>`_.
+This feature request is about the possibility of moving the origin point of a region/outline/advanced outline layer to its geometric center.
+This document will describe how to create this feature and how to make Synfig Studio able to show it to user.
+
+As the key point on the feature request is a modification of a synfig layer parameter value, it should be done via a (new) ``synfigapp::Action``.
 
 About synfigapp
 ---------------
 
 First things first: what is ``synfigapp``? It is an intermediate API to 'interactively' handle a synfig animation/document.
-It deals with stuff like layer creation, layer up/down movement (z-depth), layer parameter setting, action history, layer selection, etc.
-In summary, 'everything' that should be done/changed in a Synfig animation document. This kind of stuff is called Action. And there are so many of them, more than 100!
+It deals with stuff like layer creation, layer up/down movement (z-depth), layer parameter setting, action history, layer selection, canvas resizing, etc.
+In other words, 'everything' that should be done/changed in a Synfig animation document. This kind of stuff is called Action. And there are so many of them, more than 100!
 ``synfigapp`` is also responsible to emit some signals at each action. Therefore, it is a 'perfect' glue between the synfig document and an interactive application that uses or creates it.
 
 Synfig Studio is a GUI built on top of synfigapp and should not change a synfig file directly.
 For example, when a user renames a layer in Layers Panel, the GUI calls an synfigapp action to rename it instead of using the synfig library directly.
 One important reason to do it via synfigapp is the handling of action history (made by synfigapp), that allows user undo the last action(s).
 
-How does Synfig Studio work?
-----------------------------
-
-The issue I mentioned above I want to solve is about move the origin point of a region/outline/advanced outline layer to its geometric center.
-As it is a modification of a synfig layer parameter value, it should be done via a ``synfigapp::Action``, and I will show here how to create it and
-how Synfig Studio will be able to provide it and call it.
+How does Synfig Studio work in this regard?
+-------------------------------------------
 
 When user right-clicks on a layer visual handle (like tangent, origin, vertex, etc.), the ``Workarea`` class detects the mouse button pressing event,
 realizes that it was over a handle (Synfig Studio internally calls it 'duck') and dispatches the event to the duck object.
@@ -34,17 +34,21 @@ At this point, Studio pops up a context menu with all related actions (and some 
 When user selects a menu item, ``void Instance::process_action(synfig::String action_name, synfigapp::Action::ParamList param_list)`` is called,
 where it may ask user for some confirmation or for extra info and then check if the action tells it is ready. Finally, the action is performed.
 
+In conclusion, the new ``synfigapp::Action`` must be able to provide what data (layers, parameters/valuenodes, etc.) it expects, to provide a name/label to be used in GUI, to check if it is a candidate for current user context, and to do (and hopefully undo) the action itself.
+
 synfigapp Actions
 -----------------
 
+As we now know what any synfigapp action should do, let us explore how they are structured in synfigapp.
+
 There are 4 types of Action:
 
-* Base
-* Undoable (< Base)
-* CanvasSpecific
-* Super (< Base, CanvasSpecific)
-* Group (< Super)
+* synfigapp::Action::Base – obviously the base for any action
+* synfigapp::Action::Undoable (derived from synfigapp::Action::Base) – adds the ``undo()`` method
+* synfigapp::Action::Super (derived from synfigapp::Action::Base and synfigapp::Action::CanvasSpecific) – it is, actually, a sequence of other actions
+* synfigapp::Action::Group (derived from synfigapp::Action::Super) – ?
 
+synfigapp::Action::CanvasSpecific is a 'interface' to provide basic and standard support to those actions that must be used on a specific Canvas. Any action that modifies layers, valuenodes, etc. would inherit this class. And it is very important to inherit synfigapp::Action::Undoable, because it is the way synfigapp knows the action is… undoable. Thus, many actions explicitly inherit both classes, if they aren't already based on synfigapp::Action::Super.
 
 One of the first things to do is to decide what is the base class for our new Action:
 
