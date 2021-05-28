@@ -50,6 +50,62 @@ There are 4 types of Action:
 
 synfigapp::Action::CanvasSpecific is a 'interface' to provide basic and standard support to those actions that must be used on a specific Canvas. Any action that modifies layers, valuenodes, etc. would inherit this class. And it is very important to inherit synfigapp::Action::Undoable, because it is the way synfigapp knows the action is… undoable. Thus, many actions explicitly inherit both classes, if they aren't already based on synfigapp::Action::Super.
 
+Here is the mandatory methods to be implemented for 'any' Action (defined in ``synfigapp/action.h``):
+
+==========  ===========================================================  =========================
+Base Class  Method                                                       Description
+==========  ===========================================================  =========================
+Base        virtual synfig::String get_name() const;                     The internal action name. Must be unique.
+                                                                         Used for creating action instances by name (``synfigapp::Action::create(const synfig::String& name)``).
+
+                                                                         The recommended way to declare and implement it is via ACTION_ macros listed below.
+
+Base        static Action::Base* create();                               Factory for creating this action later configured via ``set_param()`` if needed.
+
+                                                                         The recommended way to declare and implement it is via ACTION_ macros listed below.
+
+Base        static bool is_candidate(const ParamList &x);                Checks the ParamList to see if this action could be performed with given parameters.
+
+Base        static ParamVocab get_param_vocab();                         Yields the ParamVocab object which describes what parameters this action needs before
+                                                                         it can perform the act.
+
+Base        bool set_param(const synfig::String& name, const Param& v);  The action implementation receives the value ``v`` for parameter ``name`` by this method.
+
+Base        virtual bool is_ready() const;                               Check if the current parameter list set for action is enough and
+                                                                         it would be ok to call ``perform()``
+
+Base        virtual void perform();                                      As name says, this method does what action is supposed to do.
+
+                                                                         It must throw an ``Action::Error`` on failure
+
+Undoable    virtual void undo();                                         If this action class is derived from synfigapp::Action::Undoable,
+                                                                         it must implement here how to undo it.
+
+Super       virtual void prepare();                                      This method is responsible to make the sequence of actions to be performed.
+
+                                                                         From the parameters set by e.g. ``set_param()``, it will create the needed actions
+									 that will compound the action sequence.
+==========  ===========================================================  =========================
+
+Helper macros (provided by ``synfigapp/action.h``):
+
+.. code-block:: cpp
+
+  // Inside class declaration
+  ACTION_MODULE_EXT
+  
+  // In class implementation file (example: class Action::ActivepointSet)
+  ACTION_INIT(Action::ActivepointSet)
+  ACTION_SET_NAME(Action::ActivepointSet,"ActivepointSet");
+  ACTION_SET_LOCAL_NAME(Action::ActivepointSet,N_("Set Activepoint"));
+  ACTION_SET_TASK(Action::ActivepointSet,"set");
+  ACTION_SET_CATEGORY(Action::ActivepointSet,Action::CATEGORY_ACTIVEPOINT);
+  ACTION_SET_PRIORITY(Action::ActivepointSet,0);
+  ACTION_SET_VERSION(Action::ActivepointSet,"0.0");
+
+Solving the issue
+-----------------
+
 One of the first things to do is to decide what is the base class for our new Action:
 
 
@@ -64,46 +120,3 @@ And register the action in ``synfigapp::Action`` book. For now, the only way is 
 
 Next I'll start to implement the new action class. The essencial methods are shown below:
 
-*	virtual synfig::String get_name() const;
-  The internal action name. Must be unique. Used for creating action instances by name (``synfigapp::Action::create(const synfig::String& name)``).
-  The recommended way to declare and implement it is via ACTION_ macros listed below.
-* static Action::Base* create();
-  Factory for creating this action later configured via ``set_param()`` if needed.
-  The recommended way to declare and implement it is via ACTION_ macros listed below.
-* static bool is_candidate(const ParamList &x);
-  Checks the ParamList to see if this action could be performed with given parameters.
-* static ParamVocab get_param_vocab();
-  Yields the ParamVocab object which describes what parameters this action needs before it can perform the act.
-*	bool set_param(const synfig::String& name, const Param &);
-  The action implementation receives the parameter values by this method.
-* virtual bool is_ready() const;
-  Check if the current parameter list set for action is enough and it would be ok to call ``perform()``
-*	virtual void perform();
-  As name says, this method does what action is supposed to do.
-  It must throw an ``Action::Error`` on failure
-* virtual void undo();
-  If this action class is derived from synfigapp::Action::Undoable, it must implement here how to undo it.
-
-
-
-  
-  ACTION_MODULE_EXT
-  
-  ACTION_INIT(class)
-  ACTION_SET_NAME(Action::ActivepointSet,"ActivepointSet");
-ACTION_SET_LOCAL_NAME(Action::ActivepointSet,N_("Set Activepoint"));
-ACTION_SET_TASK(Action::ActivepointSet,"set");
-ACTION_SET_CATEGORY(Action::ActivepointSet,Action::CATEGORY_ACTIVEPOINT);
-ACTION_SET_PRIORITY(Action::ActivepointSet,0);
-ACTION_SET_VERSION(Action::ActivepointSet,"0.0");
-.. code-block:: cpp
-
-	static ParamVocab get_param_vocab();
-	static bool is_candidate(const ParamList &x);
-
-	virtual bool is_ready()const;
-
-	virtual void perform();
-	virtual void undo();
-
-	ACTION_MODULE_EXT
