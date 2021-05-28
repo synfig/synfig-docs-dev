@@ -1,0 +1,104 @@
+How to add new synfigapp Action
+===============================
+
+This is a tutorial based on what I did to solve issue `#2005 <https://github.com/synfig/synfig/issues/2005>`_.
+
+About synfigapp
+---------------
+
+First things first: what is ``synfigapp``? It is an intermediate API to 'interactively' handle a synfig animation/document.
+It deals with stuff like layer creation, layer up/down movement (z-depth), layer parameter setting, action history, layer selection, etc.
+In summary, 'everything' that should be done/changed in a Synfig animation document. This kind of stuff is called Action. And there are so many of them, more than 100!
+``synfigapp`` is also responsible to emit some signals at each action. Therefore, it is a 'perfect' glue between the synfig document and an interactive application that uses or creates it.
+
+Synfig Studio is a GUI built on top of synfigapp and should not change a synfig file directly.
+For example, when a user renames a layer in Layers Panel, the GUI calls an synfigapp action to rename it instead of using the synfig library directly.
+One important reason to do it via synfigapp is the handling of action history (made by synfigapp), that allows user undo the last action(s).
+
+How does Synfig Studio work?
+----------------------------
+
+The issue I mentioned above I want to solve is about move the origin point of a region/outline/advanced outline layer to its geometric center.
+As it is a modification of a synfig layer parameter value, it should be done via a ``synfigapp::Action``, and I will show here how to create it and
+how Synfig Studio will be able to provide it and call it.
+
+When user right-clicks on a layer visual handle (like tangent, origin, vertex, etc.), the Workarea class detects the mouse button pressing event,
+realizes that it was over a handle (Synfig Studio internally calls it 'duck') and dispatches the event to the duck object.
+The event detection is done in ``bool studio::WorkArea::on_drawing_area_event(GdkEvent *event)`` and the dispatch is via ``void studio::Duck::signal_user_click(int button_num)``.
+
+Each handle (duck) type may react to this signal calling differently, but it is pretty common to they call ``studio::CanvasView::popup_param_menu()`` passing
+as argument what layer parameter they affect. In its turn, it calls ``studio::CanvasView::make_param_menu()`` that, in short, scans all synfigapp actions and
+ask each one if they are a action candidate to deal with that layer parameter/value node.
+
+At his point, Studio pops up a context menu with all related actions (and some other special stuff).
+When user selects a menu item, ``void Instance::process_action(synfig::String action_name, synfigapp::Action::ParamList param_list)`` is called,
+where it may ask user for some confirmation or for extra info and then check if the action tells it is ready. Finally, the action is performed.
+
+synfigapp Actions
+-----------------
+
+There are 4 types of Action:
+* Base
+* Undoable (< Base)
+* CanvasSpecific
+* Super (< Base, CanvasSpecific)
+* Group (< Super)
+
+
+One of the first things to do is to decide what is the base class for our new Action:
+
+
+Now let's create the new files ``origintocenter.h`` and ``origintocenter.cpp``: they will be placed under ``synfig-studio/src/synfigapp/actions`` folder.
+
+Next I registered in the building system files. As we support Autotools and CMake, we have to edit:
+
+* ``synfig-studio/src/synfigapp/Makefile.am``
+* ``synfig-studio/src/synfigapp/actions/CMakeLists.txt``
+
+And register the action in ``synfigapp::Action`` book. For now, the only way is directly in ``syfigapp::Action::Main()`` method (in file ``synfig-studio/src/synfigapp/action.cpp``).
+
+Next I'll start to implement the new action class. The essencial methods are shown below:
+
+*	virtual synfig::String get_name() const;
+  The internal action name. Must be unique. Used for creating action instances by name (``synfigapp::Action::create(const synfig::String& name)``).
+  The recommended way to declare and implement it is via ACTION_ macros listed below.
+* static Action::Base* create();
+  Factory for creating this action later configured via ``set_param()`` if needed.
+  The recommended way to declare and implement it is via ACTION_ macros listed below.
+* static bool is_candidate(const ParamList &x);
+  Checks the ParamList to see if this action could be performed with given parameters.
+* static ParamVocab get_param_vocab();
+  Yields the ParamVocab object which describes what parameters this action needs before it can perform the act.
+*	bool set_param(const synfig::String& name, const Param &);
+  The action implementation receives the parameter values by this method.
+* virtual bool is_ready() const;
+  Check if the current parameter list set for action is enough and it would be ok to call ``perform()``
+*	virtual void perform();
+  As name says, this method does what action is supposed to do.
+  It must throw an ``Action::Error`` on failure
+* virtual void undo();
+  If this action class is derived from synfigapp::Action::Undoable, it must implement here how to undo it.
+
+
+
+  
+  ACTION_MODULE_EXT
+  
+  ACTION_INIT(class)
+  ACTION_SET_NAME(Action::ActivepointSet,"ActivepointSet");
+ACTION_SET_LOCAL_NAME(Action::ActivepointSet,N_("Set Activepoint"));
+ACTION_SET_TASK(Action::ActivepointSet,"set");
+ACTION_SET_CATEGORY(Action::ActivepointSet,Action::CATEGORY_ACTIVEPOINT);
+ACTION_SET_PRIORITY(Action::ActivepointSet,0);
+ACTION_SET_VERSION(Action::ActivepointSet,"0.0");
+.. code-block:: cpp
+
+	static ParamVocab get_param_vocab();
+	static bool is_candidate(const ParamList &x);
+
+	virtual bool is_ready()const;
+
+	virtual void perform();
+	virtual void undo();
+
+	ACTION_MODULE_EXT
