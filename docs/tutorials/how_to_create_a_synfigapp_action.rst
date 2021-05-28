@@ -1,5 +1,5 @@
-How to add new synfigapp Action
-===============================
+How to create a new synfigapp Action
+====================================
 
 This is a tutorial based on what I did to solve issue `#2005 <https://github.com/synfig/synfig/issues/2005>`_.
 This feature request is about the possibility of moving the origin point of a region/outline/advanced outline layer to its geometric center.
