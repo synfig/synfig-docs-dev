@@ -106,17 +106,53 @@ Helper macros (provided by ``synfigapp/action.h``):
 Solving the issue
 -----------------
 
-One of the first things to do is to decide what is the base class for our new Action:
+The logic for the new action
+............................
 
+The new action purpose is to move the origin point of a region/outline/advanced outline layer to its geometric center.
+Let us assume the layer geometric center is the center of its (AABB) bounding rectangle (that one shown on Synfig Studio when you select the layer).
+It may be a problem for convex or concave shapes. However, for simplicity sake of this documentation, I will adopt this concept.
 
-Now let's create the new files ``origintocenter.h`` and ``origintocenter.cpp``: they will be placed under ``synfig-studio/src/synfigapp/actions`` folder.
+Synfig Studio let user create geometric shapes by its tools Circle, Rectangle, Star, Polygon and Spline. Internally they use Layer_Circle, Layer_Polygon, Rectangle, Star, Region, Outline and Advanced_Outline layers. All of them are (directly or indirectly) derived from Layer_Shape class.
+From this list, Layer_Circle and Star always have their origin point set at their geometric center. Layer_Ractangle does not have an origin parameter. So the focus is the layers Layer_Polygon, Region, Outline and Advanced_Outline.
 
-Next I registered in the building system files. As we support Autotools and CMake, we have to edit:
+Layer_Shape has the convenient method ``Rect Layer_Shape::get_bounding_rect()``. So deriving the geometric center of those layers is pretty easy.
+
+The new action parameters
+.........................
+
+The action shall receive the origin parameter that should be displaced. From this information, it can retrieve the layer it belongs to and access the mentioned method. Once computed the new origin position, it should set the origin parameter value.
+
+However, if the origin has a new value set, all vertices will rendered in a new place, as their coordinates are relative to origin point. Therefore it is necessary to change (by a constant offset) the coordinates of all vertices. Layer_Poligon stores them in 'vector_list' parameter; the others in 'bline' parameter.
+
+The new action base class
+.........................
+
+The action is specific to a canvas (the one the layer is on), so it must be derived from auxiliar class ``synfigapp::Action::CanvasSpecific``.
+
+It is obvious the action can be undoable, so ``synfigapp::Action::Undoable`` must be a base class too for it.
+
+Obviously, synfigapp already has an action for setting a layer parameter. It is called ValueDescSet. We could reuse it, as we have to change a lot of parameters, instead of repeting code. That would also avoid we having to handle the undo method, as ValueDescSet already know to undo.
+
+If we are reusing an existent action (and several times: origin + vertices), we should use as our base class for action the ``synfig::Action::Super`` class only, as it is derived from ``synfigapp::Action::Undoable`` and ``synfigapp::Action::CanvasSpecific`` and the main reason: it handles sequence of existent actions.
+
+Creating the new action class and its files
+...........................................
+
+The new class will be named as OriginToShapeCenter, following the action naming convention: `camel case <https://en.wikipedia.org/wiki/Camel_case>`_. I chose OriginToShapeCenter because OriginToCenter is too much generic: it could mean canvas center, for example.
+
+The filenames will be ``origintoshapecenter.h`` and ``origintoshapecenter.cpp``, as the convention used for synfigapp action files are the action name in snake_case, but (ugh) without the underscore ``_``. They will be placed under ``synfig-studio/src/synfigapp/actions`` folder.
+
+The new files must be registered in the building systems. As we support Autotools and CMake, we have to edit the following files:
 
 * ``synfig-studio/src/synfigapp/Makefile.am``
 * ``synfig-studio/src/synfigapp/actions/CMakeLists.txt``
 
-And register the action in ``synfigapp::Action`` book. For now, the only way is directly in ``syfigapp::Action::Main()`` method (in file ``synfig-studio/src/synfigapp/action.cpp``).
+We have to edit an extra file too, related to i18n: ``synfig-studio/po/POTFILES.in``.
 
-Next I'll start to implement the new action class. The essencial methods are shown below:
+Note: Don't forget to regenerate the Makefiles due to this change. If you are using the building scripts provided by synfig project, run ``./2-build-production.sh studio build`` once. It is only required because we changed a Makefile.am and/or CMakeLists.txt.
+
+
+DRAFT
+.....
 
