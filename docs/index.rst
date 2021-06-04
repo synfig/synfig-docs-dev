@@ -22,6 +22,7 @@ Welcome to Synfig developers documentation!
    tutorials
    common/release
    common/roadmap
+   common/sif_file_format
    gsoc
    projects
    common/hotkeys
