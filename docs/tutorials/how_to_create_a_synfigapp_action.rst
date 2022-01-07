@@ -45,10 +45,10 @@ There are 4 types of Action:
 
 * synfigapp::Action::Base – obviously the base for any action
 * synfigapp::Action::Undoable (derived from synfigapp::Action::Base) – adds the ``undo()`` method
-* synfigapp::Action::Super (derived from synfigapp::Action::Base and synfigapp::Action::CanvasSpecific) – it is, actually, a sequence of other actions
+* synfigapp::Action::Super (derived from synfigapp::Action::Undoable and synfigapp::Action::CanvasSpecific) – it is, actually, a sequence of other actions
 * synfigapp::Action::Group (derived from synfigapp::Action::Super) – ?
 
-synfigapp::Action::CanvasSpecific is a 'interface' to provide basic and standard support to those actions that must be used on a specific Canvas. Any action that modifies layers, valuenodes, etc. would inherit this class. And it is very important to inherit synfigapp::Action::Undoable, because it is the way synfigapp knows the action is… undoable. Thus, many actions explicitly inherit both classes, if they aren't already based on synfigapp::Action::Super.
+synfigapp::Action::CanvasSpecific is an 'interface' to provide basic and standard support to those actions that must be used on a specific Canvas. Any action that modifies layers, valuenodes, etc. would inherit this class. And it is very important to inherit synfigapp::Action::Undoable, because it is the way synfigapp knows the action is… undoable. Thus, many actions explicitly inherit both classes, if they aren't already based on synfigapp::Action::Super.
 
 Here is the mandatory methods to be implemented for 'any' Action (defined in ``synfigapp/action.h``):
 
