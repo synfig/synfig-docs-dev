@@ -1,6 +1,6 @@
 .. _skeleton-project:
 
-Skeleton Tool (GSoC-2020) [IN PROGRESS]
+Skeleton Tool (GSoC 2020) [COMPLETED]
 =====================================================
 
 Implementation Plan
