@@ -35,6 +35,23 @@ Next issues should be resolved:
 
 **- Mentor(s)** Artem Konoplin (https://github.com/ice0), Konstantin Dmitriev (https://github.com/morevnaproject)
 
+Enhance building process by integrating Conan C++ package manager
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**- Description**
+
+Integrate Conan C/C++ package manager (https://conan.io/) to provide all required dependencies for building Synfig on any platform. See this page for details - https://github.com/synfig/synfig/issues/666
+
+**- Expected Results**
+
+Developers can easily set up build environment on any platform and any toolchain.
+
+**- Difficulty** Easy
+
+**- Skills required** Basic Linux system administration skills, Python, Bash scripting, Git, Conan, Docker (recommended), CMake (recommended)
+
+**- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
+
 
 Building Synfig with the MSVC/vcpkg toolkit (175 hrs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
