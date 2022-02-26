@@ -9,8 +9,8 @@ This year we plan to apply to Google Summer of Code. Currently we are looking fo
 Projects Ideas
 --------------
 
-User Interface improvements (175-350 hrs)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+User Interface improvements (175 or 350 hrs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **- Description**
 
@@ -37,7 +37,7 @@ Next issues should be resolved:
 
 
 Building Synfig with the MSVC/vcpkg toolkit (175 hrs)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **- Description**
 
@@ -58,7 +58,7 @@ There are still some issues when building Synfig with the Microsoft Visual Studi
 
 
 Replacement of deprecated Gtk classes (175 hrs)
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **- Description**
 
 - get rid of deprecated Gtk::StockId (since before 2013)
@@ -79,8 +79,8 @@ Synfig compiles with the `-DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED` fla
 **- Mentor(s)** Rodolfo Ribeiro Gomes (https://github.com/rodolforg), Ankit Kumar Dwivedi (https://github.com/ankit-kumar-dwivedi)
 
 
-Performance enhancements (175-350 hrs)
-~~~~~~~~~~~~~~~~~~~~~~~~
+Performance enhancements (175 or 350 hrs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **- Description**
 
 Improve the speed of Synfig export to files and rendering speed.
@@ -100,16 +100,16 @@ Improved Synfig rendering speed, allowing users to work faster and create more c
 **- Mentor(s)** Artem Konoplin (https://github.com/ice0), Konstantin Dmitriev (https://github.com/morevnaproject)
 
 
-Propose Project
----------------
+Propose a Project
+------------------
 If you have a project idea, edit the "Project Ideas" section below by filling the required details and sending a pull request (this page is editable at  https://github.com/synfig/synfig-docs-dev/blob/master/docs/gsoc/2022/ideas.rst), even if you could not mentor (we will find a mentor).
 
 **Required information for project proposal**
 
 ::
 
-    A descriptive title
-    ~~~~~~~~~~~~~~~~~~~
+    A descriptive title (175 or 350 hrs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     **- Description**
 
     A brief description about the project
