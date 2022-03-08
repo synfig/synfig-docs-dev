@@ -86,5 +86,5 @@ Once this is completed successfully, you can run Synfig by.
 
 .. code:: bash
 
-    $ ./cmake-build-msys/output/bin/synfigstudio.exe
+    $ ./cmake-build-msys/output/Release/bin/synfigstudio.exe
 
