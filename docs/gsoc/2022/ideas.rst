@@ -129,11 +129,11 @@ If you have a project idea, edit the "Project Ideas" section below by filling th
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     **- Description**
 
-    A brief description about the project
+    Waveform Converter to create waveform from audio
 
     **- Expected Results**
 
-    What benefit this deliver?
+    visual waveform animates to audo file, something like an audio visualizer
 
     **- Difficulty** Easy | Medium | High
 
@@ -143,9 +143,9 @@ If you have a project idea, edit the "Project Ideas" section below by filling th
 
 *Please mention the following as comment on your proposal pr*
 
-:Your name: :)
-:Your profile: github | linkedin | etc
-:Your role: I am a making this proposal as a <student | mentor | community member | contributor | etc>
+:Your name: Kemar McInnis
+:Your profile: https://github.com/Khemardi
+:Your role: community member
 
 Contacts
 --------
