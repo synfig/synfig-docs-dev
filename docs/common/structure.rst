@@ -114,7 +114,7 @@ A structure which stores a list of layers is called **Canvas**.
 
 A canvas can also store other canvases. This is how layers organized into hierarchy.
 
-In GUI canvases represented by Groups, but in code they are called Paste Canvases. Past Canvas is a special type of layers, which holds Canvas of other layers.
+In GUI canvases represented by Groups, but in code they are called Paste Canvases. Paste Canvas is a special type of layers, which holds Canvas of other layers.
 
 .. note::
 
