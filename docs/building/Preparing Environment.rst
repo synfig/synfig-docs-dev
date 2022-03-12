@@ -92,7 +92,7 @@ Windows
     
     Alternative for that approach could be to build using MSVC and Microsoft vcpkg (https://github.com/microsoft/vcpkg), but we haven't digged into that yet. Any help on this matter is appreciated here - https://github.com/synfig/synfig/issues/860.
 
-Download and install MSYS2, following instructions here - http://www.msys2.org/.
+Download and install MSYS2, following instructions here - https://www.msys2.org/.
 
 Make sure to select the correct MSYS as per your needs. 
 
