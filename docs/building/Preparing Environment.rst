@@ -94,7 +94,15 @@ Windows
 
 Download and install MSYS2, following instructions here - https://www.msys2.org/.
 
-Make sure to select the correct MSYS as per your needs. 
+Make sure to select the correct MSYS as per your needs.
+
+Keep "Run MSYS2 64bit now." check, we will do a first update after the install with the following instruction.
+
+.. code:: bash
+
+    $ pacman -Syu
+    
+The shell will then close by itself and open the proper shell as described in the following image.
 
 .. image:: ../images/msys.png
 
@@ -104,10 +112,11 @@ Always use the proper shell:
     * **MinGW64** for compiling **64**-bit Synfig.
     * **Never** use the **MSYS** shell for compiling Synfig.
 
-After picking the needed MSYS Shell.
+After picking the needed MSYS Shell (MinGW64 for most users), install the last updates (once again) and git.
 
 .. code:: bash
-
+    
+    $ pacman -Syu
     $ pacman -S git
 
 Next, get Synfig's sources:
