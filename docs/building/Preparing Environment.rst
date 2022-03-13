@@ -137,19 +137,13 @@ Now you need to install all required dependencies. Run a special script shipped 
 
     $ ./1-setup-windows-msys2.sh
 
-Wait till the script finish installing dependencies. Now install CMake and Ninja with:
-
-* For MINGW32:
-
-.. code:: bash
-
-        $ pacman -S mingw-w64-i686-cmake mingw-w64-i686-ninja
-
-* For MINGW64:
-
-.. code:: bash
-
-        $ pacman -S mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja
-
+Wait till the script finish installing dependencies.
 When it completes you are ready to build Synfig! 
 
+.. note::
+    The tools and libraries are architecture dependant, as will be the produced binaries.
+    
+    You will have to execute again `./1-setup-windows-msys2.sh` from the 'MinGW32' shell if you want to be able to build Synfig for this target.
+    
+    Generally, for development, you only need to use the shell corresponding to your own architecture.
+    
