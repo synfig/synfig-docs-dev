@@ -88,3 +88,16 @@ Once this is completed successfully, you can run Synfig by.
 
     $ ./cmake-build-msys/output/Release/bin/synfigstudio.exe
 
+You can also use this script to run a debug build by using the argument: Debug
+
+.. code:: bash
+
+    $ ./2-build-msys-cmake.sh Debug
+    
+Then, you can run Synfig by.
+
+.. code:: bash
+
+    $ ./cmake-build-msys/output/Debug/bin/synfigstudio.exe
+
+
