@@ -99,5 +99,3 @@ Then, you can run Synfig by.
 .. code:: bash
 
     $ ./cmake-build-msys/output/Debug/bin/synfigstudio.exe
-
-
