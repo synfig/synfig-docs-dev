@@ -33,7 +33,7 @@ Next issues should be resolved:
 
 **- Skills required** C++, gtkmm (recommended)
 
-**- Mentor(s)** Artem Konoplin (https://github.com/ice0), Konstantin Dmitriev (https://github.com/morevnaproject)
+**- Mentor(s)** Rodolfo Ribeiro Gomes (https://github.com/rodolforg), Dhairya Bahl (https://github.com/DhairyaBahl)
 
 Enhance building process by integrating Conan C++ package manager (175 hrs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,7 +50,7 @@ Developers can easily set up build environment on any platform and any toolchain
 
 **- Skills required** Basic Linux system administration skills, Python, Bash scripting, Git, Conan, Docker (recommended), CMake (recommended)
 
-**- Mentor(s)** Konstantin Dmitriev (https://github.com/morevnaproject)
+**- Mentor(s)** Rodolfo Ribeiro Gomes (https://github.com/rodolforg)
 
 
 Building Synfig with the MSVC/vcpkg toolkit (175 hrs)
@@ -70,7 +70,7 @@ There are still some issues when building Synfig with the Microsoft Visual Studi
 
 **- Skills required** C++
 
-**- Mentor(s)** Artem Konoplin (https://github.com/ice0), Konstantin Dmitriev (https://github.com/morevnaproject)
+**- Mentor(s)** Dhairya Bahl (https://github.com/DhairyaBahl), Rodolfo Ribeiro Gomes (https://github.com/rodolforg)
 
 
 
@@ -114,7 +114,7 @@ Improved Synfig rendering speed, allowing users to work faster and create more c
 
 **- Skills required** C++ (perf optional)
 
-**- Mentor(s)** Artem Konoplin (https://github.com/ice0), Konstantin Dmitriev (https://github.com/morevnaproject)
+**- Mentor(s)** Ayush Chamoli, Rodolfo Ribeiro Gomes (https://github.com/rodolforg)
 
 Optimization of internal operations with layers (175 or 350 hrs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
