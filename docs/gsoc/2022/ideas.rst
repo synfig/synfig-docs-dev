@@ -35,8 +35,8 @@ Next issues should be resolved:
 
 **- Mentor(s)** Artem Konoplin (https://github.com/ice0), Konstantin Dmitriev (https://github.com/morevnaproject)
 
-Enhance building process by integrating Conan C++ package manager
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enhance building process by integrating Conan C++ package manager (175 hrs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **- Description**
 
@@ -115,6 +115,31 @@ Improved Synfig rendering speed, allowing users to work faster and create more c
 **- Skills required** C++ (perf optional)
 
 **- Mentor(s)** Artem Konoplin (https://github.com/ice0), Konstantin Dmitriev (https://github.com/morevnaproject)
+
+Optimization of internal operations with layers (175 or 350 hrs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**- Description**
+
+The goal of this task is to introduce caching mechanism to allow Synfig work faster with layers and their parameters. 
+
+There are two places where it is possible to introduce cache optimizations: 
+
+1. The "set_time()" function. In curent implemetation, the "set_time()" is called every time when Synfig retrieves value of any layer parameter. This function recalculates parameters of all layers for specific moment of time, and writes them directly to layer objects. This is a slow operation and also leads to some bugs when using TimeLoop layer, time shift feature for groups and exported canvases. Instead of writing values into layer objects every time, it would be better to cache them.
+
+2. Conveting layers into rendering tasks. When rendering process started, it reads layers tree and converts it into tree of "tasks" (structures, understandable by render engine). When any change is made to document, Synfig have to re-render everything again, so it reads full tree again and makes new set of tasks. When document have many layer, then this process takes much time and even with a small change to single parrameter it repeats the whole process (reads full layers tree). This process can be optimized by introducing an algorithm, which analyzes the change made to layers (their parameters) and propagates this change to the tree of rendering tasks.
+
+Depending on available time and project size, aspiring contributor can choose to implement only first issue or both.
+
+**- Expected Results**
+
+Synfig will work faster on complex animations with many layers.
+
+**- Difficulty** Medium
+
+**- Skills required** C++
+
+**- Mentor(s)** Anish Gulati (https://github.com/AnishGG), Ankit Kumar Dwivedi (https://github.com/ankit-kumar-dwivedi)
 
 
 Propose a Project
