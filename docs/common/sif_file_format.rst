@@ -257,7 +257,7 @@ Attributes
 :version: <optional> <string> A string (usually in the `semantic versioning <https://semver.org/>`_) that represents the layer implementation version
 :desc: <optional> <string> Layer description. GUI uses it as layer label.
 :active: <optional> <boolean> If layer will be 'rendered'/'applied' in an visual editor. See ``exclude_from_rendering``. Default: true.
-:exclude_from_rendering: <optional> <boolean> If layer will be rendered/applied. See ``active``. Default: true.
+:exclude_from_rendering: <optional> <boolean> If layer will be rendered/applied. See ``active``. Default: false.
 
 'param'
 ------------------------------------------
