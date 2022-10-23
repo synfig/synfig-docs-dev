@@ -8,7 +8,6 @@ List of dependencies required for building Synfig:
 * autoconf (build-time)
 * automake (build-time)
 * adwaita-icon-theme
-* boost (system module)
 * fftw3
 * gettext
 * glibmm-2.4
