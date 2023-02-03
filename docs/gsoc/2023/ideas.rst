@@ -87,7 +87,7 @@ Depending on available time and project size, aspiring contributor can choose to
 
 **Skills required:** C++
 
-**Planned mentor(s)** `Anish Gulati <https://github.com/AnishGG>`_, `Ankit Kumar Dwivedi <https://github.com/ankit-kumar-dwivedi>_
+**Planned mentor(s)** `Anish Gulati <https://github.com/AnishGG>`_, `Ankit Kumar Dwivedi <https://github.com/ankit-kumar-dwivedi>`_
 
 
 Propose a Project
