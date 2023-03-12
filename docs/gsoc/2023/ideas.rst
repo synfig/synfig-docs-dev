@@ -89,6 +89,27 @@ Depending on available time and project size, aspiring contributor can choose to
 
 **Planned mentor(s)** `Anish Gulati <https://github.com/AnishGG>`_, `Ankit Kumar Dwivedi <https://github.com/ankit-kumar-dwivedi>`_
 
+Select Tool (175 or 350 hrs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**- Description**
+
+New users easily strugle with Synfig Studio when they are trying to just move a rectangle around the workarea: 'why in hell the (Smooth) Move tool does not move anything?!'. Understanbly, they don't get that Synfig Studio tool palette has some vertex-editor tools (Smooth move, rotate, scale, mirror), new-shape-layer tools (circle, rectangle, polygon, spline, draw), and a do-a-lot-of-stuff-but-it-is-another-vertex-editing tool (transform).
+
+This projects proposes to create a new tool: Select Tool. This tool is responsible to ease the movement/translation of elements on the screen.
+By elements I mean composite layers (e.g. Rectangle and Region layers) and canvases (e.g. Groups and Switch Groups).
+
+Other affine transformations, like rotation and scale, may be added in a well stablished user experience: the selected element is surrounded by a dashed or continuous rectangle with special handles on its vertices and edges that allows to scale or rotate the element. Currently in Synfig, it would be 'easy' to add to PasteCanvas layers (Group, Switch Group, Filter Group).
+
+**- Expected Results**
+
+UX will be greatly improved by allowing users to easily select and move layers around the scene, without having to select all vertex handles.
+Inkscape and LibreOffice Draw (and MANY other software) do it since their begining, and Synfig Studio lacks it since ever, making it weird for newcomers and unpratical in many cases.
+
+**- Difficulty** Medium
+
+**- Skills required** C++ (see ``synfig-studio/src/gui/states`` and ``synfig-studio/src/gui/duckmatic.cpp``)
+
+**- Mentor(s)** `Rodolfo R Gomes <https://github.com/rodolforg>`_
 
 Propose a Project
 ------------------
