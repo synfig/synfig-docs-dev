@@ -31,9 +31,18 @@ A *.deb* package for Synfig can be made by using the following code.
 Windows
 -------
 
-A *.exe* installer for synfig can be made by using the following code.
+A *.exe* installer for Synfig can be made by using the following code.
 
 .. code:: bash
 
     $ cpack -G NSIS
+
+macOS (formely OSX)
+-------
+
+A *.app* installer for Synfig can be made by using the following code.
+
+.. code:: bash
+
+    $ cmake --build .
 
