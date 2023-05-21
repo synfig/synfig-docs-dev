@@ -17,6 +17,7 @@ Welcome to Synfig developers documentation!
    community/contribution guidelines
    ide/Setting up your preferred IDE
    common/structure
+   renderer
    building/Building Synfig
    packaging/packaging
    tutorials
