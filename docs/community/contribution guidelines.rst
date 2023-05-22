@@ -128,6 +128,118 @@ Create a pull request (from now on we will shorten it often to just *PR*) by vis
   sort of behaviour persists please use any command line editor like
   VIM, etc
 
+Coding style
+~~~~~~~~~~~~
+
+There are many creative ways a coder expresses his/her clever/intelligent solution
+but we also believe uniformity is a necessary evil for both the contributors and
+the maintainers. It boosts up code readability, encourages clean coding, and helps
+both the readers (us) and the writer (you) during code review.
+
+Below are some of the best practices to follow through while making code changes
+to the Synfig project.
+
+Namespace spacing
+-----------------
+
++---------------------------------------+------------------------------------------+
+| Correct                               | Incorrect                                |
++=======================================+==========================================+
+|                                       |                                          |
+|.. code-block:: c++                    |.. code-block:: c++                       |
+|   :emphasize-lines: 4-6               |   :emphasize-lines: 4-6                  |
+|   :linenos:                           |   :linenos:                              |
+|                                       |                                          |
+|   // Indent class on the same line    |   // Do not indent class like below      |
+|   namespace synfig {                  |   namespace synfig {                     |
+|                                       |                                          |
+|   class BLinePoint : public UniqueID  |       class BLinePoint : public UniqueID |
+|   {                                   |       {                                  |
+|   };                                  |       };                                 |
+|                                       |                                          |
+|   }                                   |   }                                      |
+|                                       |                                          |
++---------------------------------------+------------------------------------------+
+
+Operator spacings
+-----------------
+
++---------------------------------------+------------------------------------------+
+| Correct                               | Incorrect                                |
++=======================================+==========================================+
+|                                       |                                          |
+|.. code-block:: c++                    |.. code-block:: c++                       |
+|   :emphasize-lines: 6                 |   :linenos:                              |
+|   :linenos:                           |                                          |
+|                                       |                                          |
+|   // Unary                            |   // Unary                               |
+|   i++;                                |   i ++;                                  |
+|   if (!b) {}                          |   if (! b) {}                            |
+|                                       |                                          |
+|   // Assignment, binary, ternary      |   // Assignment, binary, ternary         |
+|   y = m*x + b;                        |   y = m*x+b;                             |
+|   c = a | b;                          |   c=a|b;                                 |
+|   return condition ? true : false;    |   return condition?true:false;           |
+|                                       |                                          |
++---------------------------------------+------------------------------------------+
+| | To emphasize order no spacing is OK |                                          |
+|   sometimes                           |                                          |
+| | (line no 6)                         |                                          |
++---------------------------------------+------------------------------------------+
+
+Braces & more spaces
+--------------------
+
+.. code-block:: c++
+
+   /* All C++ reserved keywords where braces are inevitable
+    * Are placed on the same line
+    *
+    * Also make sure to leave one space before function brackets
+    */
+
+   if (condition) {
+       ...
+   } else {
+       ...
+   }
+
+   switch (value) {
+       case 1: ...
+       case n: ...
+   }
+
+   enum MyEnum {
+       ...
+   };
+   
+   // Same apply for C++ loops too
+
+   while (condition) { ... }
+
+   do {
+       ...
+   } while (condition);
+
+   for (const auto& item : list) {
+       ...
+   }
+
+   // User defined functions are exceptions
+   // - Brace on the new line
+   // - And no space before function bracket
+    
+   void my_function()
+   {
+       another_function();
+   }
+   
+   // including main too
+   int main(int argc, char** argv)
+   {
+       return 0;
+   }
+
 Thank You
 ~~~~~~~~~
 
