@@ -161,6 +161,103 @@ Namespace spacing
 |                                       |                                          |
 +---------------------------------------+------------------------------------------+
 
+Class access modifier spacings
+------------------------------
+
++---------------------------------------+------------------------------------------+
+| Correct                               | Incorrect                                |
++=======================================+==========================================+
+|                                       |                                          |
+|.. code-block:: c++                    |.. code-block:: c++                       |
+|   :emphasize-lines: 3, 6, 9           |   :emphasize-lines: 3, 6, 9              |
+|   :linenos:                           |   :linenos:                              |
+|                                       |                                          |
+|   class BLinePoint : public UniqueID  |   class BLinePoint : public UniqueID     |
+|   {                                   |   {                                      |
+|       public:                         |   public:                                |
+|           ...                         |       ...                                |
+|                                       |                                          |
+|       protected:                      |   protected:                             |
+|           ...                         |       ...                                |
+|                                       |                                          |
+|       private:                        |   private:                               |
+|           ...                         |       ...                                |
+|   };                                  |   };                                     |
+|                                       |                                          |
++---------------------------------------+------------------------------------------+
+
+Class initializer list spacings
+-------------------------------
+
++---------------------------------------+------------------------------------------+
+| Correct                               | Incorrect                                |
++=======================================+==========================================+
+|                                       |                                          |
+|.. code-block:: c++                    |.. code-block:: c++                       |
+|   :emphasize-lines: 2, 3, 4           |   :emphasize-lines: 1, 2                 |
+|   :linenos:                           |   :linenos:                              |
+|                                       |                                          |
+|   BLinePoint::BLinePoint()            |   BLinePoint::BLinePoint() : width_(0),  |
+|       : vertex_ (Point(0, 0))         |       origin_(0.0), vertex_(Point(0, 0)) |
+|       , width_  (0)                   |   {                                      |
+|       , origin_ (0.0)                 |                                          |
+|   {                                   |       ...                                |
+|       ...                             |                                          |
+|   }                                   |   }                                      |
+|                                       |                                          |
++---------------------------------------+------------------------------------------+
+
+Class methods return type spacing
+---------------------------------
+
++---------------------------------------+------------------------------------------+
+| Correct                               | Incorrect                                |
++=======================================+==========================================+
+|                                       |                                          |
+|.. code-block:: c++                    |.. code-block:: c++                       |
+|   :emphasize-lines: 1, 7              |   :emphasize-lines: 1, 8                 |
+|   :linenos:                           |   :linenos:                              |
+|                                       |                                          |
+|   void                                |   void synfig::BLinePoint::reverse()     |
+|   synfig::BLinePoint::reverse()       |   {                                      |
+|   {                                   |       ...                                |
+|       ...                             |   }                                      |
+|   }                                   |                                          |
+|                                       |                                          |
+|   synfig::GUID                        |                                          |
+|   Activepoint::get_guid()             |   synfig::GUID Activepoint::get_guid()   |
+|   {                                   |   {                                      |
+|       ...                             |       ...                                |
+|   }                                   |   }                                      |
+|                                       |                                          |
++---------------------------------------+------------------------------------------+
+
+Specifiers & modifiers spacing
+------------------------------
+
++---------------------------------------+------------------------------------------+
+| Correct                               | Incorrect                                |
++=======================================+==========================================+
+|                                       |                                          |
+|.. code-block:: c++                    |.. code-block:: c++                       |
+|   :emphasize-lines: 1, 7              |   :emphasize-lines: 1, 7                 |
+|   :linenos:                           |   :linenos:                              |
+|                                       |                                          |
+|   inline void                         |   inline                                 |
+|   clamp(Vector& v)                    |   void clamp(Vector& v)                  |
+|   {                                   |   {                                      |
+|       ...                             |       ...                                |
+|   }                                   |   }                                      |
+|                                       |                                          |
+|   static inline unsigned char*        |   static inline                          |
+|   color2pf_raw()                      |   unsigned char* color2pf_raw()          |
+|   {                                   |   {                                      |
+|       ...                             |       ...                                |
+|   }                                   |   }                                      |
+|                                       |                                          |
++---------------------------------------+------------------------------------------+
+
+
 Operator spacings
 -----------------
 
@@ -192,7 +289,8 @@ Braces & more spaces
 
 .. code-block:: c++
 
-   /* All C++ reserved keywords where braces are inevitable
+   /**
+    * All C++ reserved keywords where braces are inevitable
     * Are placed on the same line
     *
     * Also make sure to leave one space before function brackets
@@ -213,9 +311,11 @@ Braces & more spaces
        ...
    };
    
-   // Same apply for C++ loops too
+   /* Same apply for C++ loops too */
 
-   while (condition) { ... }
+   while (condition) {
+       ...
+   }
 
    do {
        ...
@@ -224,21 +324,153 @@ Braces & more spaces
    for (const auto& item : list) {
        ...
    }
+   
+   // Excepting lambda expressions; do not space the function bracket
+   [](int a, int b) { ... }
 
-   // User defined functions are exceptions
+   // And user defined functions:
    // - Brace on the new line
    // - And no space before function bracket
     
-   void my_function()
+   void
+   my_function()
    {
        another_function();
    }
    
    // including main too
-   int main(int argc, char** argv)
+   int
+   main(int argc, char** argv)
    {
        return 0;
    }
+
+Single line control statement
+-----------------------------
+
+.. code-block:: c++
+   :linenos:
+   
+   // They are acceptable only if the body has a single instruction/statement
+
+   while (reading) { i++; }
+   if (!ready) return;
+   for (;;) { do_something(); ++i; }
+
+Naming & cases
+---------------
+
++-------------------------+------------+
+| Naming                  | Cases      |
++============+============+============+
+| class      | type       | CamelCase  |
+|            +------------+------------+
+|            | properties |            |
+|            +------------+ snake_case |
+|            | methods    |            |
++------------+------------+------------+
+|            | type       | CamelCase  |
+| enum       +------------+------------+
+|            | values     | UPPERCASE  |
++------------+------------+------------+
+| structs                 | CamelCase  |
++-------------------------+------------+
+| variables               | snake_case |
++-------------------------+------------+
+| functions               | snake_case |
++-------------------------+------------+
+| constants               | UPPERCASE  |
++-------------------------+------------+
+| macros                  | UPPERCASE  |
++-------------------------+------------+
+
+Pointers & references
+---------------------
+
++---------------------------------------+------------------------------------------+
+| Correct                               | Incorrect                                |
++=======================================+==========================================+
+|.. code-block:: c++                    |.. code-block:: c++                       |
+|   :linenos:                           |   :linenos:                              |
+|                                       |                                          |
+|   int* snake_case;                    |   int *snake_case;                       |
+|                                       |                                          |
+|   const int& UPPERCASE;               |   const int & UPPERCASE;                 |
++---------------------------------------+------------------------------------------+
+| Do not add space between the data type and the pointer or reference              |
++----------------------------------------------------------------------------------+
+
+Code documenting
+----------------
+
+.. code-block:: c++
+   :linenos:
+
+    /**
+     * Use JavaDoc style
+     * to document your complex ideas so others in the future can read,
+     * comprehend, and hack/improve your code :)
+     *
+     * And to document your parameters & return values use:
+     * @param foo ...
+     * @return bar ...
+     */
+
+Headers & macros
+--------------------
+
+Indentation
+^^^^^^^^^^^
+
++---------------------------------------+------------------------------------------+
+| Correct                               | Incorrect                                |
++=======================================+==========================================+
+|.. code-block:: c++                    |.. code-block:: c++                       |
+|   :emphasize-lines: 2, 5              |   :emphasize-lines: 2, 5                 |
+|   :linenos:                           |   :linenos:                              |
+|                                       |                                          |
+|   #ifdef USING_PCH                    |   #ifdef USING_PCH                       |
+|   # include "pch.h"                   |   #include "pch.h"                       |
+|   #else                               |   #else                                  |
+|   #ifdef HAVE_CONFIG_H                |   #ifdef HAVE_CONFIG_H                   |
+|   # include <config.h>                |   #include <config.h>                    |
+|   #endif                              |   #endif                                 |
+|   #endif                              |   #endif                                 |
++---------------------------------------+------------------------------------------+
+
+Legacy include guard
+^^^^^^^^^^^^^^^^^^^^^^
+
+Synfig is somewhat ancient so you might encounter legacy coding style like below:
+
+.. code-block:: c++
+
+   #define __SYNFIG_ROTATE_H
+
+The double underscore before defining the header file is reserved for use by the
+C++ standard. So if you are designing a new class be sure to not prefix your header
+file macro guard with the double underscores.
+
+GUI class identifier
+^^^^^^^^^^^^^^^^^^^^
+
+When creating a new GUI class, we recommend the identifier format for your header
+(replace XXXXX) file:
+
+.. code-block:: c++
+
+   #define SYNFIG_STUDIO_XXXXX_H
+
+Include order
+^^^^^^^^^^^^^
+
+Include headers in the following order: Related header, C system headers, C++
+standard library headers, other libraries' headers, and finally your project
+headers.
+
+.. code-block::c++
+
+   #
 
 Thank You
 ~~~~~~~~~
