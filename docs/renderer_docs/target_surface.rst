@@ -51,6 +51,8 @@ The functions ``start_scanline`` and ``end_scaline`` are overridden by modules. 
 Surface
 ~~~~~~~
 
+See file ``synfig-core/src/synfig/surface.cpp``.
+
 Tasks exchange pixels using Surfaces. Tasks do not write to Targets directly. They write on Surfaces given to them by the Targets. Surfaces store actual pixel data. For OpenGL, a surface is like a Framebuffer.
 
 The ``Surface`` base class only declares essential virtual functions like ``create_vfunc`` for creating a new Surface of this type, ``assign_vfunc`` for assigning data from another surface to this surface, etc.
@@ -74,8 +76,8 @@ Synfig ensures thread-safety of Surfaces using ``std::mutex`` and ``Glib::Thread
 Conversion
 ----------
 
-``SurfaceResource`` can store more than one surface. But only one of each type, i.e., when ``SurfaceResource::get_surface`` and ``SurfaceResource(surface)``  is called, it stores the surface in a map where ``surface->token`` is the key. ``surface->token`` is like a string used to distinguish/name surfaces of different types.
+``SurfaceResource`` can store more than one surface. But only one of each type, i.e., when ``SurfaceResource::get_surface`` and ``SurfaceResource(surface)``  is called, it stores the surface in a map where ``surface->token`` is the key. ``surface->token`` is like a string used to distinguish/name surfaces of different types. Token is static for each surface.
 
-Conversion is mainly done by ``SurfaceResource::get_surface``. It takes multiple arguments, but its main job is to attempt to convert any available surfaces from the map into the requested surface type. It stores the conversion in the same map.
+Conversion is mainly done by ``SurfaceResource::get_surface``. It takes multiple arguments, but its main job is to attempt to convert any available surfaces from the map into the requested surface type. It stores the conversion in the same map. When a lock is created, it converts the passed resource to the type argument and stores it.
 
-This pattern of using tokens to distinguish between types and convert from one to another can be seen multiple times in Synfig. See:ref:`renderer_tasks`; tasks use a similar pattern.
+This pattern of using tokens to distinguish between types and convert from one to another can be seen multiple times in Synfig. See :ref:`renderer_tasks`; tasks use a similar pattern.
