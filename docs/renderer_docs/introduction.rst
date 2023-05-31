@@ -7,7 +7,7 @@ There are two ways to render a Synfig document, using the **synfig** CLI tool or
 
 .. code-block:: bash
 
-   synfig $FILE -o out.png --time=0 --width=1080 --height=1920
+   synfig $FILE -o out.png --time=0 --width=1920 --height=1080
 
 This will render only the first frame of ``$FILE`` with dimensions 1920x1080 to target *out.png*. Now Synfig supports rendering to multiple file formats. These file formats are represented as ``Target`` in Synfig's code base. The CLI does the following tasks to render a file:
 
