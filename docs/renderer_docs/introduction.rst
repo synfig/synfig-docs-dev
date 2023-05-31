@@ -22,14 +22,14 @@ Job
 
 This class is present in CLI only, and it is simple. This class stores information used by other functions to start rendering the file. The most important fields it stores are ``synfig::RendDesc desc`` and a handle to the ``synfig::Canvas``. After all the initialization and reading of the document is done, the first step taken by the CLI is to create and fill a Job.
 
-Usually, only one Job is created, but two jobs are created if the user wants to extract Alpha to another file. These jobs are first set up and run. The setup step attempts to find the ``Target``, Render Engine to use, permissions, etc.
+Usually, only one Job is created, but two jobs are created if the user wants to extract Alpha to another file. These jobs are first set up and run. The setup step attempts to find the ``Target`` specified by the user or by the file extension, Render Engine to use, permissions, etc.
 
 To start rendering the file, ``job.target->render(..)`` is called. This function actually starts the rendering process.
 
 Target
 ~~~~~~
 
-``Target`` represents the output file and handles the frame-by-frame rendering process. The base class ``Target`` has a few virtual methods overridden by derived classes like ``Target_Scanline``. Targets for output files are modules that derive mostly from ``Target_Scanline``. Details about how the correct ``Target`` class is acquired and the actual working of ``Target::render()`` can be found in :ref:`renderer_target_surface`.
+``Target`` represents the output (file or memory) and handles the frame-by-frame rendering process. The base class ``Target`` has a few virtual methods overridden by derived classes like ``Target_Scanline``. Targets for output files are modules that derive mostly from ``Target_Scanline``. Details about how the correct ``Target`` class is acquired and the actual working of ``Target::render()`` can be found in :ref:`renderer_target_surface`.
 
 The Cobra engine is multithreaded, executing independent Tasks on different threads. The function ``Canvas::build_rendering_task`` creates a Task for rendering a frame. This function is called by ``Target::render()``.
 

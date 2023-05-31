@@ -3,7 +3,7 @@
 Target and Surface
 ==================
 
-Synfig supports rendering to different file formats and uses different modules for writing to those file formats. These modules are called Targets. They inherit from the ``Target`` class and can be selected by the user or automatically.
+Synfig supports rendering to different file formats and uses different modules for writing to those file formats. These modules are called Targets. They inherit from the ``Target`` class and can be selected by the user or automatically (depending on the file extension).
 
 Selecting Target
 ~~~~~~~~~~~~~~~~
@@ -65,7 +65,7 @@ Since the Cobra engine is multi-threaded and supports different render engines(e
 Thread-Safety
 -------------
 
-Synfig ensures thread-safety of Surfaces using ``std::mutex`` and ``Glib::Threads::RWLock``. To keep locking Surfaces simple, these are not used directly but by ``SurfaceResource::LockBase``. To safely read from a Surface, all you need to do is:
+Synfig ensures thread-safety of Surfaces using ``std::mutex`` and ``Glib::Threads::RWLock``. (We use ``Glib::Threads::RWLock`` because we still support C++11 and unfortunately it doesn't have the same primitive). To keep locking Surfaces simple, these are not used directly but by ``SurfaceResource::LockBase``. To safely read from a Surface, all you need to do is:
 
 .. code-block:: cpp
 
