@@ -154,3 +154,24 @@ Implementation of ``run`` for ``ClampSW`` looks like,
 
         return true;
     }
+
+
+Special Tasks
+~~~~~~~~~~~~~
+
+There are some special tasks in Synfig, they do not do any processing but are used as utilities. Their tokens are created using ``DescSpecial``.
+
+TaskSurface
+-----------
+
+**TODO**
+
+TaskList
+--------
+
+This task is used to denote a list of tasks that need to executed sequentially.
+
+TaskEvent
+---------
+
+This task is used for notifying when rendering has finished(using ``std::contidion_variable``). When ``TaskEvent::run`` is called, it signals that rendering has finished, atleast till the stage where this event was inserted.

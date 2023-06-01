@@ -9,7 +9,7 @@ There are two ways to render a Synfig document, using the **synfig** CLI tool or
 
    synfig $FILE -o out.png --time=0 --width=1920 --height=1080
 
-This will render only the first frame of ``$FILE`` with dimensions 1920x1080 to target *out.png*. Now Synfig supports rendering to multiple file formats. These file formats are represented as ``Target`` in Synfig's code base. The CLI does the following tasks to render a file:
+This will render only the first frame(``--time=0``) of ``$FILE`` with dimensions 1920x1080 to target *out.png*. Now Synfig supports rendering to multiple file formats. These file formats are represented as ``Target`` in Synfig's code base. The CLI does the following tasks to render a file:
 
 * Boot Synfig using ``synfig::Main``, which initializes different modules and systems.
 * Read the document file and create the internal representation of the document.
@@ -38,10 +38,10 @@ Tasks
 
 Tasks are the main objects of the Cobra engine, which writes and transforms pixels. There are tasks for blending, rendering shapes, transformation, etc. Tasks can have dependencies stored in a ``sub_tasks`` list inside the class ``Task``. ``Canvas::build_rendering_task`` builds this graph of Tasks, which is then sent to the Render Engine for execution. Details on how this Task list is build can be found in :ref:`renderer_tasks`.
 
-Render Engine
-~~~~~~~~~~~~~
+Renderer 
+~~~~~~~~
 
-A Render Engine in Synfig receives a Task list, processes it, and runs it. Synfig has multiple render engines, like Draft SW, Preview SW, etc. Currently, there are only Software Renderers in Synfig. ``Tasks`` are specialized based on the chosen engine. This is because Software Tasks can not be directly run using GPU. The base class ``Renderer`` does most of the work. It is responsible for Optimizing the Task List, constructing the Tasks, and then sending them to the Render Queue. More details in :ref:`renderer_queue`.
+A Renderer in Synfig receives a Task list, processes it, and runs it. Synfig has multiple renderers, like Draft SW, Preview SW, etc. Currently, there are only Software Renderers in Synfig. ``Tasks`` are specialized based on the chosen renderer. This is because Software Tasks can not be directly run using GPU. The base class ``Renderer`` does most of the work. It is responsible for Optimizing the Task List, constructing the Tasks, and then sending them to the Render Queue. More details in :ref:`renderer_queue`.
 
 Render Queue
 ~~~~~~~~~~~~
