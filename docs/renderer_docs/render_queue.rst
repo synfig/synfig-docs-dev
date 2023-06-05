@@ -40,7 +40,16 @@ This function changes the ``list`` by adding/removing/modifying tasks to improve
 Renderer::find_deps
 -------------------
 
-This function fills ``deps`` and ``back_deps`` members of ``Task::RenderData`` for each task in the passed linearized task list. It first finds dependencies based on same target surface. Then removes dependencies between tasks if their target rect is non-overlapping.
+This function fills ``deps`` and ``back_deps`` members of ``Task::RenderData`` for each task in the passed linearized task list. It first finds dependencies based on same target surface. Tasks are also depended on other tasks if their sub tasks share the target with the other task. Dependency direction is based on position in the linear list. Tasks that come later are dependend on the tasks that come earlier if they share taret.
+
+It also removes dependencies between tasks if their target rect is non-overlapping.
+
+Now sub tasks don't have the same target surface as their parent task. So by the logic above the parent task is not depended on the sub task, but in reality it should be. This is handled by ``Renderer::linearize``.
+
+Renderer::linearize
+-------------------
+
+This function turns the tree of tasks into a linear list. Sub tasks are inserted before the parent task in the list, and are converted into ``TaskSurface`` in the parents ``sub_task`` list. Since sub tasks come before parent tasks in the list and the ``TaskSurface`` has the same target surface as the sub task, ``find_deps`` is able to find the dependency.
 
 Render Queue
 ~~~~~~~~~~~~

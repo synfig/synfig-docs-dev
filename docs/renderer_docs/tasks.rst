@@ -164,7 +164,7 @@ There are some special tasks in Synfig, they do not do any processing but are us
 TaskSurface
 -----------
 
-**TODO**
+This special task does nothing. It is used by the renderer for dependency.
 
 TaskList
 --------
