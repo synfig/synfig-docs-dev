@@ -3,14 +3,14 @@
 Renderer and Render Queue
 =========================
 
-A renderer in Synfig is resposible to take a ``Task::List``, optimize it, specialize the tasks and then run them. Renderers apply different optimizations and settings on the tasks. For example, the LowRes SW renderer changes various settings like resolution, blur type, etc. to make the render faster. The Safe SW Renderer does no optimizations, so its slower than other renderers.
+A renderer in Synfig is responsible to take a ``Task::List``, optimize it, specialize the tasks and then run them. Renderers apply different optimizations and settings on the tasks. For example, the LowRes SW renderer changes various settings like resolution, blur type, etc. to make the render faster. The Safe SW Renderer does no optimizations, so its slower than other renderers.
 
 The renderer then sends the optimized and specialized task list to the Render Queue.
 
 Renderer
 ~~~~~~~~
 
-The renderer is selected by the user from Synfig Studio UI or by passing a CLI arguement.
+The renderer is selected by the user from Synfig Studio UI or by passing a CLI argument.
 
 Each renderer has some modes registers, these modes are used for specializing tasks. For example, a software renderer will register the ``TaskSW::mode_token`` like so,
 
@@ -18,9 +18,9 @@ Each renderer has some modes registers, these modes are used for specializing ta
     
     register_mode(TaskSW::mode_token.handle()); // function in Renderer class
 
-Renderers derieve from the ``Renderer`` class, which has most of the functionality already built in. So, creating a new renderer is as simple as,
+Renderers derive from the ``Renderer`` class, which has most of the functionality already built in. So, creating a new renderer is as simple as,
 
-* derieve from ``Renderer`` class,
+* derive from ``Renderer`` class,
 * override ``get_name()``,
 * register optimizers and mode in the constructor,
 * register renderer in ``Renderer::initialize_renderers``.

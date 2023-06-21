@@ -3,15 +3,15 @@
 Introduction
 ============
 
-There are two ways to render a Synfig document, using the **synfig** CLI tool or via **Synfig Studio**. The rendering code is the same, but some concepts would be easier explained using the CLI tool. A basic command to render a Synfig document using the CLI looks like this
+There are two ways to render a Synfig document, by using the **synfig** CLI tool or via **Synfig Studio**. The rendering code is the same, but some concepts would be easier explained using the CLI tool. A basic command to render a Synfig document using the CLI looks like this
 
 .. code-block:: bash
 
    synfig $FILE -o out.png --time=0 --width=1920 --height=1080
 
-This will render only the first frame(``--time=0``) of ``$FILE`` with dimensions 1920x1080 to target *out.png*. Now Synfig supports rendering to multiple file formats. These file formats are represented as ``Target`` in Synfig's code base. The CLI does the following tasks to render a file:
+This will render only the first frame(``--time=0``) of ``$FILE`` with dimensions 1920x1080 to target *out.png*. Synfig supports rendering to multiple file formats. These file formats are represented as ``Target`` in Synfig's code base. The CLI performs the following tasks to render an image:
 
-* Boot Synfig using ``synfig::Main``, which initializes different modules and systems.
+* Boot Synfig by using ``synfig::Main``, which initializes different modules and systems.
 * Read the document file and create the internal representation of the document.
 * Extract and execute a ``Job``.
 

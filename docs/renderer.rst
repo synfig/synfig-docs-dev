@@ -3,7 +3,7 @@
 Renderer Docs
 =====================
 
-This section explains the different parts of Cobra Engine and the Algorithm which uses them to render images.
+This section explains the different parts of Cobra Engine and the algorithm which uses them to render images.
 
 .. toctree::
    :maxdepth: 1

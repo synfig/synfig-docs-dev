@@ -3,7 +3,7 @@
 Optimizers
 ==========
 
-Optimizers can be found in ``synfig-core/src/synfig/rendering/common/optimizer``. They derieve from the base class ``Optimizer``.
+Optimizers can be found in ``synfig-core/src/synfig/rendering/common/optimizer``. They derive from the base class ``Optimizer``.
 
 Renderer::optimize
 ~~~~~~~~~~~~~~~~~~
