@@ -47,23 +47,23 @@ Content model
 Attributes
 ^^^^^^^^^^
 
-:id: <optional> <string> canvas identifier. Ignored if it is the root canvas.
+:id: <optional> <string> canvas identifier. Ignored if it is the root canvas. Default: "".
 :guid: <optional>
 :version: <optional> <string> the canvas version. Current default: "1.2".
-:width: <optional> <positive integer> 
-:height: <optional> <positive integer> 
-:xres: <optional> <positive real> 
-:yres: <optional> <positive real> 
-:gamma-r: <optional> <positive real> The color correction factor for red component (since 1.1)
-:gamma-g: <optional> <positive real> The color correction factor for green component (since 1.1)
-:gamma-b: <optional> <positive real> The color correction factor for blue component (since 1.1)
-:fps: <optional> <positive real> How many frames should be rendered per second
-:begin-time: <optional> <Time> 
-:end-time: <optional> <Time> 
-:antialias: <optional> <positive integer> The antialias amount
-:view-box: <optional> <list of 4 real> The 2D coordinates of top-left point and bottom-right point of the view box, in this order, separated by a single space: tl_x tl_y br_x br_y
-:bgcolor: <optional> <list of 4 real> Background color represented by red, green, blue and alpha components, separated by single space. Values in the range (0.0, 1.0).
-:focus: <optional> <list of 2 real> The canvas focus point (for zooming). The point coordinates are separated by a single space.
+:width: <optional> <positive integer> Default: 480.
+:height: <optional> <positive integer> Default: 270.
+:xres: <optional> <positive real> Default: 2834.645669 dpm (i.e. 72 dpi).
+:yres: <optional> <positive real> Default: 2834.645669 dpm (i.e. 72 dpi).
+:gamma-r: <optional> <positive real> The color correction factor for red component. Default: 1. (since 1.1)
+:gamma-g: <optional> <positive real> The color correction factor for green component. Default: 1. (since 1.1)
+:gamma-b: <optional> <positive real> The color correction factor for blue component. Default: 1. (since 1.1)
+:fps: <optional> <positive real> How many frames should be rendered per second. Default: 24fps.
+:begin-time: <optional> <Time> Default: 0.
+:end-time: <optional> <Time> Default: 0.
+:antialias: <optional> <positive integer> The antialias amount. Default: 2.
+:view-box: <optional> <list of 4 real> The 2D coordinates of top-left point and bottom-right point of the view box, in this order, separated by a single space: tl_x tl_y br_x br_y. Default: (-4, 2.25), (4,  -2.25).
+:bgcolor: <optional> <list of 4 real> Background color represented by red, green, blue and alpha components, separated by single space. Values in the range (0.0, 1.0). Default: gray (0.5 0.5 0.5 1.0)
+:focus: <optional> <list of 2 real> The canvas focus point (for zooming). The point coordinates are separated by a single space. Default: (0, 0)
 
 .. _canvas_id:
 A canvas 'id' may be any string without '#' and ':' characters. When a node refers to a canvas, it will use its 'id' to identify it.
