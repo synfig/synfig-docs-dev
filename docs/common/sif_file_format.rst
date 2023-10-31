@@ -215,7 +215,7 @@ It defines a time point mark in the animation. A canvas can have any number of k
 
 It only applies to non-inline canvas (i.e. any group layer cannot have this kind of child node).
 
-The <meta> element
+The <keyframe> element
 ~~~~~~~~~~~~~~~~~~~~
 
 Content model
