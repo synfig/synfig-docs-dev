@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Synfig developers docs'
-copyright = '2021, Synfig Developers'
+copyright = '2024, Synfig Developers'
 author = 'Synfig developers'
 
 # The short X.Y version
