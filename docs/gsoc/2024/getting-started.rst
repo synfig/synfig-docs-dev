@@ -5,7 +5,7 @@ Getting Started
 
 When applying for a Google Summer of Code grant to work with the Synfig, your application must follow our application template below (much of which we have borrowed from the Blender Foundation, with gratitude).
 
-Before applying, please check with our `ideas page <https://synfig-docs-dev.readthedocs.io/en/latest/gsoc/2022/ideas.html#projects-ideas>`_ for our requirements for acceptance.
+Before applying, please check with our `ideas page <https://synfig-docs-dev.readthedocs.io/en/latest/gsoc/2024/ideas.html#projects-ideas>`_ for our requirements for acceptance.
 
 Also, please make sure to read the following tips:
 
