@@ -85,7 +85,7 @@ Users could easily list, install and uninstall plugins and modules they download
 
 **- Skills required:** C++, gtkmm
 
-**- Planned Mentor:** `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_, Mohamed Adhamc ?
+**- Planned Mentor:** `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_, `Mohamed Adhamc <https://github.com/mohamedAdhamc>`_ 
 
 Propose a Project
 ------------------
