@@ -65,9 +65,31 @@ macOS app bundle (175 or 350 hrs)
 **Planned mentor(s):** `Dhairya Bahl <https://github.com/DhairyaBahl>`_, `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_
 
 
+Plugin manager dialog (175 or 350 hrs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**- Description:**
+
+A dialog for management of Synfig Studio plugins and Synfig modules.
+The dialog would show the currently supported plugin/module metadata and allow user to:
+- uninstall it
+- open its folder in the default OS file manager
+- install a plugin from a zip package already stored in local machine
+- maybe browse/download from a (future) online plugin repository (maybe a dedicated service or a special session from Synfig forums or even a git server)
+
+**- Expected Results:**
+
+Users could easily list, install and uninstall plugins and modules they downloaded from Internet.
+
+**- Difficulty:** Easy/Medium
+
+**- Skills required:** C++, gtkmm
+
+**- Planned Mentor:** `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_, Mohamed Adhamc ?
+
 Propose a Project
 ------------------
-If you have a project idea, edit the "Project Ideas" section below by filling the required details and sending a pull request (this page is editable at  https://github.com/synfig/synfig-docs-dev/blob/master/docs/gsoc/2022/ideas.rst), even if you could not mentor (we will find a mentor).
+If you have a project idea, edit the "Project Ideas" section below by filling the required details and sending a pull request (this page is editable at  https://github.com/synfig/synfig-docs-dev/blob/master/docs/gsoc/2024/ideas.rst), even if you could not mentor (we will find a mentor).
 
 **Required information for project proposal**
 
