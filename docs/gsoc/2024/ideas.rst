@@ -23,26 +23,47 @@ We use Conventional commits (https://www.conventionalcommits.org/en/v1.0.0/) for
 
 - Write a script for packaging AppImage (there are ready-made scripts for packaging AppImage, but you need to check if they work correctly)
 
+**Debian package and Flatpak package**
+
+- Write a script for automated Debian and Flatpak packages (Optional)
+
 **Where to begin:**
 
-Try extracting a list of messages from the git log output.
+Try extracting a list of messages from the git log output using the following requirements:
 
-**Expected results:**
+- 1) Extract only merge commits or direct commits
+- 2) Extract Pull Request id from this commits
+- 3) Extract Pull Request description using Github API (this is necessary because PR may contain images and extended information)
+
+**Expected outcome:**
+
+**175 hours**
 
 - Changelog file can be generated automatically
+
+**350 hours**
+
 - AppImage bundle can be generated automatically
+- Debian and Flatpak packages can be generated automatically (optional)
 
 **Difficulty:** Easy/Medium
 
-**Skills required:** Python/C++
+**Skills required/preferred:** Python/C++
 
-**Planned mentor(s):** Ayush Chamoli, `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_
+**Possible mentor(s):** Ayush Chamoli, `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_
+
+**Expected size of project:** 175 or 350 hours
 
 
 macOS app bundle (175 or 350 hrs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Requirements:** macOS
+**Description:**
+
+We are currently using a script to create a macOS app bundle, but it has some issues.
+Generation takes a long time (could be greatly improved), it uses incorrect paths in some places and does not sign files.
+
+**Requirements:** macOS or access to macOS command-line (so you can test your script)
 
 - add script/program to collect executable/library dependencies (python/c++ preferred) to SynfigStudio.app folder
 - add support for signing binary files (this should be done in reverse order, files without dependencies should be signed first, SynfigStudio.app should be signed last)
@@ -55,37 +76,54 @@ macOS app bundle (175 or 350 hrs)
 
 - create prototype script/program to collect executable/library dependencies
 
-**Expected results:**
+**Expected outcome:**
 
-- CMake/CPack builds SynfigStudio.app ready for distribution (175 hours)
-- Synfig Studio is better adopted to macOS guidelines (350 hrs)
+**175 hours**
+
+- CMake/CPack builds SynfigStudio.app ready for distribution
+
+**350 hours**
+
+- Synfig Studio is better adopted to macOS guidelines
 
 **Difficulty:** Medium
 
-**Planned mentor(s):** `Dhairya Bahl <https://github.com/DhairyaBahl>`_, `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_
+**Skills required/preferred:** Python/C++
+
+**Possible mentor(s):** `Dhairya Bahl <https://github.com/DhairyaBahl>`_, `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_
+
+**Expected size of project:** 175 or 350 hours
 
 
 Plugin manager dialog (175 or 350 hrs)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**- Description:**
-
+**Description:**
 A dialog for management of Synfig Studio plugins and Synfig modules.
 The dialog would show the currently supported plugin/module metadata and allow user to:
+
 - uninstall it
 - open its folder in the default OS file manager
 - install a plugin from a zip package already stored in local machine
 - maybe browse/download from a (future) online plugin repository (maybe a dedicated service or a special session from Synfig forums or even a git server)
 
-**- Expected Results:**
+**Expected outcome:**
 
-Users could easily list, install and uninstall plugins and modules they downloaded from Internet.
+**175 hours**
 
-**- Difficulty:** Easy/Medium
+- Users could easily list, install and uninstall plugins and modules they downloaded from Internet.
 
-**- Skills required:** C++, gtkmm
+**350 hours**
 
-**- Planned Mentor:** `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_, `Mohamed Adhamc <https://github.com/mohamedAdhamc>`_ 
+- Plugin repository
+
+**Difficulty:** Easy/Medium
+
+**Skills required/preferred:** C++, gtkmm
+
+**Possible mentor(s):** `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_, `Mohamed Adhamc <https://github.com/mohamedAdhamc>`_
+
+**Expected size of project:** 175 or 350 hours
 
 Propose a Project
 ------------------
@@ -97,19 +135,21 @@ If you have a project idea, edit the "Project Ideas" section below by filling th
 
     A descriptive title (175 or 350 hrs)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    **- Description**
+    **Description**
 
     A brief description about the project
 
-    **- Expected Results**
+    **Expected outcome**
 
     What benefit this deliver?
 
-    **- Difficulty** Easy | Medium | High
+    **Difficulty** Easy | Medium | High
 
-    **- Skills required** Knowledge Prerequisite
+    **Skills required/preferred:** Knowledge Prerequisite
 
-    **- Mentor(s)** Put your name if you are willing to mentor + other mentors.
+    **Possible mentor(s):** Put your name if you are willing to mentor + other mentors.
+
+    **Expected size of project:** 90, 175 or 350 hours
 
 *Please mention the following as comment on your proposal pr*
 
