@@ -125,6 +125,35 @@ The dialog would show the currently supported plugin/module metadata and allow u
 
 **Expected size of project:** 175 or 350 hours
 
+
+Synfig Android Version (350hrs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Description:**
+This project aims at providing a solid ground for a Synfig Android version. It aims to do so through two main parts.
+
+1- Prototype UI (Using Qt for android) that uses synfigapp and -in turn- synfig-core
+
+The goal here is that while making this prototype certain parts of the api would be fixed. So that SynfigApp and Synfig-Core can be used with any other UI not just the current gtkmm UI (synfig-studio).
+
+2- Add more features to the UI
+
+Synfig is quite a huge application. Most likely there would be many features left out of the prototype. This part would involve gradually adding more features from synfig-studio to the new prototype UI.
+
+**Expected outcome**
+
+- Improved synfig-app and (possibly) synfig-core that can work with any other UI.
+- Prototype Synfig Android Version
+
+**Difficulty:** Medium/High
+
+**Skills required/preferred:** C++, gtkmm, Qt, using Qt for Android
+
+**Possible mentor(s):** `Mohamed Adham <https://github.com/mohamedAdhamc>`_ , `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_
+
+**Expected size of project:** 350 hours
+
+
 Propose a Project
 ------------------
 If you have a project idea, edit the "Project Ideas" section below by filling the required details and sending a pull request (this page is editable at  https://github.com/synfig/synfig-docs-dev/blob/master/docs/gsoc/2024/ideas.rst), even if you could not mentor (we will find a mentor).
