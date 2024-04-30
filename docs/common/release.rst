@@ -17,7 +17,7 @@ Also, make sure that source tarball generation script executes without errors:
 Apply latest translations
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Install transifex-client ('dnf install transifex-client' on Fedora)
+#. Install transifex-client (https://developers.transifex.com/docs/cli)
 #. Run 'bash ./autobuild/transifex-pull-translations.sh'
 #. Fix lines marked as "TODO" in synfig-studio/src/languages.inc.c (if any)
 #. Update and push translation template to transifex 'bash ./autobuild/transifex-push-template.sh'
