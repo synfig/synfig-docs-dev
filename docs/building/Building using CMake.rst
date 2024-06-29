@@ -78,24 +78,29 @@ Windows
 
 Synfig is shipped with this special script to build it on Windows (MSYS2). All you need to do is run that script.
 
+.. note::
+   Before commit `3f07959 <https://github.com/synfig/synfig/commit/3f0795986a0e0612f86695dade1ebd4f658d3c39>`_, the special script
+   was named `./2-build-msys-cmake.sh` instead of `./2-build-cmake.sh`.
+   Same applies to the default build directory: it was named ./cmake-build-msys back then.
+
 .. code:: bash
 
-    $ ./2-build-msys-cmake.sh
+    $ ./2-build-cmake.sh
 
 Once this is completed successfully, you can run Synfig by.
 
 .. code:: bash
 
-    $ ./cmake-build-msys/output/Release/bin/synfigstudio.exe
+    $ ./cmake-build/output/Release/bin/synfigstudio.exe
 
 You can also use this script to run a debug build by using the argument: Debug
 
 .. code:: bash
 
-    $ ./2-build-msys-cmake.sh Debug
+    $ ./2-build-cmake.sh Debug
     
 Then, you can run Synfig by.
 
 .. code:: bash
 
-    $ ./cmake-build-msys/output/Debug/bin/synfigstudio.exe
+    $ ./cmake-build/output/Debug/bin/synfigstudio.exe
