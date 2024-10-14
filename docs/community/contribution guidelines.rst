@@ -46,7 +46,7 @@ Fork the project by clicking “Fork” in the top right corner of synfig/synfig
 Clone the repository locally 
 ::
 
-  git clone https://github.com/<you-username>/synfig
+  git clone https://github.com/<your-username>/synfig
 
 Create a new, descriptively named branch to contain your change
 ::
