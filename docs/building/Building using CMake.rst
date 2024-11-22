@@ -32,7 +32,7 @@ Once this is complete, you will find the build present in `/output` folder of yo
 
 .. code:: bash
 
-    $ ./output/bin/synfigstudio
+    $ ./output/Debug/bin/synfigstudio
 
 You can also specify a target if you want to build that specific target.
 
