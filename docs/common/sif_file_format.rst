@@ -167,6 +167,13 @@ Canvas may have an internal library/collection of canvases and value nodes, each
 
 The Canvas Library components are defined here, and can be referred in layer or value node parameters by their ID by using the node attribute 'use_'.
 
+The syntax for 'use_' is:
+
+* ``[[file-path]#]canvas-id[:child-canvas-id][:child-canvas-id][:child-canvas-id]…`` (for a Canvas)
+* ``[[file-path]#][canvas-id[:child-canvas-id][:child-canvas-id][:child-canvas-id]…][:]value-node-id`` (for a value node)
+
+Components surrounded by square brackets mean it is optional. If ``file-path`` is ommited, it means the current file (the file of the current root canvas). For value node, if ``canvas-id`` is ommited, it means the current root canvas.
+
 'defs' only applies to non-inline canvas (i.e. any group layer cannot have this kind of child node).
 
 The <defs> element
