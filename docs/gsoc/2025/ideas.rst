@@ -49,6 +49,48 @@ Generation takes a long time (could be greatly improved), it uses incorrect path
 **Expected size of project:** 175 or 350 hours
 
 
+
+
+
+Synfig Android Version (350hrs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Description:**
+This project aims at providing a solid ground for a Synfig Android version. It aims to do so through two main parts.
+
+1- Prototype UI (Using Qt for android) that uses synfigapp and -in turn- synfig-core
+
+There are two main goals here:
+1. To have a basic android UI for synfig working. 
+2. While making this prototype certain parts of the synfig api would be fixed. Which would make SynfigApp and Synfig-Core able to be used with any other UI not just the current gtkmm UI (synfig-studio).
+
+2- Add more features to the UI
+Synfig is quite a huge application. Most likely this app would start with only very basic needed synfig features added. Then gradually adding more features from synfig-studio to the new prototype UI.
+
+**Where to begin:**
+
+1. Start out by understanding and gathering the basic features for animation in synfig. In your proposal include these features and expand on how you plan to include them. 
+2. Research the available mobile/tablet animation apps and prototype a ui design using any ui design software (e.g. canva). This is not required but it will definetly help your proposal.
+
+
+**Expected outcome**
+
+- Prototype Synfig Android Version
+- Improved synfig-app and (possibly) synfig-core that can work with any other UI.
+
+**Difficulty:** Medium/High
+
+**Skills required/preferred:** C++, gtkmm, Qt, using Qt for Android
+
+**Possible mentor(s):** `Mohamed Adham <https://github.com/mohamedAdhamc>`_ , `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_
+
+**Expected size of project:** 350 hours
+
+
+
+
+
+
 Plugin manager dialog (175 or 350 hrs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
