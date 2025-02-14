@@ -152,35 +152,35 @@ You can start with this website: https://huggingface.co/lllyasviel/sd-controlnet
 
 
 
-Plugin manager dialog (175 or 350 hrs)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Brush tool (175hrs)
+~~~~~~~~~~~~~~~~~~~
 
 **Description:**
-A dialog for management of Synfig Studio plugins and Synfig modules.
-The dialog would show the currently supported plugin/module metadata and allow user to:
 
-- uninstall it
-- open its folder in the default OS file manager
-- install a plugin from a zip package already stored in local machine
-- maybe browse/download from a (future) online plugin repository (maybe a dedicated service or a special session from Synfig forums or even a git server)
+Synfig is primarily designed for vector-based animation, but it also supports the use of raster images within animations.
+However, the current functionality only allows for the use of raster images imported from external files (usually BMP, JPG or PNG), limiting users from drawing directly within the application.
+The goal of this project is to implement the missing Brush tool for raster drawing, allowing users to draw raster content directly in the app.
+An early attempt to implement this feature, called 'Brush,' exists, but it is entirely nonfunctional. Users are unable to make even a single stroke with the tool.
 
-**Expected outcome:**
+**Where to begin:**
 
-**175 hours**
+1. Look for the code of how tools are implemented in Synfig. As they are coded as a finite state machine, the correspondent files are name as state_
+2. `synfigapp` is responsible for handling the interface between the graphical user interface (GUI) and the underlying core engine of Synfig (which handles the animation and rendering processes).
+There are some synfigapp::Actions trying to implement it, as in synfig-studio/src/synfigapp/actions/layerpaint.h
 
-- Users could easily list, install and uninstall plugins and modules they downloaded from Internet.
+**Expected outcome**
 
-**350 hours**
+A working tool that allows users to freely hand-draw their artwork, which can then be animated within Synfig, with undo/redo functionality while drawing and features like brush selection, coloring options, and erasing.
 
-- Plugin repository
+**Difficulty:** Medium/High
 
-**Difficulty:** Easy/Medium
+**Skills required/preferred:** C++, gtkmm, 2D-drawing
 
-**Skills required/preferred:** C++, gtkmm
+**Possible mentor(s):** `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_ , `Mohamed Adham <https://github.com/mohamedAdhamc>`_
 
-**Possible mentor(s):** `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_, `Mohamed Adhamc <https://github.com/mohamedAdhamc>`_
+**Expected size of project:** 175 hours
 
-**Expected size of project:** 175 or 350 hours
+
 
 Propose a Project
 ------------------
