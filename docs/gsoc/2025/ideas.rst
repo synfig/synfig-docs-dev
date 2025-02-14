@@ -132,6 +132,7 @@ Thus, users can leverage Synfig's powerful animation tools while taking advantag
 
 1. Check Synfig skeleton layer code
 2. Check Spine JSON format (https://en.esotericsoftware.com/spine-json-format)
+3. Try to add new menu option "Export to Spine format" to Skeleton layer, which should create basic Spine JSON file.
 
 **Expected outcome**
 * A fully functional export tool in Synfig Studio capable of converting skeleton-based animations into the Spine file format.
