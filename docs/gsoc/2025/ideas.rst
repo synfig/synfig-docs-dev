@@ -115,6 +115,40 @@ A working tool that allows users to freely hand-draw their artwork, which can th
 
 **Expected size of project:** 175 hours
 
+
+
+Exporter to Spine file format (175hrs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Description:**
+
+The goal of this project is to implement a feature in Synfig Studio that enables exporting skeleton-based animations to the Spine file format.
+This would allow users to seamlessly transfer their Synfig animations, those created using bone-based rigs and skeleton systems, to Spine for additional refinement or game engine integration.
+This would involve creating an export function in Synfig that outputs the necessary JSON or binary format that Spine can read.
+The project will ensure that all essential animation data, such as bone movements, and keyframe timing, are accurately preserved during the export.
+Thus, users can leverage Synfig's powerful animation tools while taking advantage of Spine's advanced features, such as runtime support in various game engines.
+
+**Where to begin:**
+
+1. Check Synfig skeleton layer code
+2. Check Spine JSON format (https://en.esotericsoftware.com/spine-json-format)
+3. Try to add new menu option "Export to Spine format" to Skeleton layer, which should create basic Spine JSON file.
+
+**Expected outcome**
+* A fully functional export tool in Synfig Studio capable of converting skeleton-based animations into the Spine file format.
+* The exported Spine file should retain all key elements of the animation, including bones, mesh deformation, and animation keyframes.
+* The ability to open and refine the exported Spine animation in Spine's editor or integrate it directly into a game engine.
+
+**Difficulty:** Medium
+
+**Skills required/preferred:** Python (or C++), XML and JSON, understanding of Synfig's animation system, especially skeleton-based animation and bone rigs, and Synfig file format.
+
+**Possible mentor(s):** `Rodolfo Ribeiro Gomes <https://github.com/rodolforg>`_ , `Mohamed Adham <https://github.com/mohamedAdhamc>`_
+
+**Expected size of project:** 175 hours
+
+
+
 Propose a Project
 ------------------
 If you have a project idea, edit the "Project Ideas" section below by filling the required details and sending a pull request (this page is editable at  https://github.com/synfig/synfig-docs-dev/blob/master/docs/gsoc/2025/ideas.rst), even if you could not mentor (we will find a mentor).
