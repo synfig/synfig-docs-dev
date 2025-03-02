@@ -22,7 +22,7 @@ List of dependencies required for building Synfig:
 * libxml++-2.6
 * libsigc++-2.0
 * make (build-time)
-* Mlt++ (optional)
+* Mlt++ (optional - provides audio support)
 * pango
 * pkg-config (build-time)
 * SDL2_mixer
