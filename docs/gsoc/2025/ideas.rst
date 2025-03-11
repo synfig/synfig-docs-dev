@@ -14,7 +14,7 @@ macOS app bundle (175 or 350 hrs)
 
 **Description:**
 
-We are currently using a script to create a macOS app bundle, but it has some issues.
+We are currently using a script to create a macOS app bundle, but it has some issues (This script can be found at: https://github.com/synfig/synfig/blob/master/3-package-osx-dmg.sh).
 Generation takes a long time (could be greatly improved), it uses incorrect paths in some places and does not sign files.
 
 **Requirements:** macOS or access to macOS command-line (so you can test your script)
