@@ -56,9 +56,9 @@ Create a new, descriptively named branch to contain your change
 2. Making code changes
 -----------------------------------------
 
-Learn how to build Synfig here - https://synfig-docs-dev.readthedocs.io/en/latest/common/building.html
+Learn how to `build Synfig <../building/Building%20Synfig.rst>`_
 
-Make sure to read about code structure - https://synfig-docs-dev.readthedocs.io/en/latest/common/structure.html
+Make sure to read about `code structure <../common/structure.rst>`_
 
 Don't forget to configure IDE. We recommend to use NetBeans. Here are video instructions on how to configure it - https://www.youtube.com/watch?v=SNkdiSxBV_s
 
