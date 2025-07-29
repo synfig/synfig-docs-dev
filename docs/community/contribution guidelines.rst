@@ -56,9 +56,9 @@ Create a new, descriptively named branch to contain your change
 2. Making code changes
 -----------------------------------------
 
-Learn how to :ref:`build Synfig <../building/Building Synfig>`_
+Learn how to :ref:`build Synfig <Building Synfig>`
 
-Make sure to read about :ref:`code structure <../common/structure>`_
+Make sure to read about :ref:`code structure <structure>`
 
 Don't forget to configure IDE. We recommend to use NetBeans. Here are video instructions on how to configure it - https://www.youtube.com/watch?v=SNkdiSxBV_s
 
