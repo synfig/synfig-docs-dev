@@ -37,3 +37,10 @@ A *.exe* installer for synfig can be made by using the following code.
 
     $ cpack -G NSIS
 
+OSX
+---
+
+A *.dmg* package for Synfig can be made by using the following code.
+
+.. code:: bash
+    $ cpack -G DragNDrop
