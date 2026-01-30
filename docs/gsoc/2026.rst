@@ -1,0 +1,11 @@
+.. _gsoc:
+
+Google Summer of Code 2026
+==========================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   2026/*
+
