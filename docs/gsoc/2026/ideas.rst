@@ -32,12 +32,12 @@ Synfig is quite a huge application. Most likely this app would start with only v
 
 **Expected outcome**
 
-- Prototype Synfig Android Version
+- Prototype Synfig Android Version.
 - Improved synfig-app and (possibly) synfig-core that can work with any other UI.
 
 **Difficulty:** Medium/High
 
-**Skills required/preferred:** C++, gtkmm, Qt, using Qt for Android
+**Skills required/preferred:** C++, gtkmm, Qt, using Qt for Android.
 
 **Possible mentor(s):** `Mohamed Adham <https://github.com/mohamedAdhamc>`_ , `Rodolfo Ribeiro <https://github.com/rodolforg>`_
 
@@ -56,8 +56,8 @@ Thus, users can leverage Synfig's powerful animation tools while taking advantag
 
 **Where to begin:**
 
-1. Check Synfig skeleton layer code
-2. Check Spine JSON format (https://en.esotericsoftware.com/spine-json-format)
+1. Check Synfig skeleton layer code.
+2. Check Spine JSON format (https://en.esotericsoftware.com/spine-json-format).
 3. Try to add new menu option "Export to Spine format" to Skeleton layer, which should create basic Spine JSON file.
 
 **Expected outcome**
@@ -95,15 +95,15 @@ The intention here is to replace it with its own backend: SDL (SDL_audio, specif
 
 **Expected outcome:**
 
-* Remove MLT++ dependency;
+* Remove MLT++ dependency.
 
-* Be able to reproduce audios in SynfigStudio, but via SDL2 or SDL3 (choose in building/compilation time)
+* Be able to reproduce audios in SynfigStudio, but via SDL2 or SDL3 (choose in building/compilation time).
 
-* Be able to export video+audio via ffmpeg target, but via SDL2 or SDL3 (choose done in building/compilation time)
+* Be able to export video+audio via ffmpeg target, but via SDL2 or SDL3 (choose done in building/compilation time).
 
 **Dificulty:** Medium
 
-**Skills required/preferred:** C++, SDL2/SDL3 audio playback
+**Skills required/preferred:** C++, SDL2/SDL3 audio playback.
 
 **Possible mentor(s):** `Rodolfo Ribeiro <https://github.com/rodolforg>`_ , `Mohamed Adham <https://github.com/mohamedAdhamc>`_
 
@@ -118,9 +118,9 @@ Allow artist to set up a grid and animate by deforming on moving this lattice po
 
 **Where to begin:**
 
-1. Check Skeleton Deformation layer works
+1. Check Skeleton Deformation layer works.
 
-2. Check how handles work (duckmatic class)
+2. Check how handles work (duckmatic class).
 
 **Expected outcome:**
 
